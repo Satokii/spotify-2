@@ -32,7 +32,6 @@ export default function Home() {
         <Routes>
           <Route path="/spotify-login" element={<WelcomePage />}></Route>
         </Routes>
-        <WelcomePage></WelcomePage>
       </div>
     </BrowserRouter>
   );
