@@ -6,6 +6,8 @@ import ProfileIcon from "../../../../assets/svgs/main-app/profile-icon.svg"
 import LogOutBtn from "../../../../assets/svgs/main-app/log-out.svg"
 import NotificationBell from "../../../../assets/svgs/main-app/noti-bell.svg"
 
+import "../styles/dashboard-menu.css"
+
 function DashboardMenu() {
     return (
         <div className="main-page--menu-backing">
