@@ -1,3 +1,9 @@
+import BackArrow from "../../../../assets/svgs/main-app/back-arrow.svg"
+import ForwardArrow from "../../../../assets/svgs/main-app/forward-arrow.svg"
+import ProfileIcon from "../../../../assets/svgs/main-app/profile-icon.svg"
+import LogOutBtn from "../../../../assets/svgs/main-app/log-out.svg"
+import NotificationBell from "../../../../assets/svgs/main-app/noti-bell.svg"
+
 function DashboardMenu() {
     return (
         <div className="main-page--menu-backing">
