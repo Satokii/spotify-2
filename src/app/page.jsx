@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="container grid">
         <Routes>
           <Route path="/spotify-login" element={<WelcomePage />}></Route>
           <Route path="/" element={<Dashboard />}></Route>
