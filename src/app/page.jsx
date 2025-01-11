@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/welcome-page";
 
-import "./root.css"
-import "./keyframes/fade-in.css"
+import "./root.css";
+import "./keyframes/fade-in.css";
 
 export default function Home() {
   const [token, setToken] = useState("");
@@ -24,10 +26,14 @@ export default function Home() {
     setToken(token);
   }, []);
 
-
   return (
-    <div>
-      <WelcomePage></WelcomePage>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/spotify-login" element={<WelcomePage />}></Route>
+        </Routes>
+        <WelcomePage></WelcomePage>
+      </div>
+    </BrowserRouter>
   );
 }
