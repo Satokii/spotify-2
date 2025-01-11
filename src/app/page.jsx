@@ -32,7 +32,7 @@ export default function Home() {
       <div className="container grid">
         <Routes>
           <Route path="/spotify-login" element={<WelcomePage />}></Route>
-          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/" element={<Dashboard setToken={setToken} />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

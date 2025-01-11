@@ -10,7 +10,7 @@ import NotificationBell from "../../../../assets/svgs/main-app/noti-bell.svg";
 
 import "../styles/dashboard-menu.css";
 
-function DashboardMenu() {
+function DashboardMenu({ setToken }) {
   const navigate = useNavigate();
 
   return (

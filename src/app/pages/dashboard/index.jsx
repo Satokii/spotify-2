@@ -1,11 +1,11 @@
 import DashboardMenu from "./components/DashboardMenu"
 
-function Dashboard() {
+function Dashboard({ setToken }) {
     return (
         <div className="dashboard-outer-container grid">
             <div className="scrollbar-dashboard">
                 <main className="dashboard grid">
-                 <DashboardMenu />
+                 <DashboardMenu setToken={setToken} />
                 </main>
             </div>
         </div>
