@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useNavigate } from "react-router-dom";
 import Logout from "@/Logout";
+import sleep from "@/shared-functions/sleep";
+import scrollFade from "../functions/scrollFade";
 
 import BackArrow from "../../../../assets/svgs/main-app/back-arrow.svg";
 import ForwardArrow from "../../../../assets/svgs/main-app/forward-arrow.svg";
