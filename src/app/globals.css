@@ -88,3 +88,7 @@ select {
 textarea:not([rows]) {
   min-height: 10em;
 }
+
+.grid {
+  display: grid;
+}
