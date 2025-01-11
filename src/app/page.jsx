@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Authorisation from "@/Authorisation";
+import WelcomePage from "./pages/welcome-page";
 
 export default function Home() {
   const [token, setToken] = useState("");
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <div>
       <Authorisation></Authorisation>
+      <WelcomePage></WelcomePage>
       Add code here
     </div>
   );
