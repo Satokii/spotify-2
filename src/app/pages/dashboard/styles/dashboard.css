@@ -1,0 +1,43 @@
+.dashboard-outer-container {
+    grid-area: Main;
+    overflow: hidden;
+    background: linear-gradient(var(--const-base-red-db), var(--const-base-bg) 50%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: 5px;
+    padding-right: 3px;
+    padding-top: 65px;
+    opacity: 0;
+    animation: 0.3s ease 0.5s forwards fade-in;
+}
+
+.scrollbar-dashboard {
+    overflow-y: scroll;
+    visibility: hidden;
+    transition: 1s all 0.1s ease-out;
+}
+
+.scrollbar-dashboard:hover {
+    visibility: visible;
+}
+
+.dashboard {
+    grid-template-rows: 200px 1fr;
+    padding: 8px 0 40px 20px;
+    gap: 30px;
+    visibility: visible;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dashboard--sub-container {
+    grid-template-rows: repeat(auto-fit, auto);
+    gap: 20px;
+    padding: 0 5px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
