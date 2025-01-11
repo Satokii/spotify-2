@@ -1,0 +1,41 @@
+:root {
+    --const-black: #000000;
+    --almost-black: #070D0D;
+    --header-black: #011212;
+    --darker-black: #000101;
+    --const-base-bg: #121212;
+    --const-card-bg: #181818;
+    --const-card-hover:#282828;
+    --const-library-item-hover: #1e1e1e;
+    --const-sidebar-gray: #242424;
+    --const-gray: #a7a7a7;
+    --const-lighter-gray: #b3b3b3;
+    --const-gray-faint: #0f0c0c1a;
+    --const-player-slider: #444;
+    --album-track-hover:rgba(255, 255, 255, 0.1);
+    --album-track-focus:hsla(0,0%,100%,.3);
+    --explicit-bg: hsla(0,0%,100%,.6);
+    --disco-filter: hsla(0,0%,100%,.07);
+    --const-green: #1ed760;
+    --const-green-hover: #0aef5a;
+    --const-dark-green: #1db954;
+    --const-honey-dew: #bdffbd;
+    --const-blue: #452ADB;
+    --const-card-blue: #0000cd;
+    --const-main-white: #ffffff;
+    --const-dull-white: #c6c6c6;
+    --const-red: #9f0000;
+    --const-red-hover: #E10600;
+    --const-base-red-db: #4a0209;
+    --const-peach: #ffddca;
+    --const-card-yellow: #868604;
+    --const-card-yellow-hover: #cece07;
+    --const-card-gray: #1b1e24;
+    --const-card-gray-hover: #262a33;
+    --const-light-purple: #AF40FF;
+    --const-purple: #5B42F3;
+    --const-cyan: #00DDEB;
+
+    --filter-hover-white: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(606%) hue-rotate(253deg) brightness(112%) contrast(81%);
+    --filter-hover-green: filter: brightness(0) saturate(100%) invert(64%) sepia(55%) saturate(715%) hue-rotate(86deg) brightness(100%) contrast(100%);
+}
