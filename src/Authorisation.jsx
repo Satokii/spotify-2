@@ -1,10 +1,10 @@
 function Authorisation() {
-    const CLIENT_ID = import.meta.env.VITE_CLIENT_ID;
-    const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI
-    const AUTH_ENDPOINT = import.meta.env.VITE_AUTH_ENDPOINT
-    const SCOPE = import.meta.env.VITE_SCOPE
-    const RESPONSE_TYPE = import.meta.env.VITE_RESPONSE_TYPE
-    const SHOW_DIALOG = import.meta.env.VITE_SHOW_DIALOG
+    const CLIENT_ID = process.env.VITE_CLIENT_ID;
+    const REDIRECT_URI = process.env.VITE_REDIRECT_URI
+    const AUTH_ENDPOINT = process.env.VITE_AUTH_ENDPOINT
+    const SCOPE = process.env.VITE_SCOPE
+    const RESPONSE_TYPE = process.env.VITE_RESPONSE_TYPE
+    const SHOW_DIALOG = process.env.VITE_SHOW_DIALOG
   
     return (
       <a
