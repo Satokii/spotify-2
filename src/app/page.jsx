@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WelcomePage from "./pages/welcome-page";
 
 import "./root.css"
+import "./keyframes/fade-in.css"
 
 export default function Home() {
   const [token, setToken] = useState("");
