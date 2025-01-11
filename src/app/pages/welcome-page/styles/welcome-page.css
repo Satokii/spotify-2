@@ -1,0 +1,35 @@
+.welcome-page--container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--const-base-bg);
+  text-align: center;
+  opacity: 0;
+  animation: 0.3s ease 1s forwards fade-in;
+}
+
+.welcome-page--text {
+  font-size: 40px;
+  line-height: 2;
+}
+
+.welcome-page--logged-out-text {
+  font-size: 40px;
+}
+
+.welcome-page--login-link {
+  color: var(--const-green);
+  font-size: 60px;
+  opacity: 0.7;
+  font-weight: bold;
+  font-variant-caps: all-small-caps;
+}
+
+.welcome-page--login-link:hover {
+  color: var(--const-green-hover);
+  text-decoration: underline 2px;
+  text-underline-offset: 0.15em;
+  opacity: 0.9;
+}
