@@ -1,5 +1,7 @@
 import Authorisation from "@/Authorisation"
 
+import './styles/welcome-page.css'
+
 function WelcomePage() {
     return (
         <section className="welcome-page--container grid">
