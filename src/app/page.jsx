@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Authorisation from "@/Authorisation";
 import WelcomePage from "./pages/welcome-page";
 
 export default function Home() {
@@ -25,9 +24,7 @@ export default function Home() {
 
   return (
     <div>
-      <Authorisation></Authorisation>
       <WelcomePage></WelcomePage>
-      Add code here
     </div>
   );
 }
