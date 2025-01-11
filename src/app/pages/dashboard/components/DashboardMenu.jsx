@@ -13,7 +13,9 @@ import NotificationBell from "../../../../assets/svgs/main-app/noti-bell.svg";
 import "../styles/dashboard-menu.css";
 
 function DashboardMenu({ setToken }) {
+    
   const navigate = useNavigate();
+  sleep(0).then(() => scrollFade())
 
   return (
     <div className="main-page--menu-backing">
