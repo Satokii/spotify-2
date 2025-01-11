@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/welcome-page";
+import Dashboard from "./pages/dashboard";
 
 import "./root.css";
 import "./keyframes/fade-in.css";
@@ -31,6 +32,7 @@ export default function Home() {
       <div>
         <Routes>
           <Route path="/spotify-login" element={<WelcomePage />}></Route>
+          <Route path="/" element={<Dashboard />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
