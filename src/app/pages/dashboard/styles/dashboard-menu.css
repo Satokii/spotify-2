@@ -1,0 +1,43 @@
+.main-page--menu-backing {
+  position: absolute;
+  top: 13px;
+  left: 293px;
+  width: calc(100% - 636px);
+  z-index: 1;
+  transition: 0.3s 0s ease;
+}
+
+.main-page--menu {
+  grid-template-columns: repeat(2, auto);
+  padding: 0 26px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+  height: 65px;
+  transition: 0.3s 0s ease-in-out;
+}
+/* MAIN PAGE NAV */
+.main-page--nav-container {
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  justify-content: start;
+  align-content: center;
+}
+
+/* MAIN PAGE ICONS */
+.main-page--icons-container {
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  justify-content: end;
+  align-content: center;
+}
+
+.main-page--menu img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.main-page--menu img:hover {
+  transform: scale(1.15);
+}
