@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import WelcomePage from "./pages/welcome-page";
 
+import "./root.css"
+
 export default function Home() {
   const [token, setToken] = useState("");
 
