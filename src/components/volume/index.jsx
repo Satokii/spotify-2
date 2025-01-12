@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import getDevices from "./components/getDevices";
-import handleDeviceVolumeChanges from "./components/handleDeviceVolumeChanges";
-import changeVolume from "./components/changeVolume";
+import getDevices from "./functions/getDevices";
+import handleDeviceVolumeChanges from "./functions/handleDeviceVolumeChanges";
+import changeVolume from "./functions/changeVolume";
 
 import "./styles/volume-controls-container.css"
 import "./styles/volume-slider.css"
