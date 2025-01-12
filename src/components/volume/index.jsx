@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getDevices from "./functions/getDevices";
 import handleDeviceVolumeChanges from "./functions/handleDeviceVolumeChanges";
 import changeVolume from "./functions/changeVolume";
+import VolumeIcon from "./components/VolumeIcon";
 
 import "./styles/volume-controls-container.css"
 import "./styles/volume-slider.css"
