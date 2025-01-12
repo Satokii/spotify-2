@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import scrollToTop from "@/shared-functions/scrollToTop";
 
 function CurrentlyPlayingTrack({ currentTrack, notPlaying, pulse }) {
   const togglePulse = () => {
