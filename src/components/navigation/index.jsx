@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavMainLinks from "./components/NavMainLinks";
-// import NavLibraryHeader from "./components/NavLibraryHeader";
+import NavLibraryHeader from "./components/NavLibraryHeader";
 // import NavLibraryFilter from "./components/NavLibraryFilter";
 // import NavLibraryPlaylists from "./components/NavLibraryPlaylists";
 
