@@ -30,6 +30,45 @@ export default function Home() {
     setToken(token);
   }, []);
 
+    // FETCH CURRENTLY PLAYING TRACK
+    const [currentTrack, setCurrentTrack] = useState(CURRENT_TRACK_INITIAL_STATE);
+    const [currentTrackArtists, setCurrentTrackArtists] = useState([])
+    const [notPlaying, setNotPlaying] = useState(null);
+  
+    useEffect(() => {
+      const getCurrentTrack = async () => {
+        const { data } = await axios.get(
+          "https://api.spotify.com/v1/me/player/currently-playing",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        if (!data) setNotPlaying(true);
+        else {
+          const { item } = data;
+          // console.log(data)
+          setCurrentTrackArtists(item.artists)
+          setCurrentTrack({
+            trackId: item.id,
+            albumId: item.album.id,
+            artistId: item.artists[0].id,
+            trackImageLength: item.album.images.length,
+            trackImage: item.album.images[0].url,
+            trackName: item.name,
+            trackArtist: item.artists[0].name,
+            trackIsPlaying: data.is_playing,
+            trackProgress: data.progress_ms,
+            trackDuration: item.duration_ms,
+          });
+        }
+      };
+      // setInterval(() => {
+        getCurrentTrack();
+      // }, 1000);
+    }, [ token]);
+
   return (
     <BrowserRouter>
       <div className="container grid">
