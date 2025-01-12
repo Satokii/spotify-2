@@ -28,8 +28,8 @@ function NavLibraryPlaylists({ token, showFilter }) {
 
   useEffect(() => {
     let playlistURL = `https://api.spotify.com/v1/me/playlists`;
-    let allPlaylists = [];
-    let combinedPlaylists = [];
+    // let allPlaylists = [];
+    // let combinedPlaylists = [];
     const getPlaylistItems = async () => {
       const { data } = await axios.get(playlistURL, {
         headers: {
@@ -56,8 +56,8 @@ function NavLibraryPlaylists({ token, showFilter }) {
 
   useEffect(() => {
     let albumURL = `https://api.spotify.com/v1/me/albums`;
-    let allAlbums = [];
-    let combinedAlbums = [];
+    // let allAlbums = [];
+    // let combinedAlbums = [];
     const getAlbums = async () => {
       const { data } = await axios.get(albumURL, {
         headers: {
@@ -67,16 +67,17 @@ function NavLibraryPlaylists({ token, showFilter }) {
           limit: 50,
         },
       });
-      allAlbums.push(data.items);
-      if (data.next !== null) {
-        albumURL = data.next;
-        getAlbums();
-      } else {
-        allAlbums.forEach((array) => {
-          combinedAlbums = combinedAlbums.concat(array);
-        });
-      }
-      setAlbumItemsLibrary(combinedAlbums);
+    //   allAlbums.push(data.items);
+    //   if (data.next !== null) {
+    //     albumURL = data.next;
+    //     getAlbums();
+    //   } else {
+    //     allAlbums.forEach((array) => {
+    //       combinedAlbums = combinedAlbums.concat(array);
+    //     });
+    //   }
+    //   setAlbumItemsLibrary(combinedAlbums);
+    setAlbumItemsLibrary(data.items)
     };
     getAlbums();
   }, [token]);
