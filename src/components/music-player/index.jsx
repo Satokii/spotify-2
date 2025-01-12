@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getQueue from "../queue/functions/getQueue";
 import seekToPosition from "./functions/seekToPosition";
 import TrackSlider from "./components/TrackSlider";
+import SongControls from "./components/SongControls";
 
 import "./styles/music-player.css"
 
