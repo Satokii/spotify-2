@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import skipTrack from "../functions/skipTrack";
+import changePlayerState from "../functions/changePlayerState";
+
 import forwardButton from "../../../assets/svgs/player/forward-button.svg";
 import backButton from "../../../assets/svgs/player/back-button.svg";
 import playButton from "../../../assets/svgs/player/play-button.svg";
