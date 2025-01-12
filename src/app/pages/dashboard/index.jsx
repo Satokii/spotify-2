@@ -1,7 +1,7 @@
 import DashboardMenu from "./components/DashboardMenu"
 import DashboardBanner from "./components/DashboardBanner"
 
-function Dashboard({ setToken }) {
+function Dashboard({ token, queue, setQueue, setToken, currentTrack, notPlaying }) {
     return (
         <div className="dashboard-outer-container grid">
             <div className="scrollbar-dashboard">
