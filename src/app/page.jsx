@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
+import Navigation from "@/components/navigation";
 
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 
@@ -75,6 +76,7 @@ export default function Home() {
   return (
     <BrowserRouter>
       <div className="container grid">
+        {token ? <Navigation token={token} /> : null}
         <Routes>
           <Route path="/spotify-login" element={<WelcomePage />}></Route>
           <Route
