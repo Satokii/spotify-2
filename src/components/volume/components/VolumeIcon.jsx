@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import changeVolume from "../functions/changeVolume";
 
+import VolumeOnIcon from "../../../assets/svgs/volume/volume-on.svg"
+import VolumeMuteIcon from "../../../assets/svgs/volume/volume-mute.svg"
+
 function VolumeIcon({ token, volume, setVolume }) {
   const [mute, setMute] = useState(false);
   const [savedLastVolume, setSavedLastVolume] = useState(0);
