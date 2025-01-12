@@ -3,6 +3,8 @@ import Image from "next/image";
 import LibraryIcon from "../../../assets/svgs/main-app/library-icon.svg";
 import PlusGray from "../../../assets/svgs/main-app/plus-gray.svg";
 
+import "../styles/nav-library-header.css"
+
 function NavLibraryHeader() {
   return (
     <div className="navigation--library-header grid">
