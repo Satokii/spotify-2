@@ -1,7 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
 import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
