@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import CurrentlyPlayingHeader from "./CurrentlyPlayingHeader";
 
+import "../../styles/dashboard-playback/currently-playing.css"
+
 function CurrentlyPlaying({ currentTrack, notPlaying }) {
 
   const [pulse, setPulse] = useState(false);
