@@ -39,16 +39,17 @@ function NavLibraryPlaylists({ token, showFilter }) {
           limit: 50,
         },
       });
-      allPlaylists.push(data.items);
-      if (data.next !== null) {
-        playlistURL = data.next;
-        getPlaylistItems();
-      } else {
-        allPlaylists.forEach((array) => {
-          combinedPlaylists = combinedPlaylists.concat(array);
-        });
-      }
-      setPlaylistItemsLibrary(combinedPlaylists);
+    //   allPlaylists.push(data.items);
+    //   if (data.next !== null) {
+    //     playlistURL = data.next;
+    //     getPlaylistItems();
+    //   } else {
+    //     allPlaylists.forEach((array) => {
+    //       combinedPlaylists = combinedPlaylists.concat(array);
+    //     });
+    //   }
+    //   setPlaylistItemsLibrary(combinedPlaylists);
+      setPlaylistItemsLibrary(data.items);
     };
     getPlaylistItems();
   }, [token]);
@@ -95,7 +96,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
               <li tabIndex={1}>
                 <Link
                   className="navigation--playlists-item-container grid"
-                  to={"/liked-songs"}
+                  href="liked-songs"
                   onClick={scrollToTop}
                 >
                   <Image
@@ -115,13 +116,13 @@ function NavLibraryPlaylists({ token, showFilter }) {
               </li>
               {playlistItemsLibrary.map((playlist, index) => (
                 <li key={`${playlist.id}-${index}`} tabIndex={1}>
-                  {/* <Link
+                  <Link
                     className="navigation--playlists-item-container grid"
-                    to={`/user-playlist/${playlist.id}`}
+                    href={`/user-playlist/${playlist.id}`}
                     onClick={scrollToTop}
                   >
                     {playlist.images.length ? (
-                      <Image
+                      <img
                         className="navigation--playlists-item-img"
                         src={playlist.images[0].url}
                         alt="playlist songs img"
@@ -140,7 +141,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                         &bull; {`${playlist.owner.display_name}`}
                       </div>
                     </div>
-                  </Link> */}
+                  </Link>
                 </li>
               ))}
             </>
@@ -148,13 +149,13 @@ function NavLibraryPlaylists({ token, showFilter }) {
             <>
               {albumItemsLibrary.map((album, index) => (
                 <li key={`${album.album.id}-${index}`} tabIndex={1}>
-                  {/* <Link
+                  <Link
                     className="navigation--playlists-item-container grid"
-                    to={`/album/${album.album.id}/${album.album.artists[0].id}`}
+                    href={`/album/${album.album.id}/${album.album.artists[0].id}`}
                     onClick={scrollToTop}
                   >
                     {album.album.images.length ? (
-                      <Image
+                      <img
                         className="navigation--playlists-item-img"
                         src={album.album.images[0].url}
                         alt="playlist songs img"
@@ -173,7 +174,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                         &bull; {`${album.album.artists[0].name}`}
                       </div>
                     </div>
-                  </Link> */}
+                  </Link>
                 </li>
               ))}
             </>
