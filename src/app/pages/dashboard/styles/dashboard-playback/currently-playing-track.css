@@ -1,0 +1,62 @@
+.main-playback--no-track-playing {
+  width: 360px;
+  align-items: center;
+  padding: 20px;
+  font-size: 26px;
+  font-variant-caps: all-small-caps;
+  text-align: center;
+  color: var(--const-red);
+  margin-bottom: 20px;
+}
+
+.main-playback--cur-playing-item {
+  grid-template-columns: 100px 185px;
+  gap: 20px;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+
+.main-playback--cur-playing-item img {
+  border-radius: 8px;
+  transition: 0.3s;
+  object-fit: cover;
+}
+
+.main-playback--cur-playing-item img:hover {
+  transform: scale(1.05);
+}
+
+.main-playback--pulse-img {
+  animation: img-pulse 1.65s infinite ease-in-out;
+}
+
+.main-playback--cur-playing-details {
+  line-height: 1;
+  gap: 10px;
+  text-align: start;
+}
+
+.main-playback--cur-playing-title {
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.main-playback--cur-playing-title:hover {
+  text-decoration: underline 1px;
+  text-underline-offset: 1.5px;
+}
+
+.main-playback--cur-playing-artist {
+  font-size: 14px;
+  color: var(--const-lighter-gray);
+  width: fit-content;
+}
+
+.main-playback--cur-playing-artist:hover {
+  cursor: pointer;
+  color: var(--const-main-white);
+  text-decoration: underline 1px;
+  text-underline-offset: 1.5px;
+}
