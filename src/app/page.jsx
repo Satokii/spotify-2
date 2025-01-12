@@ -12,6 +12,9 @@ import "./keyframes/fade-in.css";
 export default function Home() {
   const [token, setToken] = useState("");
 
+   //  QUEUE
+   const [queue, setQueue] = useState([])
+
   useEffect(() => {
     const hash = window.location.hash;
     let token = window.localStorage.getItem("token");
