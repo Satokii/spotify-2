@@ -1,5 +1,6 @@
 import NowPlaying from "../now-playing";
 import MusicPlayer from "../music-player";
+import VolumeControls from "../volume";
 
 import "./styles/footer.css"
 
@@ -22,7 +23,7 @@ function Footer({
         setCurrentTrack={setCurrentTrack}
         setQueue={setQueue}
       />
-      {/* <VolumeControls token={token} /> */}
+      <VolumeControls token={token} />
     </footer>
   );
 }
