@@ -1,0 +1,64 @@
+/* SCROLLBAR */
+.navigation--playlists-scrollbar {
+  padding: 8px 0 8px 8px;
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+}
+
+.navigation--playlists-scrollbar:hover {
+  visibility: visible;
+}
+
+/* PLAYLISTS CONTAINER */
+.navigation--playlists-container {
+  visibility: visible;
+  padding-right: 5px;
+}
+
+/* PLAYLISTS LIST */
+.navigation--playlists-list {
+  grid-template-rows: repeat(auto-fit, 64px);
+}
+
+.navigation--playlists-item-container {
+  grid-template-columns: 48px auto;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navigation--playlists-item-container:hover {
+  background-color: var(--const-library-item-hover);
+}
+
+.navigation--playlists-item-container:focus {
+  background-color: var(--const-card-hover);
+  outline: 0;
+}
+
+/* IMG */
+.navigation--playlists-item-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+
+/* TEXT CONTAINER */
+.navigation--playlists-item-text-container {
+  grid-template-rows: repeat(2, 22px);
+  gap: 2px;
+  align-self: center;
+}
+
+/* ITEM TRACKS DETAILS */
+.navigation--playlists-item-details {
+  font-size: 14px;
+  color: var(--const-gray);
+}
+
+.navigation--playlists-item-capitalise {
+  text-transform: capitalize;
+}
