@@ -2,6 +2,8 @@ import calcTrackTime from "@/shared-functions/calcTrackTime";
 import renderCurrentTrackTime from "../functions/renderCurrentTrackTime";
 import calcSeekPosition from "../functions/calcSeekPosition";
 
+import "../styles/track-slider.css"
+
 function TrackSlider({
   currentTrack,
   sliderVal,
