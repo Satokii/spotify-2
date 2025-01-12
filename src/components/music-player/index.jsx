@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import getQueue from "../queue/functions/getQueue";
+import seekToPosition from "./functions/seekToPosition";
 
 function MusicPlayer({ token, currentTrack, setCurrentTrack, setQueue }) {
   // HANDLE SLIDER POSITION - BOTH MANUAL AND AUTOMATIC
