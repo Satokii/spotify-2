@@ -1,0 +1,77 @@
+.main-playback--queue-container {
+  grid-template-rows: 26px 1fr;
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.main-playback--queue-header {
+  font-variant-caps: all-small-caps;
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+  color: var(--const-peach);
+  line-height: 0.9;
+  padding-top: 10px;
+}
+
+.scrollbar--dashboard-queue {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+  align-items: center;
+}
+
+.main-playback--queue-container:hover .scrollbar--dashboard-queue {
+  visibility: visible;
+}
+
+.main-playback--queue-list {
+  grid-auto-columns: 120px;
+  grid-auto-flow: column;
+  gap: 10px;
+  align-items: start;
+  visibility: visible;
+}
+
+.main-playback--queue-item {
+  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 70px 20px 20px;
+  border-radius: 10px;
+  background-color: var(--const-card-bg);
+  align-items: start;
+  height: 130px;
+  padding: 8px 12px 0;
+  transition: 0.3s;
+}
+
+.main-playback--queue-item:hover {
+  background-color: var(--const-card-hover);
+  cursor: pointer;
+}
+
+.main-playback--queue-item img {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+.main-playback--queue-track {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--const-main-white);
+  margin-top: 2px;
+}
+
+.main-playback--queue-artist {
+  font-size: 12px;
+  color: var(--const-lighter-gray);
+  width: fit-content;
+}
+
+.main-playback--queue-artist:hover {
+  color: var(--const-main-white);
+  text-decoration: underline 1px;
+}
