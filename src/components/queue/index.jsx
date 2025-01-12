@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import fixLengthQueue from "../../shared-functions/fixLengthQueue";
+import fixLengthQueue from "@/shared-functions/fixLengthQueue";
 import getQueue from "./functions/getQueue";
 import scrollToTop from "../../shared-functions/scrollToTop";
 
