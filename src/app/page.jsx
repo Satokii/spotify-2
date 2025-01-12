@@ -96,6 +96,18 @@ export default function Home() {
               )
             }
           ></Route>
+          <Route
+            path="/liked-songs"
+            element={
+              token ? (
+                // <LikedSongs token={token} setToken={setToken} />
+                <div>Liked Songs</div>
+              ) : (
+                // <LoginPage />
+                <WelcomePage />
+              )
+            }
+          ></Route>
         </Routes>
       </div>
     </BrowserRouter>

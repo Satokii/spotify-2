@@ -93,7 +93,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
           {showFilter === "Playlists" ? (
             <>
               <li tabIndex={1}>
-                {/* <Link
+                <Link
                   className="navigation--playlists-item-container grid"
                   to={"/liked-songs"}
                   onClick={scrollToTop}
@@ -111,7 +111,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                       Playlist &bull; {`${likeSongsLibrary.numTracks}`} songs
                     </div>
                   </div>
-                </Link> */}
+                </Link>
               </li>
               {playlistItemsLibrary.map((playlist, index) => (
                 <li key={`${playlist.id}-${index}`} tabIndex={1}>
