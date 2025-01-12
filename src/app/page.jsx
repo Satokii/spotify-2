@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import axios from "axios";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
 
