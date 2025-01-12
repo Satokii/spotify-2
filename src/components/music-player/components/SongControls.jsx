@@ -8,6 +8,8 @@ import backButton from "../../../assets/svgs/player/back-button.svg";
 import playButton from "../../../assets/svgs/player/play-button.svg";
 import pauseButton from "../../../assets/svgs/player/pause-button.svg";
 
+import "../styles/song-controls.css"
+
 function SongControls({ token, currentTrack, setCurrentTrack }) {
   const togglePlayBtn = currentTrack.trackIsPlaying ? pauseButton : playButton;
 

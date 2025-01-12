@@ -1,0 +1,25 @@
+/* PLAYER CONTROL BUTTONS */
+.song-controls {
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  width: 34px;
+}
+
+.play-btn:hover {
+  transform: scale(1.07);
+}
+
+.back-btn,
+.forward-btn {
+  width: 14px;
+}
+
+.forward-btn:hover,
+.back-btn:hover {
+  filter: var(--filter-hover-white);
+}
