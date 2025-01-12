@@ -1,0 +1,43 @@
+.navigation--library-header {
+  grid-template-columns: 40px 1fr 30px;
+  gap: 20px;
+  align-items: center;
+  padding: 8px 12px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+/* LIBRARY HEADER ICON */
+.navigation--library-header-icon {
+  width: 30px;
+  height: 30px;
+  justify-self: end;
+  cursor: default;
+}
+
+/* LIBRARY HEADER TEXT */
+.navigation--library-header-text {
+  font-weight: bold;
+  color: var(--const-lighter-gray);
+  cursor: default;
+}
+
+/* LIBRARY HEADER CREATE PLAYLIST */
+.navigation--library-create-playlist-btn {
+  place-content: center;
+  height: 30px;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation--library-create-playlist-btn:hover {
+  background-color: var(--disco-filter);
+}
+
+.navigation--library-header-plus-icon {
+  width: 16px;
+  height: 16px;
+}
