@@ -1,0 +1,44 @@
+/* PLAYER SLIDER */
+.volume-slide-container {
+  width: 100%;
+  position: relative;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 1;
+  width: 120px;
+  height: 5px;
+  padding: 0;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--const-main-white);
+  border: none;
+  border: solid 2px var(--const-main-white);
+  cursor: default;
+  box-shadow: -407px 0 0 405px var(--const-main-white);
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  box-shadow: -407px 0 0 405px var(--const-green);
+}
+
+.volume-slider:hover::-webkit-slider-thumb {
+  box-shadow: -407px 0 0 405px var(--const-green);
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background-color: var(--const-player-slider);
+}
