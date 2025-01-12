@@ -7,6 +7,7 @@ import axios from "axios";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 
@@ -109,6 +110,15 @@ export default function Home() {
             }
           ></Route>
         </Routes>
+        {token ? (
+          <Footer
+            token={token}
+            currentTrack={currentTrack}
+            currentTrackArtists={currentTrackArtists}
+            setCurrentTrack={setCurrentTrack}
+            setQueue={setQueue}
+          />
+        ) : null}
       </div>
     </BrowserRouter>
   );

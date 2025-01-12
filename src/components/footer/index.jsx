@@ -15,13 +15,13 @@ function Footer({
         currentTrack={currentTrack}
         currentTrackArtists={currentTrackArtists}
       />
-      <MusicPlayer
+      {/* <MusicPlayer
         token={token}
         currentTrack={currentTrack}
         setCurrentTrack={setCurrentTrack}
         setQueue={setQueue}
       />
-      <VolumeControls token={token} />
+      <VolumeControls token={token} /> */}
     </footer>
   );
 }
