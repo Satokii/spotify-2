@@ -1,0 +1,25 @@
+.navigation--container {
+    grid-area: Navigation;
+    grid-template-rows: 150px 1fr;
+    gap: 10px;
+    overflow: hidden;
+    margin: 5px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.navigation--library-container {
+    grid-template-rows: 56px 48px auto;
+    background-color: var(--const-base-bg);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow-y: scroll;
+}
+
+.navigation--library-container::-webkit-scrollbar  {
+    width: 1px;
+}
