@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import "./styles/volume-controls-container.css"
+import "./styles/volume-slider.css"
+
 function VolumeControls({ token }) {
   const [availableDevices, setAvailableDevices] = useState([]);
   const [volume, setVolume] = useState(50);
