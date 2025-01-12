@@ -1,3 +1,5 @@
+import "./styles/footer.css"
+
 function Footer({
   token,
   currentTrack,
