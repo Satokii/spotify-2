@@ -1,6 +1,6 @@
 function DashboardBanner() {
     return (
-        <div></div>
+        <div>Banner</div>
     )
 }
 
