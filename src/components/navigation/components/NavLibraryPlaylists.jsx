@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
+import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
+
 function NavLibraryPlaylists({ token, showFilter }) {
   const [likeSongsLibrary, setLikedSongsLibrary] = useState({});
   const [playlistItemsLibrary, setPlaylistItemsLibrary] = useState([]);
@@ -94,7 +96,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                   to={"/liked-songs"}
                   onClick={scrollToTop}
                 >
-                  <img
+                  <Image
                     className="navigation--playlists-item-img"
                     src={LikedSongsImg}
                     alt="liked songs img"
@@ -117,7 +119,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                     onClick={scrollToTop}
                   >
                     {playlist.images.length ? (
-                      <img
+                      <Image
                         className="navigation--playlists-item-img"
                         src={playlist.images[0].url}
                         alt="playlist songs img"
@@ -150,7 +152,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                     onClick={scrollToTop}
                   >
                     {album.album.images.length ? (
-                      <img
+                      <Image
                         className="navigation--playlists-item-img"
                         src={album.album.images[0].url}
                         alt="playlist songs img"
