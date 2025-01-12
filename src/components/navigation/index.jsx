@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavMainLinks from "./components/NavMainLinks";
 import NavLibraryHeader from "./components/NavLibraryHeader";
 import NavLibraryFilter from "./components/NavLibraryFilter";
-// import NavLibraryPlaylists from "./components/NavLibraryPlaylists";
+import NavLibraryPlaylists from "./components/NavLibraryPlaylists";
 
 import "./styles/navigation.css";
 
@@ -15,7 +15,7 @@ function Navigation({ token }) {
       <div className="navigation--library-container grid">
         <NavLibraryHeader />
         <NavLibraryFilter setShowFilter={setShowFilter} />
-        {/* <NavLibraryPlaylists token={token} showFilter={showFilter} /> */}
+        <NavLibraryPlaylists token={token} showFilter={showFilter} />
       </div>
     </section>
   );

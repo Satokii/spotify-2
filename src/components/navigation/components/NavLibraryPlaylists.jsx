@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
@@ -92,7 +93,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
           {showFilter === "Playlists" ? (
             <>
               <li tabIndex={1}>
-                <Link
+                {/* <Link
                   className="navigation--playlists-item-container grid"
                   to={"/liked-songs"}
                   onClick={scrollToTop}
@@ -110,11 +111,11 @@ function NavLibraryPlaylists({ token, showFilter }) {
                       Playlist &bull; {`${likeSongsLibrary.numTracks}`} songs
                     </div>
                   </div>
-                </Link>
+                </Link> */}
               </li>
               {playlistItemsLibrary.map((playlist, index) => (
                 <li key={`${playlist.id}-${index}`} tabIndex={1}>
-                  <Link
+                  {/* <Link
                     className="navigation--playlists-item-container grid"
                     to={`/user-playlist/${playlist.id}`}
                     onClick={scrollToTop}
@@ -139,7 +140,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                         &bull; {`${playlist.owner.display_name}`}
                       </div>
                     </div>
-                  </Link>
+                  </Link> */}
                 </li>
               ))}
             </>
@@ -147,7 +148,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
             <>
               {albumItemsLibrary.map((album, index) => (
                 <li key={`${album.album.id}-${index}`} tabIndex={1}>
-                  <Link
+                  {/* <Link
                     className="navigation--playlists-item-container grid"
                     to={`/album/${album.album.id}/${album.album.artists[0].id}`}
                     onClick={scrollToTop}
@@ -172,7 +173,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                         &bull; {`${album.album.artists[0].name}`}
                       </div>
                     </div>
-                  </Link>
+                  </Link> */}
                 </li>
               ))}
             </>
