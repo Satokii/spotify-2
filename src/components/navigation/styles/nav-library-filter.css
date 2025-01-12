@@ -1,0 +1,53 @@
+.navigation--library-filter-container {
+  grid-template-columns: repeat(3, auto);
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+/* NO FILTER ICON */
+.navigation--library-filter-none-container {
+  width: 32px;
+  height: 32px;
+  place-content: center;
+  justify-self: center;
+  border-radius: 9999px;
+  background-color: var(--disco-filter);
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation--library-filter-none-container:hover {
+  background-color: var(--album-track-hover);
+}
+
+.navigation--library-filter-none-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* FILTER HEADERS */
+.navigation--active-library-filter {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background-color: var(--const-main-white);
+  color: var(--const-black);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation--inactive-library-filter {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background-color: var(--disco-filter);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation--inactive-library-filter:hover {
+  background-color: var(--album-track-hover);
+}
