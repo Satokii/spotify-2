@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "../../styles/dashboard-playback/currently-playing-header.css"
+
 function CurrentlyPlayingHeader({ currentTrack, setPulse }) {
   const [funBtnClass, setFunBtnClass] = useState("pulse-off");
 
