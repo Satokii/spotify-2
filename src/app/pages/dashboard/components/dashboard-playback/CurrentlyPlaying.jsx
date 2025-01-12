@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import CurrentlyPlayingHeader from "./CurrentlyPlayingHeader";
+import CurrentlyPlayingTrack from "./CurrentlyPlayingTrack";
 
 import "../../styles/dashboard-playback/currently-playing.css"
 import "../../../../keyframes/img-pulse.css"
