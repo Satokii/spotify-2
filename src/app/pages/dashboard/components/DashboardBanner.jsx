@@ -1,8 +1,10 @@
+import CurrentlyPlaying from "./dashboard-playback/CurrentlyPlaying";
+
 function DashboardBanner() {
   return (
     <section className="dashboard--banner grid">
       <CurrentlyPlaying currentTrack={currentTrack} notPlaying={notPlaying} />
-      <Queue token={token} queue={queue} setQueue={setQueue} />
+      {/* <Queue token={token} queue={queue} setQueue={setQueue} /> */}
     </section>
   );
 }
