@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import HomeActive from "../../../assets/svgs/main-app/home-active.svg"
+import HomeInactive from "../../../assets/svgs/main-app/home-inactive.svg"
+import SearchActive from "../../../assets/svgs/main-app/search-active.svg"
+import SearchInactive from "../../../assets/svgs/main-app/search-inactive.svg"
+import TopPlayedActive from "../../../assets/svgs/main-app/top-played-active.svg"
+import TopPlayedInactive from "../../../assets/svgs/main-app/top-played-inactive.svg"
+
 function NavMainLinks() {
   const INITIAL_NAV_LINK_STATE = [
     {
