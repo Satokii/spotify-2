@@ -3,6 +3,8 @@ import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthNowPlaying from "@/shared-functions/fixLengthNowPlaying";
 import NowPlayingTrackArtists from "./functions/NowPlayingTrackArtists";
 
+import "./styles/now-playing.css";
+
 function NowPlaying({ currentTrack, currentTrackArtists }) {
   return (
     <section className="now-playing--container grid">
