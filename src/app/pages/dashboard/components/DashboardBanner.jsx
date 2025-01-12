@@ -1,6 +1,6 @@
 import CurrentlyPlaying from "./dashboard-playback/CurrentlyPlaying";
 
-function DashboardBanner() {
+function DashboardBanner({ currentTrack, notPlaying }) {
   return (
     <section className="dashboard--banner grid">
       <CurrentlyPlaying currentTrack={currentTrack} notPlaying={notPlaying} />

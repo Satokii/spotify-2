@@ -1,4 +1,5 @@
 import DashboardMenu from "./components/DashboardMenu"
+import DashboardBanner from "./components/DashboardBanner"
 
 function Dashboard({ setToken }) {
     return (
@@ -6,6 +7,7 @@ function Dashboard({ setToken }) {
             <div className="scrollbar-dashboard">
                 <main className="dashboard grid">
                  <DashboardMenu setToken={setToken} />
+                 <DashboardBanner token={token} queue={queue} setQueue={setQueue} currentTrack={currentTrack} notPlaying={notPlaying} />
                 </main>
             </div>
         </div>
