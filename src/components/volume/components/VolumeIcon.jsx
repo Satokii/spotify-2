@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import changeVolume from "../functions/changeVolume";
 
 import VolumeOnIcon from "../../../assets/svgs/volume/volume-on.svg"
@@ -29,13 +30,13 @@ function VolumeIcon({ token, volume, setVolume }) {
   return (
     <div className="volume-mute-icon-container" onClick={handleMuteBehaviour}>
       {mute ? (
-        <img
+        <Image
           className="volume-mute-icon"
           src={VolumeMuteIcon}
           alt="volume mute icon"
         />
       ) : (
-        <img
+        <Image
           className="volume-on-icon"
           src={VolumeOnIcon}
           alt="volume on icon"
