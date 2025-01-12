@@ -1,3 +1,5 @@
+import NowPlaying from "../now-playing";
+
 import "./styles/footer.css"
 
 function Footer({
