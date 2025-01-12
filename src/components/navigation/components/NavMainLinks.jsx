@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
 import HomeActive from "../../../assets/svgs/main-app/home-active.svg";
 import HomeInactive from "../../../assets/svgs/main-app/home-inactive.svg";
@@ -149,23 +150,23 @@ function NavMainLinks() {
       <ul className="navigation--main-links-icons-container grid">
         <li className="navigation--main-links-home-icons">
           {activeNavImg === "Home" ? (
-            <img src={HomeActive} alt="home icon active" />
+            <Image src={HomeActive} alt="home icon active" />
           ) : (
-            <img src={HomeInactive} alt="home icon inactive" />
+            <Image src={HomeInactive} alt="home icon inactive" />
           )}
         </li>
         <li className="navigation--main-links-search-icons">
           {activeNavImg === "Search" ? (
-            <img src={SearchActive} alt="home icon active" />
+            <Image src={SearchActive} alt="home icon active" />
           ) : (
-            <img src={SearchInactive} alt="home icon inactive" />
+            <Image src={SearchInactive} alt="home icon inactive" />
           )}
         </li>
         <li className="navigation--main-links-top-played-icons">
           {activeNavImg === "Top Played" ? (
-            <img src={TopPlayedActive} alt="home icon active" />
+            <Image src={TopPlayedActive} alt="home icon active" />
           ) : (
-            <img src={TopPlayedInactive} alt="home icon inactive" />
+            <Image src={TopPlayedInactive} alt="home icon inactive" />
           )}
         </li>
       </ul>
