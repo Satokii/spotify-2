@@ -12,11 +12,11 @@ function Navigation({ token }) {
   return (
     <section className="navigation--container grid">
       <NavMainLinks />
-      {/* <div className="navigation--library-container grid">
+      <div className="navigation--library-container grid">
         <NavLibraryHeader />
-        <NavLibraryFilter setShowFilter={setShowFilter} />
-        <NavLibraryPlaylists token={token} showFilter={showFilter} />
-      </div> */}
+        {/* <NavLibraryFilter setShowFilter={setShowFilter} />
+        <NavLibraryPlaylists token={token} showFilter={showFilter} /> */}
+      </div>
     </section>
   );
 }
