@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 function CurrentlyPlaying({ currentTrack, notPlaying }) {
-    
+
   const [pulse, setPulse] = useState(false);
 
   return (
