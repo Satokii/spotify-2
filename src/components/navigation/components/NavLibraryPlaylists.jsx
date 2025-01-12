@@ -97,7 +97,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
               <li tabIndex={1}>
                 <Link
                   className="navigation--playlists-item-container grid"
-                  href="liked-songs"
+                  to={"liked-songs"}
                   onClick={scrollToTop}
                 >
                   <Image
@@ -119,7 +119,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                 <li key={`${playlist.id}-${index}`} tabIndex={1}>
                   <Link
                     className="navigation--playlists-item-container grid"
-                    href={`/user-playlist/${playlist.id}`}
+                    to={`/user-playlist/${playlist.id}`}
                     onClick={scrollToTop}
                   >
                     {playlist.images.length ? (
@@ -152,7 +152,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                 <li key={`${album.album.id}-${index}`} tabIndex={1}>
                   <Link
                     className="navigation--playlists-item-container grid"
-                    href={`/album/${album.album.id}/${album.album.artists[0].id}`}
+                    to={`/album/${album.album.id}/${album.album.artists[0].id}`}
                     onClick={scrollToTop}
                   >
                     {album.album.images.length ? (
