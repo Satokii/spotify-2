@@ -1,0 +1,12 @@
+.footer {
+  grid-area: Footer;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  height: 100px;
+  padding: 10px;
+  background-color: var(--darker-black);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
