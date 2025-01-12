@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
 
+import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
+
 import "./root.css";
 import "./keyframes/fade-in.css";
 
