@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
+import fixLengthNowPlaying from "@/shared-functions/fixLengthNowPlaying";
 
 function NowPlaying({ currentTrack, currentTrackArtists }) {
   return (
