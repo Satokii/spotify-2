@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { useState } from "react"
+
+import CrossGray from "../../../assets/svgs/main-app/cross-gray.svg"
 
 function NavLibraryFilter({ setShowFilter }) {
 
