@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import getDevices from "./components/getDevices";
 
 import "./styles/volume-controls-container.css"
 import "./styles/volume-slider.css"
