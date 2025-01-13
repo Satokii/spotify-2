@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Baloo_Chettan_2, Calligraffitti, Figtree } from "next/font/google";
+import { Baloo_Chettan_2, Calligraffitti, Figtree } from "next/font/google";
 import "./globals.css";
 
 const balooChettan2 = Baloo_Chettan_2({
