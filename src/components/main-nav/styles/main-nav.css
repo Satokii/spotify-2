@@ -1,0 +1,26 @@
+.main-nav--container {
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  justify-content: start;
+  align-content: center;
+  color: #12121219;
+}
+
+.main-nav--icons-container {
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  justify-content: end;
+  align-content: center;
+}
+
+.main-nav--container img,
+.main-nav--icons-container img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.main-nav--container img:hover,
+.main-nav--icons-container img:hover {
+  transform: scale(1.15);
+}
