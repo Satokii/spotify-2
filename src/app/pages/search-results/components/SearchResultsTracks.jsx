@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import "../styles/search-results-tracks.css";
+
 function SearchResultsTracks({ trackResults }) {
   return (
     <div className="search-results-tracks--container grid">

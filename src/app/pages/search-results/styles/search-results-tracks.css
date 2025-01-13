@@ -1,0 +1,57 @@
+.search-results-tracks--container {
+  grid-template-rows: 30px auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-results-tracks--header {
+  font-size: 24px;
+}
+
+.search-results-tracks--list {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, 56px);
+}
+
+.search-results-tracks--track {
+  grid-template-columns: 40px 1fr 50px;
+  gap: 10px;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.search-results-tracks--track:hover {
+  background-color: var(--album-track-hover);
+}
+
+.search-results-tracks--track > img {
+  border-radius: 4px;
+}
+
+.search-results-tracks--track-text-container {
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+}
+
+.search-results-tracks--track-name {
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.search-results-tracks--track-name:hover {
+  text-decoration: underline 1.5px;
+  text-underline-offset: 2px;
+}
+
+.search-results-tracks--track-artist {
+  font-size: 14px;
+  color: var(--const-lighter-gray);
+}
+
+.search-results-tracks--track-time {
+  color: var(--const-lighter-gray);
+  font-size: 14px;
+}
