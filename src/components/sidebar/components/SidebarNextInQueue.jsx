@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import SidebarNextInQueueArtists from "../functions/SidebarNextInQueueArtists";
+import NoteIcon from "../../../assets/svgs/main-app/queue-note.svg"
 
 import "../styles/sidebar-next-in-queue.css"
 
@@ -41,9 +43,9 @@ function SidebarNextInQueue({ token }) {
         <p className="sidebar--queue-open-queue">Open queue</p>
       </div>
       <div className="sidebar--queue-track-details-container grid">
-        <img
+        <Image
           className="sidebar--queue-note-icon"
-          src={noteIcon}
+          src={NoteIcon}
           alt="note icon"
         />
         {nextInQueue.img ? (
