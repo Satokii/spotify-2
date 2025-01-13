@@ -1,6 +1,8 @@
 import DashboardMenu from "./components/DashboardMenu"
 import DashboardBanner from "./components/DashboardBanner"
 
+import "./styles/dashboard.css"
+
 function Dashboard({ token, queue, setQueue, setToken, currentTrack, notPlaying }) {
     return (
         <div className="dashboard-outer-container grid">
