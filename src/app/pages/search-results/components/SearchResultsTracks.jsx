@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import fixLengthSearchTracks from "@/shared-functions/fixLengthSearchTracks";
 import GetSearchTrackArtists from "@/shared-functions/GetSearchTrackArtists";
 import scrollToTop from "@/shared-functions/scrollToTop";
+import calcTrackTime from "@/shared-functions/calcTrackTime";
 
 import "../styles/search-results-tracks.css";
 
