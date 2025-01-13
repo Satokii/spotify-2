@@ -13,6 +13,7 @@ import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-
 
 import "./root.css";
 import "./keyframes/fade-in.css";
+import "../shared-styles/scrollbars.css"
 
 export default function Home() {
   const [token, setToken] = useState("");
