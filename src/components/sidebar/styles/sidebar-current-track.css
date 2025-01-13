@@ -1,0 +1,42 @@
+.sidebar--current-track-container {
+  grid-template-rows: 300px 32px 22px;
+  line-height: 1;
+}
+
+/* SIDEBAR CURRENT TRACK IMG */
+.sidebar--current-track-img-container {
+  width: fit-content;
+}
+
+.sidebar--current-track-img {
+  border-radius: 8px;
+  place-self: center;
+}
+
+/* SIDEBAR CURRENT TRACK NAME */
+.sidebar--current-track-name {
+  object-fit: cover;
+  font-size: 24px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.sidebar--current-track-name:hover {
+  text-decoration: underline 2px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+/* SIDEBAR CURRENT TRACK ARTIST */
+.sidebar--current-track-artist {
+  font-size: 15px;
+  color: var(--const-gray);
+  width: fit-content;
+}
+
+.sidebar--current-track-artist:hover {
+  color: var(--const-main-white);
+  text-decoration: underline 1px;
+  text-underline-offset: 1px;
+  cursor: pointer;
+}

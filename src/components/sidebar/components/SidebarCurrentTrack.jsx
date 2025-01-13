@@ -3,6 +3,8 @@ import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import CurrentTrackArtists from "../functions/SidebarTrackArtists"
 
+import "../styles/sidebar-current-track.css"
+
 function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
   return (
     <div className="sidebar--current-track-container grid">
