@@ -1,0 +1,5 @@
+.dashboard--banner  {
+    grid-template-columns: 355px 1fr;
+    gap: 20px;
+    padding: 0 5px;
+}
