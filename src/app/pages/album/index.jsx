@@ -4,6 +4,7 @@ import { usePalette } from "react-palette";
 import AlbumTopNav from "./components/AlbumTopNav";
 import getAlbum from "./functions/getAlbum";
 import getArtist from "../artist/functions/getArtist";
+import sleep from "@/shared-functions/sleep";
 
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
