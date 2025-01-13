@@ -1,3 +1,5 @@
+import "../styles/album-top-nav.css"
+
 function AlbumTopNav({ setToken }) {
   return (
     <div className="album-page--menu-backing">
