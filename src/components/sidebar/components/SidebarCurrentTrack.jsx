@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
+import CurrentTrackArtists from "../functions/SidebarTrackArtists"
 
 function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
   return (
