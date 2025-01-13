@@ -10,6 +10,7 @@ import palletGradient from "@/palettes/paletteGradient";
 import AlbumBanner from "./components/AlbumBanner";
 import AlbumControls from "./components/AlbumControls";
 import AlbumTracks from "./components/AlbumTracks";
+import AlbumMoreByArtist from "./components/AlbumMoreByArtist";
 
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
