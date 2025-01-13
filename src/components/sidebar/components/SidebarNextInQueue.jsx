@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import scrollToTop from "@/shared-functions/scrollToTop";
+import SidebarNextInQueueArtists from "../functions/SidebarNextInQueueArtists";
 
 import "../styles/sidebar-next-in-queue.css"
 
