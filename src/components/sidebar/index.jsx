@@ -1,3 +1,5 @@
+import SidebarCurrentTrack from "./components/SidebarCurrentTrack";
+
 import "./styles/sidebar.css"
 
 function Sidebar({ token, currentTrack, currentTrackArtists }) {
