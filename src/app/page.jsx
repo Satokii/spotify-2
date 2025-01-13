@@ -7,6 +7,7 @@ import axios from "axios";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
 import Navigation from "@/components/navigation";
+import Search from "./pages/search";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
 
@@ -94,6 +95,16 @@ export default function Home() {
                   currentTrack={currentTrack}
                   notPlaying={notPlaying}
                 />
+              ) : (
+                <WelcomePage />
+              )
+            }
+          ></Route>
+          <Route
+            path="/search"
+            element={
+              token ? (
+                <Search token={token} setToken={setToken} />
               ) : (
                 <WelcomePage />
               )
