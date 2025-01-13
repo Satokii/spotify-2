@@ -1,6 +1,7 @@
 import Image from "next/image";
 import calcTrackTime from "@/shared-functions/calcTrackTime";
 import formatDate from "@/shared-functions/formatDate";
+import GetAlbumTrackArtists from "@/shared-functions/GetAlbumTrackArtists";
 
 import TimeIcon from "../../../../assets/svgs/main-app/time.svg"
 import GrayHeart from "../../../../assets/svgs/main-app/heart-gray.svg";
