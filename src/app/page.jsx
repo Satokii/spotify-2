@@ -111,6 +111,16 @@ export default function Home() {
             }
           ></Route>
           <Route
+            path="/album/:albumId/:artistId"
+            element={
+              token ? (
+                <Album token={token} setToken={setToken} />
+              ) : (
+                <WelcomePage />
+              )
+            }
+          ></Route>
+          <Route
             path="/liked-songs"
             element={
               token ? (
