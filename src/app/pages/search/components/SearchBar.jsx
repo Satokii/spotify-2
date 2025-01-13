@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 
+import "../styles/searchbar.css"
+
 function SearchBar({
   token,
   setTrackResults,
