@@ -1,5 +1,6 @@
 import SidebarCurrentTrack from "./components/SidebarCurrentTrack";
 import SidebarAboutArtist from "./components/SidebarAboutArtist";
+import SidebarNextInQueue from "./components/SidebarNextInQueue";
 
 import "./styles/sidebar.css"
 
