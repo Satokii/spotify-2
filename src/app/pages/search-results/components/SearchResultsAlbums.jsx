@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "next/image";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import fixLengthPlaylistAlbum from "@/shared-functions/fixLengthPlaylistAlbum";
 import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg";
@@ -25,7 +26,7 @@ function SearchResultsAlbums({ albumResults }) {
                     src={album.images[0].url}
                     alt="album image"
                   />
-                  <img
+                  <Image
                     className="search-results-card--play"
                     src={PlayGreen}
                     alt="play button"
