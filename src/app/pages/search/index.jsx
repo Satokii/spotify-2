@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SearchPageTopNav from "./components/SearchPageTopNav";
+import SearchPageBrowse from "./components/SearchPageBrowse";
 
 import "./styles/search.css"
 
@@ -21,7 +22,7 @@ function Search({ token, setToken }) {
             setAlbumResults={setAlbumResults}
             setPlaylistResults={setPlaylistResults}
           />
-          {/* {trackResults.length > 0 ? (
+          {trackResults.length > 0 ? (
             <SearchResultsPage
               trackResults={trackResults}
               artistResults={artistResults}
@@ -30,7 +31,7 @@ function Search({ token, setToken }) {
             />
           ) : (
             <SearchPageBrowse />
-          )} */}
+          )}
         </section>
       </div>
     </div>
