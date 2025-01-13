@@ -1,6 +1,13 @@
 import { useState } from "react";
+import Image from "next/image";
 
 import MainPlayBtn from "../../../../assets/svgs/main-app/main-play-btn.svg";
+import MainPauseBtn from "../../../../assets/svgs/main-app/main-pause-btn.svg"
+import GreenShuffleBtn from "../../../../assets/svgs/main-app/shuffle-green.svg"
+import GrayShuffleBtn from "../../../../assets/svgs/main-app/shuffle-gray.svg"
+import GreenHeart from "../../../../assets/svgs/main-app/heart-green.svg"
+import GrayHeart from "../../../../assets/svgs/main-app/heart-gray.svg"
+import MenuDots from "../../../../assets/svgs/main-app/menu-dots.svg"
 
 function AlbumControls() {
   const [play, setPlay] = useState(false);
@@ -25,14 +32,14 @@ function AlbumControls() {
   return (
     <div className="album-page--controls grid">
       {play ? (
-        <img
+        <Image
           className="album-page--pause-btn"
           src={MainPauseBtn}
           alt="pause btn green"
           onClick={togglePlayAlbum}
         />
       ) : (
-        <img
+        <Image
           className="album-page--play-btn"
           src={MainPlayBtn}
           alt="play btn green"
@@ -40,14 +47,14 @@ function AlbumControls() {
         />
       )}
       {shuffle ? (
-        <img
+        <Image
           className="album-page--shuffle-btn-green"
           src={GreenShuffleBtn}
           alt="shuffle btn green"
           onClick={toggleShuffle}
         />
       ) : (
-        <img
+        <Image
           className="album-page--shuffle-btn-gray"
           src={GrayShuffleBtn}
           alt="shuffle btn gray"
@@ -55,21 +62,21 @@ function AlbumControls() {
         />
       )}
       {saved ? (
-        <img
+        <Image
           className="album-page--heart-green"
           src={GreenHeart}
           alt="heart green"
           onClick={toggleSaved}
         />
       ) : (
-        <img
+        <Image
           className="album-page--heart-gray"
           src={GrayHeart}
           alt="heart gray"
           onClick={toggleSaved}
         />
       )}
-      <img className="album-page--menu-dots" src={MenuDots} alt="menu dots" />
+      <Image className="album-page--menu-dots" src={MenuDots} alt="menu dots" />
     </div>
   );
 }
