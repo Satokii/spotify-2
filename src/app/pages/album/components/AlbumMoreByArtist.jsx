@@ -6,6 +6,8 @@ import fixLengthPreviews from "@/shared-functions/fixLengthPreviews.js";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg";
 
+import "../styles/album-more.css"
+
 function AlbumMoreByArtist({
   token,
   artistId,
