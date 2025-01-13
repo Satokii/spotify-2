@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 import axios from "axios";
 import getYear from "@/shared-functions/getYear";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews.js";
@@ -53,7 +54,7 @@ function AlbumMoreByArtist({
               {album.images.length ? (
                 <div className="more-by-artist--album-img-container">
                   <img src={album.images[0].url} alt={album.name} />
-                  <img
+                  <Image
                     className="more-by-artist--play"
                     src={PlayGreen}
                     alt="play button"
