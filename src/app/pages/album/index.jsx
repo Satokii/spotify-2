@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { usePalette } from "react-palette";
 import AlbumTopNav from "./components/AlbumTopNav";
+import getAlbum from "./functions/getAlbum";
 
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
