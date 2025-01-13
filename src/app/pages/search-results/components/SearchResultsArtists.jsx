@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
+import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg"
 
 function SearchResultsArtists({ artistResults }) {
   return (
