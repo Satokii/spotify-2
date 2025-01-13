@@ -1,0 +1,33 @@
+.search-page--outer-container {
+  grid-area: Main;
+  overflow: hidden;
+  background-color: var(--const-base-bg);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 5px;
+  padding-right: 3px;
+  padding-top: 65px;
+  opacity: 0;
+  animation: 0.3s ease 0.5s forwards fade-in;
+}
+
+.scrollbar-search-page {
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+}
+
+.scrollbar-search-page:hover {
+  visibility: visible;
+}
+
+.search-page-container {
+  padding: 8px 0 40px 20px;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

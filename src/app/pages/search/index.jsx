@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./styles/search.css"
+
 function Search({ token, setToken }) {
   const [trackResults, setTrackResults] = useState([]);
   const [artistResults, setArtistResults] = useState([]);
