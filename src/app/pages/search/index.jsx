@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SearchPageTopNav from "./components/SearchPageTopNav";
 
 import "./styles/search.css"
 
