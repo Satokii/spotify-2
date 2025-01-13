@@ -1,3 +1,5 @@
+import { genres } from "../genres";
+
 function SearchPageBrowse() {
   return (
     <div className="search-page-browse--container grid">
