@@ -12,6 +12,8 @@ import AlbumControls from "./components/AlbumControls";
 import AlbumTracks from "./components/AlbumTracks";
 import AlbumMoreByArtist from "./components/AlbumMoreByArtist";
 
+import "./styles/album-page.css"
+
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
   const [artistInfo, setArtistInfo] = useState({});

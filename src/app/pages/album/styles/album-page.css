@@ -1,0 +1,33 @@
+.scrollbar-album {
+  grid-area: Main;
+  overflow: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+  margin: 5px;
+}
+
+.scrollbar-album:hover {
+  visibility: visible;
+}
+
+.album-page--container {
+  grid-area: Main;
+  background-color: var(--const-base-bg);
+  grid-template-rows: 350px 1fr;
+  opacity: 0;
+  animation: 0.3s ease 0.8s forwards fade-in;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  overflow: hidden;
+}
+
+.album-page--sub-container {
+  grid-template-rows: 120px 1fr auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
