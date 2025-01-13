@@ -7,13 +7,14 @@ import axios from "axios";
 import WelcomePage from "./pages/welcome-page";
 import Dashboard from "./pages/dashboard";
 import Navigation from "@/components/navigation";
+import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
 
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 
 import "./root.css";
 import "./keyframes/fade-in.css";
-import "../shared-styles/scrollbars.css"
+import "../shared-styles/scrollbars.css";
 
 export default function Home() {
   const [token, setToken] = useState("");
@@ -111,6 +112,13 @@ export default function Home() {
             }
           ></Route>
         </Routes>
+        {token ? (
+          <Sidebar
+            token={token}
+            currentTrack={currentTrack}
+            currentTrackArtists={currentTrackArtists}
+          />
+        ) : null}
         {token ? (
           <Footer
             token={token}
