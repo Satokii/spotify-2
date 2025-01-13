@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import getYear from "@/shared-functions/getYear";
 import convertMsToTime from "@/shared-functions/convertMsToTime";
+import albumTimeinMs from "@/shared-functions/albumTimeInMs";
 
 function AlbumBanner({ albumInfo, artistInfo, albumTracksArr, artistId }) {
   return (
