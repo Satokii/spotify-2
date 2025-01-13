@@ -1,4 +1,6 @@
-import "../styles/album-top-nav.css"
+import MainNav from "@/components/main-nav";
+
+import "../styles/album-top-nav.css";
 
 function AlbumTopNav({ setToken }) {
   return (
