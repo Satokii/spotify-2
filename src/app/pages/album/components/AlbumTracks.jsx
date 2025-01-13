@@ -8,6 +8,7 @@ import GrayHeart from "../../../../assets/svgs/main-app/heart-gray.svg";
 import MenuDots from "../../../../assets/svgs/main-app/menu-dots.svg";
 import PlayButton from "../../../../assets/svgs/main-app/play-triangle.svg"
 
+import "../styles/album-tracks.css"
 
 function AlbumTracks({ albumTracksArr, albumInfo, copyrights }) {
   return (

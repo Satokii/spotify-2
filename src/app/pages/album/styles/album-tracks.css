@@ -1,0 +1,201 @@
+.album-page--tracks {
+  grid-template-rows: 35px 1fr auto;
+  gap: 20px;
+  padding: 0 25px;
+  margin-bottom: 50px;
+}
+
+/* TRACKS HEADERS */
+.album-page--tracks-headers {
+  grid-template-columns: 20px 1fr 65px;
+  gap: 20px;
+  align-items: center;
+  padding: 0 20px;
+  color: var(--const-gray);
+  font-size: 14px;
+  border-bottom: solid 1px var(--const-gray-faint);
+}
+
+.tracks-header--number {
+  justify-self: end;
+  font-size: 17px;
+  position: relative;
+}
+
+.tracks-header--title {
+  justify-self: start;
+}
+
+.tracks-header--time {
+  height: 18px;
+  width: 18px;
+}
+
+/* TRACKS */
+.album-page--tracks-tracks {
+  grid-auto-flow: row;
+  line-height: 1.3;
+}
+
+.album-page--single-track {
+  grid-template-columns: 20px 1fr 20px 30px 20px;
+  gap: 20px;
+  height: 56px;
+  border: solid 1px transparent;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+/* TRACK HOVER AND FOCUS EFFECTS */
+.album-page--single-track:hover {
+  background-color: var(--album-track-hover);
+}
+
+.album-page--single-track:hover .album-page--track-number,
+.album-page--single-track:focus .album-page--track-number {
+  opacity: 0;
+}
+
+.album-page--single-track:hover div,
+.album-page--single-track:focus div {
+  color: var(--const-main-white);
+}
+
+.album-page--single-track:focus {
+  background-color: var(--album-track-focus);
+  outline: 0;
+}
+
+.album-page--single-track:hover img,
+.album-page--single-track:focus img {
+  opacity: 1;
+}
+
+/* TRACK NUMBER */
+.album-page--track-num-container {
+  position: relative;
+}
+
+.album-page--track-number {
+  justify-self: center;
+  font-size: 18px;
+  color: var(--const-gray);
+}
+
+.album-page--hover-play-btn {
+  height: 15px;
+  width: 15px;
+  margin-left: 4px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0;
+}
+
+/* TRACK NAME */
+.album-page--track-name-container {
+  grid-template-rows: repeat(2, auto);
+  gap: 3px;
+  align-items: center;
+}
+
+.album-page--track-name {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* TRACK ARTISTS */
+.album-page--artist-sub-container {
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+}
+
+.album-page--explicit-container {
+  align-items: start;
+}
+
+.album-page--explicit-track {
+  font-size: 9px;
+  height: fit-content;
+  color: var(--darker-black);
+  border-radius: 2px;
+  background-color: var(--explicit-bg);
+  padding: 2px 5px;
+  margin-right: 7px;
+}
+
+.album-page--artist-name-container {
+  grid-template-columns: repeat(auto-fill, auto);
+  grid-auto-flow: column;
+  gap: 4px;
+}
+
+.album-page--artist-name {
+  font-size: 14px;
+  color: var(--const-gray);
+}
+
+.album-page--artist-name:hover {
+  text-decoration: underline;
+  text-underline-offset: 1.7px;
+  cursor: pointer;
+}
+
+/* TRACK LIKE */
+.album-page--hide-like {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.album-page--hide-like:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+.album-page--show-like {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* TRACK TIME */
+.album-page--track-time {
+  color: var(--const-gray);
+  font-size: 14px;
+}
+
+/* TRACK MENU DOTS */
+.album-page--track-dots {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.album-page--track-dots:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* RELEASE DATE AND COPYRIGHTS */
+.album-page--date-copyright-container {
+  margin-top: 10px;
+  color: var(--const-gray);
+  line-height: 1.4;
+}
+
+.album-page--release-date {
+  font-size: 14px;
+  width: fit-content;
+}
+
+.album-page--tracks-copyrights {
+  grid-auto-flow: row;
+  font-size: 11px;
+  margin-left: 1px;
+  width: fit-content;
+}
