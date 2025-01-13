@@ -1,0 +1,67 @@
+.sidebar--queue-container {
+  grid-template-rows: 24px auto;
+  gap: 10px;
+  padding: 16px 8px;
+  border-radius: 8px;
+  background-color: var(--const-sidebar-gray);
+}
+
+/* HEADERS */
+.sidebar--queue-headers {
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  padding: 0 8px;
+}
+
+.sidebar--queue-open-queue {
+  color: var(--const-lighter-gray);
+  font-size: 14px;
+  justify-self: end;
+}
+
+.sidebar--queue-open-queue:hover {
+  color: var(--const-main-white);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 1.5px;
+  transform: scale(1.04);
+}
+
+/* TRACK DETAILS */
+.sidebar--queue-track-details-container {
+  grid-template-columns: 16px 50px auto;
+  gap: 12px;
+  align-items: center;
+  padding: 8px;
+}
+
+.sidebar--queue-track-details-container:hover {
+  background-color: var(--album-track-hover);
+  border-radius: 8px;
+}
+
+.sidebar--queue-note-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar--queue-img {
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  place-self: center;
+}
+
+.sidebar--queue-track-name:hover {
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 1.5px;
+}
+
+.sidebar--queue-artists {
+  font-size: 14px;
+}

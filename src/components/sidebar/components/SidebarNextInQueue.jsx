@@ -4,6 +4,8 @@ import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
+import "../styles/sidebar-next-in-queue.css"
+
 function SidebarNextInQueue({ token }) {
   const [nextInQueue, setNextInQueue] = useState({});
   const [nextInQueueArtists, setNextInQueueArtists] = useState([]);
