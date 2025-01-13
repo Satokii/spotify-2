@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import fixLengthSearchTracks from "@/shared-functions/fixLengthSearchTracks";
+import GetSearchTrackArtists from "@/shared-functions/GetSearchTrackArtists";
 
 import "../styles/search-results-tracks.css";
 
