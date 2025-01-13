@@ -1,3 +1,5 @@
+import SearchResultsTracks from './components/SearchResultsTracks';
+
 import './styles/search-results-generic.css'
 
 function SearchResults({
