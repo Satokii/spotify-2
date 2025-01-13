@@ -1,0 +1,93 @@
+.album-page--controls {
+  grid-template-columns: 100px repeat(3, auto);
+  padding: 25px;
+  justify-content: start;
+  align-items: center;
+}
+
+.album-page--controls img {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.album-page--play-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.album-page--play-btn:hover {
+  transform: scale(1.03);
+}
+
+/* PAUSE BUTTON */
+.album-page--pause-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.album-page--pause-btn:hover {
+  transform: scale(1.03);
+}
+
+/* SHUFFLE BUTTON GRAY */
+.album-page--shuffle-btn-gray {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.album-page--shuffle-btn-gray:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* SHUFFLE BUTTON GREEN */
+.album-page--shuffle-btn-green {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.album-page--shuffle-btn-green:hover {
+  filter: var(--filter-hover-green);
+  transform: scale(1.05);
+}
+
+/* HEART BUTTON GRAY */
+.album-page--heart-gray {
+  width: 40px;
+  height: 40px;
+  transition: 0.1s;
+}
+
+.album-page--heart-gray:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* HEART BUTTON GREEN */
+.album-page--heart-green {
+  width: 40px;
+  height: 40px;
+  transition: 0.1s;
+}
+
+.album-page--heart-green:hover {
+  filter: var(--filter-hover-green);
+  transform: scale(1.05);
+}
+
+/* MENU DOTS */
+.album-page--menu-dots {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.album-page--menu-dots:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
