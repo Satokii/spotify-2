@@ -1,0 +1,26 @@
+.search-page-nav--container {
+  grid-template-columns: repeat(2, auto);
+  gap: 16px;
+  justify-content: start;
+  align-content: center;
+  color: #12121219;
+}
+
+.search-page-nav--icons-container {
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  justify-content: end;
+  align-content: center;
+}
+
+.search-page-nav--container img,
+.search-page-nav--icons-container img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.search-page-nav--container img:hover,
+.search-page-nav--icons-container img:hover {
+  transform: scale(1.15);
+}
