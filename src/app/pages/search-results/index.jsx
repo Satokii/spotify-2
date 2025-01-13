@@ -11,9 +11,9 @@ function SearchResults({
   return (
     <section className="search-results--container grid">
       <SearchResultsTracks trackResults={trackResults} />
-      <SearchResultsArtists artistResults={artistResults} />
+      {/* <SearchResultsArtists artistResults={artistResults} />
       <SearchResultsAlbums albumResults={albumResults} />
-      <SearchResultsPlaylists playlistResults={playlistResults} />
+      <SearchResultsPlaylists playlistResults={playlistResults} /> */}
     </section>
   );
 }

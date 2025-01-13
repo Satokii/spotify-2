@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchPageTopNav from "./components/SearchPageTopNav";
 import SearchPageBrowse from "./components/SearchPageBrowse";
+import SearchResults from "../search-results";
 
 import "./styles/search.css"
 
@@ -23,7 +24,7 @@ function Search({ token, setToken }) {
             setPlaylistResults={setPlaylistResults}
           />
           {trackResults.length > 0 ? (
-            <SearchResultsPage
+            <SearchResults
               trackResults={trackResults}
               artistResults={artistResults}
               albumResults={albumResults}
