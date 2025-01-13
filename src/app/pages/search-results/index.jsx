@@ -1,3 +1,5 @@
+import './styles/search-results-generic.css'
+
 function SearchResults({
   trackResults,
   artistResults,
