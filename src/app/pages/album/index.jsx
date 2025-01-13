@@ -8,6 +8,7 @@ import sleep from "@/shared-functions/sleep";
 import palletGradient from "@/palettes/paletteGradient";
 
 import AlbumBanner from "./components/AlbumBanner";
+import AlbumControls from "./components/AlbumControls";
 
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
