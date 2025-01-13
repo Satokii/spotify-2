@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 
