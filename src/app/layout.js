@@ -1,13 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Baloo_Chettan_2, Calligraffitti, Figtree } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const balooChettan2 = Baloo_Chettan_2({
+  variable: "--font-baloo-chettan-2",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const calligraffitti = Calligraffitti({
+  variable: "--font-calligraffitti",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
 });
 
@@ -19,7 +25,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${balooChettan2.variable} ${calligraffitti.variable} ${figtree.variable}`}
+      >
         {children}
       </body>
     </html>
