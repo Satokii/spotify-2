@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "next/image";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg"
@@ -23,7 +24,7 @@ function SearchResultsArtists({ artistResults }) {
                     src={artist.images[0].url}
                     alt="artist image"
                   />
-                  <img
+                  <Image
                     className="search-results-card--play"
                     src={PlayGreen}
                     alt="play button"
