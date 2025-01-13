@@ -1,3 +1,5 @@
+import "./styles/sidebar.css"
+
 function Sidebar({ token, currentTrack, currentTrackArtists }) {
   return (
     <div className="sidebar-outer-container grid">

@@ -1,0 +1,35 @@
+.sidebar-outer-container {
+  grid-area: Sidebar;
+  overflow: hidden;
+  background-color: var(--const-base-bg);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 5px;
+  padding: 5px 0;
+}
+
+.scrollbar-sidebar {
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+}
+
+.scrollbar-sidebar:hover {
+  visibility: visible;
+}
+
+.sidebar {
+  grid-template-rows: 360px 370px 125px;
+  padding: 30px 16px 16px;
+  gap: 10px;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: 0.3s ease 0.8s forwards fade-in;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
