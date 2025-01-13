@@ -1,5 +1,6 @@
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
+import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 
 function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
   return (
