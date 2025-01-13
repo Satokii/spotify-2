@@ -4,6 +4,8 @@ import scrollToTop from "@/shared-functions/scrollToTop";
 import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 
+import "../styles/sidebar-about-artist.css"
+
 function SidebarAboutArtist({ token, currentTrack }) {
   const [artistInfo, setArtistInfo] = useState({});
   const [isFollowing, setIsFollowing] = useState(false);
