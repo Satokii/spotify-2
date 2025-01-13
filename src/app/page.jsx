@@ -10,6 +10,7 @@ import Navigation from "@/components/navigation";
 import Search from "./pages/search";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
+import Album from "./pages/album";
 
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 
