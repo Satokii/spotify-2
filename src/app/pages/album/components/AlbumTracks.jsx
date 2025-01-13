@@ -1,6 +1,11 @@
+import Image from "next/image";
+import calcTrackTime from "@/shared-functions/calcTrackTime";
+
+import TimeIcon from "../../../../assets/svgs/main-app/time.svg"
 import GrayHeart from "../../../../assets/svgs/main-app/heart-gray.svg";
 import MenuDots from "../../../../assets/svgs/main-app/menu-dots.svg";
-import calcTrackTime from "@/shared-functions/calcTrackTime";
+import PlayButton from "../../../../assets/svgs/main-app/play-triangle.svg"
+
 
 function AlbumTracks({ albumTracksArr, albumInfo, copyrights }) {
   return (
@@ -8,7 +13,7 @@ function AlbumTracks({ albumTracksArr, albumInfo, copyrights }) {
       <div className="album-page--tracks-headers grid">
         <p className="tracks-header--number">#</p>
         <p className="tracks-header--title">Title</p>
-        <img className="tracks-header--time" src={TimeIcon} alt="time icon" />
+        <Image className="tracks-header--time" src={TimeIcon} alt="time icon" />
       </div>
       <div className="album-page--tracks-tracks grid">
         {albumTracksArr.map((track, index) => (
@@ -19,7 +24,7 @@ function AlbumTracks({ albumTracksArr, albumInfo, copyrights }) {
           >
             <div className="album-page--track-num-container">
               <div className="album-page--track-number">{index + 1}</div>
-              <img
+              <Image
                 className="album-page--hover-play-btn"
                 src={PlayButton}
                 alt="play button"
@@ -41,15 +46,15 @@ function AlbumTracks({ albumTracksArr, albumInfo, copyrights }) {
                 </div>
               </div>
             </div>
-            <img
+            <Image
               className="album-page--hide-like"
               src={GrayHeart}
               alt="gray heart"
-            ></img>
+            />
             <div className="album-page--track-time">
               {calcTrackTime(track.duration_ms)}
             </div>
-            <img
+            <Image
               className="album-page--track-dots"
               src={MenuDots}
               alt="menu dots"
