@@ -1,5 +1,7 @@
 import { genres } from "../genres";
 
+import "../styles/search-page-browse.css"
+
 function SearchPageBrowse() {
   return (
     <div className="search-page-browse--container grid">

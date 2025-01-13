@@ -1,0 +1,39 @@
+.search-page-browse--container {
+  grid-template-rows: 40px auto;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.search-page-browse--header {
+  font-size: 24px;
+}
+
+.search-page-browse--genre-container {
+  grid-template-columns: repeat(auto-fit, 190px);
+  gap: 24px;
+}
+
+.browse--genre-item {
+  position: relative;
+  height: 190px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.browse--genre-item-header {
+  font-size: 24px;
+  padding: 16px 20px;
+}
+
+.browse--genre-item-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  transform: rotate(25deg) translate(18%, -2%);
+}
