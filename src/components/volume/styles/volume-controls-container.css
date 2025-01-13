@@ -7,11 +7,11 @@
   margin-right: 40px;
 }
 
-.volume-mute-icon-container img {
+.volume-mute-icon-container {
   width: 20px;
   height: 20px;
 }
 
-.volume-mute-icon-container img:hover {
+.volume-mute-icon-container:hover {
   filter: var(--filter-hover-white);
 }
