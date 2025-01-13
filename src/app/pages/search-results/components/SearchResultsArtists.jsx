@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import scrollToTop from "@/shared-functions/scrollToTop";
+import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 
 function SearchResultsArtists({ artistResults }) {
   return (
