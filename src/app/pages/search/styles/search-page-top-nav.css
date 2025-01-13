@@ -1,0 +1,19 @@
+.search-page--menu-backing {
+  position: absolute;
+  top: 13px;
+  left: 293px;
+  width: calc(100% - 652px);
+  z-index: 1;
+  transition: 0.3s 0s ease;
+  background-color: var(--const-base-bg);
+}
+
+.search-page--menu-container {
+  grid-template-columns: 110px 300px auto;
+  padding: 0 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+  height: 65px;
+  transition: 0.3s 0s ease-in-out;
+}
