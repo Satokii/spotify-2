@@ -7,6 +7,8 @@ import getArtist from "../artist/functions/getArtist";
 import sleep from "@/shared-functions/sleep";
 import palletGradient from "@/palettes/paletteGradient";
 
+import AlbumBanner from "./components/AlbumBanner";
+
 function Album({ token, setToken }) {
   const [albumInfo, setAlbumInfo] = useState({});
   const [artistInfo, setArtistInfo] = useState({});
