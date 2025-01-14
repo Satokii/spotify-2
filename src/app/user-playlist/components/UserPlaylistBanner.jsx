@@ -1,6 +1,8 @@
 import convertMsToTime from "../../../shared-functions/convertMsToTime";
 import playlistTimeinMs from "../../playlist/functions/playlistTimeinMs";
 
+import "../styles/user-playlist-banner.css"
+
 function UserPlaylistBanner({ userPlaylistInfo, userPlaylistTracks }) {
   return (
     <div className="user-playlist--banner grid">
