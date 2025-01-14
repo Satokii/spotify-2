@@ -5,12 +5,12 @@ import { usePalette } from "react-palette";
 import { useRouter } from "next/navigation";
 import { useClient } from "@/components/ClientContext";
 
-import getPlaylist from "./functions/getPlaylist";
+import getPlaylist from "../functions/getPlaylist";
 import sleep from "@/shared-functions/sleep";
 import palletGradientPlaylist from "@/palettes/paletteGradientPlaylist";
-import PlaylistTopNav from "./components/PlaylistTopNav";
-import PlaylistBanner from "./components/PlaylistBanner";
-import PlaylistControls from "./components/PlaylistControls";
+import PlaylistTopNav from "../components/PlaylistTopNav";
+import PlaylistBanner from "../components/PlaylistBanner";
+import PlaylistControls from "../components/PlaylistControls";
 // import PlaylistTracks from "./components/PlaylistTracks";
 
 import "./styles/playlist-page.css";
