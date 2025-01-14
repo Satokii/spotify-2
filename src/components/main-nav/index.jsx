@@ -1,4 +1,4 @@
-// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Logout from "@/Logout";
 import BackArrow from "../../assets/svgs/main-app/back-arrow.svg";
@@ -10,15 +10,15 @@ import LogOutBtn from "../../assets/svgs/main-app/log-out.svg";
 import "./styles/main-nav.css";
 
 function MainNav({ setToken }) {
-  // const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <>
       <div className="main-nav--container grid">
-        <div onClick={() => navigate(-1)}>
+        <div onClick={() => router.back()}>
           <Image src={BackArrow} alt="back arrow" />
         </div>
-        <div onClick={() => navigate(1)}>
+        <div onClick={() => router.forward()}>
           <Image src={ForwardArrow} alt="forward arrow" />
         </div>
       </div>
