@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react";
 import { usePalette } from "react-palette";
 import { useRouter } from "next/navigation";
