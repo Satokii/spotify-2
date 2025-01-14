@@ -12,6 +12,8 @@ import fixPlaylistAlbumName from "../../../shared-functions/fixPlaylistAlbumName
 import formatDateShortMths from "../../../shared-functions/formatDateShortMths";
 import fixPlaylistTrackName from "../../../shared-functions/fixPlaylistTrackName";
 
+import "../styles/user-playlist-tracks.css";
+
 function UserPlaylistTracks({ userPlaylistTracks }) {
   return (
     <div className="user-playlist--tracks grid">
