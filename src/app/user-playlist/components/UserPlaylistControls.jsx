@@ -9,6 +9,8 @@ import GreenHeart from "../../../assets/svgs/main-app/heart-green.svg";
 import GrayHeart from "../../../assets/svgs/main-app/heart-gray.svg";
 import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
 
+import "../styles/user-playlist-controls.css"
+
 function UserPlaylistControls() {
   const [play, setPlay] = useState(false);
   const [shuffle, setShuffle] = useState(false);
