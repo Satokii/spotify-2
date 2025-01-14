@@ -8,7 +8,7 @@ function SearchPageTopNav({
   setTrackResults,
   setArtistResults,
   setAlbumResults,
-  setPlaylistResults,
+  // setPlaylistResults,
 }) {
   return (
     <div className="search-page--menu-backing">
@@ -19,7 +19,7 @@ function SearchPageTopNav({
           setTrackResults={setTrackResults}
           setArtistResults={setArtistResults}
           setAlbumResults={setAlbumResults}
-          setPlaylistResults={setPlaylistResults}
+          // setPlaylistResults={setPlaylistResults}
         />
       </section>
     </div>

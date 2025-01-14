@@ -17,7 +17,7 @@ function SearchPageNavContent({
   setTrackResults,
   setArtistResults,
   setAlbumResults,
-  setPlaylistResults,
+  // setPlaylistResults,
 }) {
   const router = useRouter();
 
@@ -36,7 +36,7 @@ function SearchPageNavContent({
         setTrackResults={setTrackResults}
         setArtistResults={setArtistResults}
         setAlbumResults={setAlbumResults}
-        setPlaylistResults={setPlaylistResults}
+        // setPlaylistResults={setPlaylistResults}
       />
       <div className="search-page-nav--icons-container grid">
         <div>

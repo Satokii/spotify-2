@@ -11,7 +11,7 @@ function SearchBar({
   setPlaylistResults,
 }) {
   const [searchQuery, setSearchQuery] = useState("");
-
+console.log("token", token)
   const getSearchResult = async (e) => {
     e.preventDefault();
     const { data } = await axios.get("https://api.spotify.com/v1/search", {
