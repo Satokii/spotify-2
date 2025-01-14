@@ -6,6 +6,7 @@ import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
+import WelcomePage from "@/app/pages/welcome-page";
 
 import paletteGradientUserPlaylist from "@/palettes/paletteGradientUserPlaylist";
 import UserPlaylistTopNav from "../components/UserPlaylistTopNav";
@@ -13,7 +14,7 @@ import UserPlaylistBanner from "../components/UserPlaylistBanner";
 import UserPlaylistControls from "../components/UserPlaylistControls";
 import UserPlaylistTracks from "../components/UserPlaylistTracks";
 
-import "../styles/user-playlist.css"
+import "../styles/user-playlist.css";
 
 function UserPlaylist() {
   const { token, setToken } = useClient();
@@ -81,6 +82,10 @@ function UserPlaylist() {
   useEffect(() => {
     sleep(0).then(() => paletteGradientUserPlaylist(data));
   }, [data]);
+
+  if (!token) {
+    return <WelcomePage />;
+  }
 
   return (
     <div className="scrollbar-user-playlist">
