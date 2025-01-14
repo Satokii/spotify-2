@@ -5,6 +5,7 @@ import { usePalette } from "react-palette";
 import { useRouter } from "next/navigation";
 import { useClient } from "@/components/ClientContext";
 
+import WelcomePage from "@/app/pages/welcome-page";
 import getPlaylist from "../functions/getPlaylist";
 import sleep from "@/shared-functions/sleep";
 import palletGradientPlaylist from "@/palettes/paletteGradientPlaylist";
@@ -34,6 +35,12 @@ function Playlist() {
   useEffect(() => {
     sleep(0).then(() => palletGradientPlaylist(data));
   }, [data]);
+
+  if (!token) {
+    return (
+      <WelcomePage />
+    )
+  }
 
   return (
     <div className="scrollbar-playlist">
