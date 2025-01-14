@@ -18,7 +18,7 @@ function MainNav({ setToken }) {
         <div onClick={() => router.back()}>
           <Image src={BackArrow} alt="back arrow" />
         </div>
-        <div onClick={() => router.forward()}>
+        <div onClick={() => router.forward()}> 
           <Image src={ForwardArrow} alt="forward arrow" />
         </div>
       </div>
