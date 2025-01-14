@@ -1,0 +1,93 @@
+.playlist-page--controls {
+  grid-template-columns: 100px repeat(3, auto);
+  padding: 25px;
+  justify-content: start;
+  align-items: center;
+}
+
+.playlist-page--controls img {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.playlist-page--play-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.playlist-page--play-btn:hover {
+  transform: scale(1.03);
+}
+
+/* PAUSE BUTTON */
+.playlist-page--pause-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.playlist-page--pause-btn:hover {
+  transform: scale(1.03);
+}
+
+/* SHUFFLE BUTTON GRAY */
+.playlist-page--shuffle-btn-gray {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.playlist-page--shuffle-btn-gray:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* SHUFFLE BUTTON GREEN */
+.playlist-page--shuffle-btn-green {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.playlist-page--shuffle-btn-green:hover {
+  filter: var(--filter-hover-green);
+  transform: scale(1.05);
+}
+
+/* HEART BUTTON GRAY */
+.playlist-page--heart-gray {
+  width: 40px;
+  height: 40px;
+  transition: 0.1s;
+}
+
+.playlist-page--heart-gray:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* HEART BUTTON GREEN */
+.playlist-page--heart-green {
+  width: 40px;
+  height: 40px;
+  transition: 0.1s;
+}
+
+.playlist-page--heart-green:hover {
+  filter: var(--filter-hover-green);
+  transform: scale(1.05);
+}
+
+/* MENU DOTS */
+.playlist-page--menu-dots {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.playlist-page--menu-dots:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
