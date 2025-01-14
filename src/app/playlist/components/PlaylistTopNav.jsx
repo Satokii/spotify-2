@@ -1,5 +1,7 @@
 import MainNav from "@/components/main-nav";
 
+import "../styles/playlist-top-nav.css";
+
 function PlaylistTopNav({ setToken }) {
   return (
     <div className="playlist-page--menu-backing">
