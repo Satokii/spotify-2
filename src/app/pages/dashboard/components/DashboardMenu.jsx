@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import Logout from "@/Logout";
 import sleep from "@/shared-functions/sleep";
 import scrollFade from "../functions/scrollFade";
@@ -13,22 +13,21 @@ import NotificationBell from "../../../../assets/svgs/main-app/noti-bell.svg";
 import "../styles/dashboard-menu.css";
 
 function DashboardMenu({ setToken }) {
-    
-  // const navigate = useNavigate();
-  sleep(0).then(() => scrollFade())
+  const router = useRouter();
+  sleep(0).then(() => scrollFade());
 
   return (
     <div className="main-page--menu-backing">
       <section className="main-page--menu grid">
         <div className="main-page--nav-container grid">
-          <div>
+          <div onClick={() => router.back()}>
             <Image
               className="main-page--nav-back-arrow"
               src={BackArrow}
               alt="back arrow"
             />
           </div>
-          <div>
+          <div onClick={() => router.forward()}>
             <Image
               className="main-page--nav-forward-arrow"
               src={ForwardArrow}
