@@ -10,7 +10,7 @@ import sleep from "@/shared-functions/sleep";
 import palletGradientPlaylist from "@/palettes/paletteGradientPlaylist";
 import PlaylistTopNav from "./components/PlaylistTopNav";
 import PlaylistBanner from "./components/PlaylistBanner";
-// import PlaylistControls from "./components/PlaylistControls";
+import PlaylistControls from "./components/PlaylistControls";
 // import PlaylistTracks from "./components/PlaylistTracks";
 
 import "./styles/playlist-page.css";
