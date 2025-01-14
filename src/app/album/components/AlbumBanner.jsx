@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import getYear from "@/shared-functions/getYear";

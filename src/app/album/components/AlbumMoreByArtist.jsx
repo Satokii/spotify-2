@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
