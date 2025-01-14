@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Image from "next/image";
 import Logout from "@/Logout";
 import BackArrow from "../../assets/svgs/main-app/back-arrow.svg";
@@ -10,7 +10,7 @@ import LogOutBtn from "../../assets/svgs/main-app/log-out.svg";
 import "./styles/main-nav.css";
 
 function MainNav({ setToken }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <>

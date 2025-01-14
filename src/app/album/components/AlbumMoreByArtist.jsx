@@ -6,7 +6,7 @@ import axios from "axios";
 import getYear from "@/shared-functions/getYear";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews.js";
 import scrollToTop from "@/shared-functions/scrollToTop";
-import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg";
+import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
 
 import "../styles/album-more.css"
 

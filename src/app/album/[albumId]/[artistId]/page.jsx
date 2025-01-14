@@ -1,23 +1,28 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
-import AlbumTopNav from "./components/AlbumTopNav";
-import getAlbum from "./functions/getAlbum";
-import getArtist from "../artist/functions/getArtist";
+import AlbumTopNav from "../../components/AlbumTopNav";
+import getAlbum from "../../functions/getAlbum";
+import getArtist from "@/app/pages/artist/functions/getArtist";
 import sleep from "@/shared-functions/sleep";
 import palletGradient from "@/palettes/paletteGradient";
 
-import AlbumBanner from "./components/AlbumBanner";
-import AlbumControls from "./components/AlbumControls";
-import AlbumTracks from "./components/AlbumTracks";
-import AlbumMoreByArtist from "./components/AlbumMoreByArtist";
+import AlbumBanner from "../../components/AlbumBanner";
+import AlbumControls from "../../components/AlbumControls";
+import AlbumTracks from "../../components/AlbumTracks";
+import AlbumMoreByArtist from "../../components/AlbumMoreByArtist";
 
-import "./styles/album-page.css"
+import "../../styles/album-page.css";
 
-function Album({ token, setToken }) {
+function Album({ params }) {
+  const { token, setToken } = useClient();
+
+  const { albumId, artistId } = params;
+
   const [albumInfo, setAlbumInfo] = useState({});
   const [artistInfo, setArtistInfo] = useState({});
-  const { albumId, artistId } = useParams();
   const [albumTracksArr, setAlbumTracksArr] = useState([]);
   const [copyrights, setCopyrights] = useState([]);
   const [artistAlbums, setArtistAlbums] = useState([]);
@@ -33,7 +38,6 @@ function Album({ token, setToken }) {
     sleep(0).then(() => getArtist(token, artistId, setArtistInfo));
   }, [artistId, token]);
 
-  // sleep(0).then(() => dynamicGradient(albumInfo))
   useEffect(() => {
     sleep(0).then(() => palletGradient(data));
   }, [data]);
