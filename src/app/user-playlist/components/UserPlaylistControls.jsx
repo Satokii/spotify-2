@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import Image from "next/image";
 import MainPlayBtn from "../../../assets/svgs/main-app/main-play-btn.svg";
 import MainPauseBtn from "../../../assets/svgs/main-app/main-pause-btn.svg";
 import GreenShuffleBtn from "../../../assets/svgs/main-app/shuffle-green.svg";
@@ -34,14 +35,14 @@ function UserPlaylistControls() {
   return (
     <div className="user-playlist--controls grid">
       {play ? (
-        <img
+        <Image
           className="user-playlist--pause-btn"
           src={MainPauseBtn}
           alt="pause btn green"
           onClick={togglePlayAlbum}
         />
       ) : (
-        <img
+        <Image
           className="user-playlist--play-btn"
           src={MainPlayBtn}
           alt="play btn green"
@@ -49,14 +50,14 @@ function UserPlaylistControls() {
         />
       )}
       {shuffle ? (
-        <img
+        <Image
           className="user-playlist--shuffle-btn-green"
           src={GreenShuffleBtn}
           alt="shuffle btn green"
           onClick={toggleShuffle}
         />
       ) : (
-        <img
+        <Image
           className="user-playlist--shuffle-btn-gray"
           src={GrayShuffleBtn}
           alt="shuffle btn gray"
@@ -64,21 +65,21 @@ function UserPlaylistControls() {
         />
       )}
       {saved ? (
-        <img
+        <Image
           className="user-playlist--heart-green"
           src={GreenHeart}
           alt="heart green"
           onClick={toggleSaved}
         />
       ) : (
-        <img
+        <Image
           className="user-playlist--heart-gray"
           src={GrayHeart}
           alt="heart gray"
           onClick={toggleSaved}
         />
       )}
-      <img
+      <Image
         className="user-playlist--menu-dots"
         src={MenuDots}
         alt="menu dots"
