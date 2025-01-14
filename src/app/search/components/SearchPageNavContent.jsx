@@ -1,15 +1,15 @@
-// import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import Logout from "@/Logout";
 import Image from "next/image";
 
-import BackArrow from "../../../assets/svgs/main-app/back-arrow.svg"
-import ForwardArrow from "../../../assets/svgs/main-app/forward-arrow.svg"
-import NotificationBell from "../../../assets/svgs/main-app/noti-bell.svg"
-import ProfileIcon from "../../../assets/svgs/main-app/profile-icon.svg"
-import LogOutBtn from "../../../assets/svgs/main-app/log-out.svg"
+import BackArrow from "../../../assets/svgs/main-app/back-arrow.svg";
+import ForwardArrow from "../../../assets/svgs/main-app/forward-arrow.svg";
+import NotificationBell from "../../../assets/svgs/main-app/noti-bell.svg";
+import ProfileIcon from "../../../assets/svgs/main-app/profile-icon.svg";
+import LogOutBtn from "../../../assets/svgs/main-app/log-out.svg";
 import SearchBar from "./SearchBar";
 
-import "../styles/search-page-nav-content.css"
+import "../styles/search-page-nav-content.css";
 
 function SearchPageNavContent({
   token,
@@ -19,15 +19,15 @@ function SearchPageNavContent({
   setAlbumResults,
   setPlaylistResults,
 }) {
-  // const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <>
       <div className="search-page-nav--container grid">
-        <div onClick={() => navigate(-1)}>
+        <div onClick={() => router.back()}>
           <Image src={BackArrow} alt="back arrow" />
         </div>
-        <div onClick={() => navigate(1)}>
+        <div onClick={() => router.forward()}>
           <Image src={ForwardArrow} alt="forward arrow" />
         </div>
       </div>

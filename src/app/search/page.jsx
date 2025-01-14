@@ -11,7 +11,7 @@ function Search({ token, setToken }) {
   const [trackResults, setTrackResults] = useState([]);
   const [artistResults, setArtistResults] = useState([]);
   const [albumResults, setAlbumResults] = useState([]);
-  // const [playlistResults, setPlaylistResults] = useState([]);
+  const [playlistResults, setPlaylistResults] = useState([]);
 
   return (
     <div className="search-page--outer-container grid">
@@ -23,14 +23,14 @@ function Search({ token, setToken }) {
             setTrackResults={setTrackResults}
             setArtistResults={setArtistResults}
             setAlbumResults={setAlbumResults}
-            // setPlaylistResults={setPlaylistResults}
+            setPlaylistResults={setPlaylistResults}
           />
           {trackResults.length > 0 ? (
             <SearchResults
               trackResults={trackResults}
               artistResults={artistResults}
               albumResults={albumResults}
-            //   playlistResults={playlistResults}
+              playlistResults={playlistResults}
             />
           ) : (
             <SearchPageBrowse />
