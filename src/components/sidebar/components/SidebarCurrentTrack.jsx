@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import CurrentTrackArtists from "../functions/SidebarTrackArtists"
@@ -6,11 +7,12 @@ import CurrentTrackArtists from "../functions/SidebarTrackArtists"
 import "../styles/sidebar-current-track.css"
 
 function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
+
   return (
     <div className="sidebar--current-track-container grid">
       <Link
         className="sidebar--current-track-img-container"
-        to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+        href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
         onClick={scrollToTop}
       >
         <div>
@@ -27,7 +29,7 @@ function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
       </Link>
       <Link
         className="sidebar--current-track-name"
-        to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+        href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
         onClick={scrollToTop}
       >
         {fixLengthPreviews(currentTrack.trackName)}

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
 const SidebarTrackArtists = (artists) => {
@@ -8,7 +9,7 @@ const SidebarTrackArtists = (artists) => {
       <Link
         id={artists[0].id}
         className="sidebar--current-track-artist"
-        to={`/artist/${artists[0].id}`}
+        href={`/artist/${artists[0].id}`}
         onClick={scrollToTop}
       >
         {artists[0].name}
@@ -21,7 +22,7 @@ const SidebarTrackArtists = (artists) => {
           <Link
             id={artist.id}
             className="sidebar--current-track-artist"
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >
             {artist.name}
@@ -32,7 +33,7 @@ const SidebarTrackArtists = (artists) => {
           <Link
             id={artist.id}
             className="sidebar--current-track-artist"
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >{`${artist.name}...`}</Link>
         );
@@ -41,7 +42,7 @@ const SidebarTrackArtists = (artists) => {
           <Link
             id={artist.id}
             className="sidebar--current-track-artist"
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >{`${artist.name}, `}</Link>
         );

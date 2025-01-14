@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg";
@@ -13,7 +14,7 @@ function SearchResultsPlaylists({ playlistResults }) {
           <Link
             className="search-results-card--single grid"
             key={`${playlist.id}-${index}`}
-            to={`/user-playlist/${playlist.id}`}
+            href={`/user-playlist/${playlist.id}`}
             onClick={scrollToTop}
           >
             <div className="search-results-card--img-outer-container">

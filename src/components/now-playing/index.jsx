@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthNowPlaying from "@/shared-functions/fixLengthNowPlaying";
 import NowPlayingTrackArtists from "./functions/NowPlayingTrackArtists";
@@ -10,7 +11,7 @@ function NowPlaying({ currentTrack, currentTrackArtists }) {
     <section className="now-playing--container grid">
       <Link
         className="now-playing--img"
-        to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+        href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
         onClick={scrollToTop}
       >
         {currentTrack.trackImageLength ? (
@@ -26,7 +27,7 @@ function NowPlaying({ currentTrack, currentTrackArtists }) {
         <div className="now-playing--track-name-container">
           <Link
             className="now-playing--track-name"
-            to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+            href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
             onClick={scrollToTop}
           >
             {fixLengthNowPlaying(currentTrack.trackName)}

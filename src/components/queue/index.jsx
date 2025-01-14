@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import fixLengthQueue from "@/shared-functions/fixLengthQueue";
 import getQueue from "./functions/getQueue";
 import scrollToTop from "../../shared-functions/scrollToTop";
@@ -20,7 +21,7 @@ function Queue({ token, queue, setQueue }) {
             <Link
               className="main-playback--queue-item grid"
               key={`${track.id}-${index}`}
-              to={`/album/${track.album.id}/${track.artists[0].id}`}
+              href={`/album/${track.album.id}/${track.artists[0].id}`}
               onClick={scrollToTop}
             >
               {track.album.images.length ? (
@@ -36,7 +37,7 @@ function Queue({ token, queue, setQueue }) {
               </p>
               <Link
                 className="main-playback--queue-artist"
-                to={`/artist/${track.artists[0].id}`}
+                href={`/artist/${track.artists[0].id}`}
                 onClick={scrollToTop}
               >
                 {fixLengthQueue(track.artists[0].name)}

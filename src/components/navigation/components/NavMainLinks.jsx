@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 
 import HomeActive from "../../../assets/svgs/main-app/home-active.svg";
@@ -177,7 +178,7 @@ function NavMainLinks() {
             className={nav.className}
             onClick={(e) => toggleActiveNav(e)}
           >
-            <Link to={nav.navigate}>{nav.name}</Link>
+            <Link href={nav.navigate}>{nav.name}</Link>
           </li>
         ))}
       </ul>

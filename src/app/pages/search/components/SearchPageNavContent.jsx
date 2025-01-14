@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Logout from "@/Logout";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ function SearchPageNavContent({
   setAlbumResults,
   setPlaylistResults,
 }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <>

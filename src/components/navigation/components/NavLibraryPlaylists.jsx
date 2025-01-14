@@ -1,7 +1,8 @@
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
 import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
@@ -97,7 +98,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
               <li tabIndex={1}>
                 <Link
                   className="navigation--playlists-item-container grid"
-                  to={"liked-songs"}
+                  href={"liked-songs"}
                   onClick={scrollToTop}
                 >
                   <Image
@@ -119,7 +120,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                 <li key={`${playlist.id}-${index}`} tabIndex={1}>
                   <Link
                     className="navigation--playlists-item-container grid"
-                    to={`/user-playlist/${playlist.id}`}
+                    href={`/user-playlist/${playlist.id}`}
                     onClick={scrollToTop}
                   >
                     {playlist.images.length ? (
@@ -152,7 +153,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                 <li key={`${album.album.id}-${index}`} tabIndex={1}>
                   <Link
                     className="navigation--playlists-item-container grid"
-                    to={`/album/${album.album.id}/${album.album.artists[0].id}`}
+                    href={`/album/${album.album.id}/${album.album.artists[0].id}`}
                     onClick={scrollToTop}
                   >
                     {album.album.images.length ? (

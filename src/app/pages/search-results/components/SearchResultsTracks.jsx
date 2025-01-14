@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import fixLengthSearchTracks from "@/shared-functions/fixLengthSearchTracks";
 import GetSearchTrackArtists from "@/shared-functions/GetSearchTrackArtists";
 import scrollToTop from "@/shared-functions/scrollToTop";
@@ -27,7 +28,7 @@ function SearchResultsTracks({ trackResults }) {
             <div className="search-results-tracks--track-text-container grid">
               <Link
                 className="search-results-tracks--track-name"
-                to={`/album/${track.album.id}/${track.artists[0].id}`}
+                href={`/album/${track.album.id}/${track.artists[0].id}`}
                 onClick={scrollToTop}
               >
                 {fixLengthSearchTracks(track.name)}

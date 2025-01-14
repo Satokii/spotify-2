@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
 import getYear from "@/shared-functions/getYear";
@@ -47,7 +48,7 @@ function AlbumMoreByArtist({
           <Link
             className="more-by-artist--item-container grid"
             key={album.id}
-            to={`/album/${album.id}/${album.artists[0].id}`}
+            href={`/album/${album.id}/${album.artists[0].id}`}
             onClick={scrollToTop}
           >
             <div className="more-by-artist--album-img">

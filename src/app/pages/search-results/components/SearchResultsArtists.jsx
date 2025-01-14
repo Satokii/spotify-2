@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
@@ -13,7 +14,7 @@ function SearchResultsArtists({ artistResults }) {
           <Link
             className="search-results-card--single grid"
             key={`${artist.id}-${index}`}
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >
             <div className="search-results-card--img-outer-container">

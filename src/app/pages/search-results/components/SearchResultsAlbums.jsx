@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import fixLengthPlaylistAlbum from "@/shared-functions/fixLengthPlaylistAlbum";
@@ -15,7 +16,7 @@ function SearchResultsAlbums({ albumResults }) {
           <Link
             className="search-results-card--single grid"
             key={`${album.id}-${index}`}
-            to={`/album/${album.id}/${album.artists[0].id}`}
+            href={`/album/${album.id}/${album.artists[0].id}`}
             onClick={scrollToTop}
           >
             <div className="search-results-card--img-outer-container">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Logout from "@/Logout";
 import sleep from "@/shared-functions/sleep";
 import scrollFade from "../functions/scrollFade";
@@ -14,21 +14,21 @@ import "../styles/dashboard-menu.css";
 
 function DashboardMenu({ setToken }) {
     
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   sleep(0).then(() => scrollFade())
 
   return (
     <div className="main-page--menu-backing">
       <section className="main-page--menu grid">
         <div className="main-page--nav-container grid">
-          <div onClick={() => navigate(-1)}>
+          <div>
             <Image
               className="main-page--nav-back-arrow"
               src={BackArrow}
               alt="back arrow"
             />
           </div>
-          <div onClick={() => navigate(1)}>
+          <div>
             <Image
               className="main-page--nav-forward-arrow"
               src={ForwardArrow}

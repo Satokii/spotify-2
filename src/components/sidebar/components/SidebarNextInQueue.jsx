@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
@@ -60,7 +60,7 @@ function SidebarNextInQueue({ token }) {
         <div>
           <Link
             className="sidebar--queue-track-name"
-            to={`/album/${nextInQueue.albumId}/${nextInQueue.artistId}`}
+            href={`/album/${nextInQueue.albumId}/${nextInQueue.artistId}`}
             onClick={scrollToTop}
           >
             {nextInQueue.title}

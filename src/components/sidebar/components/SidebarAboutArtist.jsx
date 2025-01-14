@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
@@ -7,6 +8,7 @@ import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import "../styles/sidebar-about-artist.css"
 
 function SidebarAboutArtist({ token, currentTrack }) {
+  
   const [artistInfo, setArtistInfo] = useState({});
   const [isFollowing, setIsFollowing] = useState(false);
 
@@ -49,7 +51,7 @@ function SidebarAboutArtist({ token, currentTrack }) {
       <div className="sidebar--about-artist-details-container grid">
         <Link
           className="sidebar--about-artist-name"
-          to={`/artist/${currentTrack.artistId}`}
+          href={`/artist/${currentTrack.artistId}`}
           onClick={scrollToTop}
         >
           {artistInfo.name}

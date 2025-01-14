@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
 import "../../styles/dashboard-playback/currently-playing-track.css"
@@ -23,7 +24,7 @@ function CurrentlyPlayingTrack({ currentTrack, notPlaying, pulse }) {
         >
           {currentTrack.trackImageLength ? (
             <Link
-              to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+              href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
               onClick={scrollToTop}
             >
               <img
@@ -38,14 +39,14 @@ function CurrentlyPlayingTrack({ currentTrack, notPlaying, pulse }) {
           <div className="main-playback--cur-playing-details grid">
             <Link
               className="main-playback--cur-playing-title"
-              to={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
+              href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
               onClick={scrollToTop}
             >
               {currentTrack.trackName}
             </Link>
             <Link
               className="main-playback--cur-playing-artist"
-              to={`/artist/${currentTrack.artistId}`}
+              href={`/artist/${currentTrack.artistId}`}
               onClick={scrollToTop}
             >
               {currentTrack.trackArtist}

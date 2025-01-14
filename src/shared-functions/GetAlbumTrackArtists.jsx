@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import scrollToTop from "./scrollToTop";
 
 const GetAlbumTrackArtists = (track) => {
@@ -8,7 +9,7 @@ const GetAlbumTrackArtists = (track) => {
       <Link
         id={track.artists[0].id}
         className="album-page--artist-name"
-        to={`/artist/${track.artists[0].id}`}
+        href={`/artist/${track.artists[0].id}`}
         onClick={scrollToTop}
       >
         {track.artists[0].name}
@@ -21,7 +22,7 @@ const GetAlbumTrackArtists = (track) => {
           <Link
             id={artist.id}
             className="album-page--artist-name"
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >
             {artist.name}
@@ -32,7 +33,7 @@ const GetAlbumTrackArtists = (track) => {
           <Link
             id={artist.id}
             className="album-page--artist-name"
-            to={`/artist/${artist.id}`}
+            href={`/artist/${artist.id}`}
             onClick={scrollToTop}
           >{`${artist.name}, `}</Link>
         );
