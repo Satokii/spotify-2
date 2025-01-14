@@ -7,6 +7,7 @@ import SearchPageBrowse from "./components/SearchPageBrowse";
 import SearchResults from "@/app/pages/search-results";
 
 import "./styles/search.css";
+import WelcomePage from "../pages/welcome-page";
 
 function Search() {
   const { token, setToken } = useClient();
@@ -14,7 +15,11 @@ function Search() {
   const [trackResults, setTrackResults] = useState([]);
   const [artistResults, setArtistResults] = useState([]);
   const [albumResults, setAlbumResults] = useState([]);
-//   const [playlistResults, setPlaylistResults] = useState([]);
+  //   const [playlistResults, setPlaylistResults] = useState([]);
+
+  if (!token) {
+    return <WelcomePage />;
+  }
 
   return (
     <div className="search-page--outer-container grid">
@@ -33,7 +38,7 @@ function Search() {
               trackResults={trackResults}
               artistResults={artistResults}
               albumResults={albumResults}
-            //   playlistResults={playlistResults}
+              //   playlistResults={playlistResults}
             />
           ) : (
             <SearchPageBrowse />
