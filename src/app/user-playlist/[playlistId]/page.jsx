@@ -13,7 +13,7 @@ import UserPlaylistBanner from "../components/UserPlaylistBanner";
 import UserPlaylistControls from "../components/UserPlaylistControls";
 import UserPlaylistTracks from "../components/UserPlaylistTracks";
 
-// import "./styles/user-playlist.css";
+import "../styles/user-playlist.css"
 
 function UserPlaylist() {
   const { token, setToken } = useClient();

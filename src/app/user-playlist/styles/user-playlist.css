@@ -1,0 +1,30 @@
+.scrollbar-user-playlist {
+  grid-area: Main;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+  margin: 5px;
+}
+
+.scrollbar-user-playlist:hover {
+  visibility: visible;
+}
+
+.user-playlist--container {
+  grid-area: Main;
+  grid-template-rows: 350px 1fr;
+  opacity: 0;
+  animation: 0.3s ease 0.8s forwards fade-in;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.user-playlist--sub-container {
+  grid-template-rows: 120px 1fr;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
