@@ -1,0 +1,59 @@
+/* BANNER */
+.playlist-page--banner {
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.playlist-page--banner-filter {
+  grid-template-rows: 30px 130px 20px 40px;
+  line-height: normal;
+  align-content: end;
+  align-items: center;
+  backdrop-filter: brightness(70%);
+  padding: 0 25px 25px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* PLAYLIST INFO */
+.playlist-page--playlist-type {
+  font-size: 14px;
+  text-transform: capitalize;
+  align-self: end;
+}
+
+.playlist-page--playlist-name {
+  font-size: calc(100% + 3vw);
+  /* font-size: 5em; */
+  font-weight: bold;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.playlist-page--playlist-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* PLAYLIST OVERVIEW */
+.playlist-page--playlist-overview-container {
+  grid-template-columns: repeat(6, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+  font-size: 14px;
+}
+
+.playlist-page--playlist-owner {
+  font-weight: bold;
+}
+
+.playlist-page--playlist-likes {
+  font-weight: bold;
+}
+
+.playlist-overview-song-num {
+  font-weight: bold;
+}
