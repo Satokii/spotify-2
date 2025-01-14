@@ -5,6 +5,7 @@ import { ClientProvider } from "@/components/ClientContext";
 import Navigation from "@/components/navigation";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
+import WelcomePage from "./pages/welcome-page";
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 import axios from "axios";
 
@@ -79,12 +80,17 @@ export default function ClientWrapper({ children }) {
     setNotPlaying,
   };
 
+  if (!token) {
+    return (
+      <WelcomePage />
+    )
+  }
+
   return (
     <ClientProvider value={contextValue}>
     <div className="container grid">
-      {token && <Navigation token={token} />}
+      <Navigation token={token} />
       {children}
-      {token && (
         <>
           <Sidebar
             token={token}
@@ -99,7 +105,6 @@ export default function ClientWrapper({ children }) {
             setQueue={setQueue}
           />
         </>
-      )}
     </div>
     </ClientProvider>
   );

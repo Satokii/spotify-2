@@ -173,7 +173,13 @@ export default function Page() {
     notPlaying,
   } = useClient();
 
-  return token ? (
+  if (!token) {
+    return (
+      <WelcomePage />
+    )
+  }
+
+  return (
     <Dashboard
       token={token}
       queue={queue}
@@ -182,7 +188,5 @@ export default function Page() {
       currentTrack={currentTrack}
       notPlaying={notPlaying}
     />
-  ) : (
-    <WelcomePage />
   );
 }
