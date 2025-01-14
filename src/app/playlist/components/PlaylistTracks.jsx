@@ -12,7 +12,7 @@ import GetSearchTrackArtists from "../../../shared-functions/GetSearchTrackArtis
 // import fixPlaylistTrackName from "../../../shared-functions/fixPlaylistTrackName";
 // import formatDateShortMths from "../../../shared-functions/formatDateShortMths";
 
-// import "../styles/playlist-tracks.css";
+import "../styles/playlist-tracks.css";
 
 function PlaylistTracks({ playlistTracks }) {
   const filteredTracks = playlistTracks.filter((track) => track.track !== null);
