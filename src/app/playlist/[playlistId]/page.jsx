@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { usePalette } from "react-palette";
-import { useRouter } from "next/navigation";
 import { useClient } from "@/components/ClientContext";
 
 import WelcomePage from "@/app/pages/welcome-page";
@@ -16,11 +15,10 @@ import PlaylistTracks from "../components/PlaylistTracks";
 
 import "./styles/playlist-page.css";
 
-function Playlist() {
+function Playlist({ params }) {
   const { token, setToken } = useClient();
 
-  const router = useRouter();
-  const { playlistId } = router.query;
+  const { playlistId } = params;
 
   const [playlistInfo, setPlaylistInfo] = useState({});
   const [playlistTracks, setPlaylistTracks] = useState([]);

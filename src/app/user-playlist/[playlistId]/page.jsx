@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 import axios from "axios";
@@ -16,11 +15,10 @@ import UserPlaylistTracks from "../components/UserPlaylistTracks";
 
 import "../styles/user-playlist.css";
 
-function UserPlaylist() {
+function UserPlaylist({ params }) {
   const { token, setToken } = useClient();
 
-  const router = useRouter();
-  const { playlistId } = router.query;
+  const { playlistId } = params;
 
   const [userPlaylistInfo, setUserPlaylistInfo] = useState({});
   const [userPlaylistTracks, setUserPlaylistTracks] = useState([]);
@@ -38,7 +36,6 @@ function UserPlaylist() {
           },
         }
       );
-      console.log(data);
       setUserPlaylistInfo({
         owner: data.owner.display_name,
         name: data.name,
