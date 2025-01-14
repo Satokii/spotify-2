@@ -1,4 +1,5 @@
 import convertMsToTime from "../../../shared-functions/convertMsToTime";
+import playlistTimeinMs from "../functions/playlistTimeInMs";
 
 function PlaylistBanner({ playlistInfo, playlistTracks }) {
   const filteredTracks = playlistTracks.filter((track) => track.track !== null);
