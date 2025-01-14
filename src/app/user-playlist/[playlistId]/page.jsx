@@ -7,7 +7,7 @@ import { usePalette } from "react-palette";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 
-// import paletteGradientUserPlaylist from "../../ColorThief/paletteGradientUserPlaylist";
+import paletteGradientUserPlaylist from "@/palettes/paletteGradientUserPlaylist";
 // import UserPlaylistTopNav from "./components/UserPlaylistTopNav";
 // import UserPlaylistBanner from "./components/UserPlaylistBanner";
 // import UserPlaylistControls from "./components/UserPlaylistControls";
