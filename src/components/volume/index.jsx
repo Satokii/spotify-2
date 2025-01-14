@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react";
 import getDevices from "./functions/getDevices";
 import handleDeviceVolumeChanges from "./functions/handleDeviceVolumeChanges";

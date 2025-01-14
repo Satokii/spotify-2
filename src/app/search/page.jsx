@@ -1,11 +1,14 @@
+"use client"
+
 import { useState } from "react";
-// import SearchPageTopNav from "./components/SearchPageTopNav";
-// import SearchPageBrowse from "./components/SearchPageBrowse";
-// import SearchResults from "../search-results";
-import SearchPageTopNav from "@/app/pages/search/components/SearchPageTopNav";
-import SearchPageBrowse from "@/app/pages/search/components/SearchPageBrowse";
+import SearchPageTopNav from "./components/SearchPageTopNav";
+import SearchPageBrowse from "./components/SearchPageBrowse";
 import SearchResults from "@/app/pages/search-results";
-// import "./styles/search.css"
+
+import "./styles/search.css"
+import "../../app/root.css"
+import "../../app/globals.css"
+import "../../app/keyframes/fade-in.css"
 
 function Search({ token, setToken }) {
   const [trackResults, setTrackResults] = useState([]);
@@ -35,7 +38,6 @@ function Search({ token, setToken }) {
           ) : (
             <SearchPageBrowse />
           )}
-          search here
         </section>
       </div>
     </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react";
 import getQueue from "../queue/functions/getQueue";
 import seekToPosition from "./functions/seekToPosition";

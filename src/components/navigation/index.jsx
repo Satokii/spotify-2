@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import NavMainLinks from "./components/NavMainLinks";
 import NavLibraryHeader from "./components/NavLibraryHeader";
