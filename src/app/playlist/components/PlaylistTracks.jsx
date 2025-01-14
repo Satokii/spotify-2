@@ -9,7 +9,7 @@ import PlayButton from "../../../assets/svgs/main-app/play-triangle.svg";
 import GetSearchTrackArtists from "../../../shared-functions/GetSearchTrackArtists";
 
 import fixPlaylistAlbumName from "@/shared-functions/fixPlaylistAlbumName";
-// import fixPlaylistTrackName from "../../../shared-functions/fixPlaylistTrackName";
+import fixPlaylistTrackName from "@/shared-functions/fixPlaylistTrackName";
 // import formatDateShortMths from "../../../shared-functions/formatDateShortMths";
 
 import "../styles/playlist-tracks.css";
