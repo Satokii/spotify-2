@@ -6,9 +6,6 @@ import SearchPageBrowse from "./components/SearchPageBrowse";
 import SearchResults from "@/app/pages/search-results";
 
 import "./styles/search.css"
-import "../../app/root.css"
-import "../../app/globals.css"
-import "../../app/keyframes/fade-in.css"
 
 function Search({ token, setToken }) {
   const [trackResults, setTrackResults] = useState([]);
