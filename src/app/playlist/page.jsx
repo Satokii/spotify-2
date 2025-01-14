@@ -5,7 +5,7 @@ import { usePalette } from "react-palette";
 import { useRouter } from "next/navigation";
 import { useClient } from "@/components/ClientContext";
 
-// import getPlaylist from "./functions/getPlaylist";
+import getPlaylist from "./functions/getPlaylist";
 // import sleep from "../../shared-functions/sleep";
 // import palletGradientPlaylist from "../../ColorThief/paletteGradientPlaylist";
 // import PlaylistTopNav from "./components/PlaylistTopNav"
