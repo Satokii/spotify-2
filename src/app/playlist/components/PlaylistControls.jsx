@@ -37,14 +37,14 @@ function PlaylistControls() {
       {play ? (
         <Image
           className="playlist-page--pause-btn"
-          href={MainPauseBtn}
+          src={MainPauseBtn}
           alt="pause btn green"
           onClick={togglePlayPlaylist}
         />
       ) : (
         <Image
           className="playlist-page--play-btn"
-          href={MainPlayBtn}
+          src={MainPlayBtn}
           alt="play btn green"
           onClick={togglePlayPlaylist}
         />
@@ -52,14 +52,14 @@ function PlaylistControls() {
       {shuffle ? (
         <Image
           className="playlist-page--shuffle-btn-green"
-          href={GreenShuffleBtn}
+          src={GreenShuffleBtn}
           alt="shuffle btn green"
           onClick={toggleShuffle}
         />
       ) : (
         <Image
           className="playlist-page--shuffle-btn-gray"
-          href={GrayShuffleBtn}
+          src={GrayShuffleBtn}
           alt="shuffle btn gray"
           onClick={toggleShuffle}
         />
@@ -67,21 +67,21 @@ function PlaylistControls() {
       {saved ? (
         <Image
           className="playlist-page--heart-green"
-          href={GreenHeart}
+          src={GreenHeart}
           alt="heart green"
           onClick={toggleSaved}
         />
       ) : (
         <Image
           className="playlist-page--heart-gray"
-          href={GrayHeart}
+          src={GrayHeart}
           alt="heart gray"
           onClick={toggleSaved}
         />
       )}
       <Image
         className="playlist-page--menu-dots"
-        href={MenuDots}
+        src={MenuDots}
         alt="menu dots"
       />
     </div>
