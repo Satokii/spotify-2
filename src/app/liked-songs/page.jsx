@@ -33,7 +33,7 @@ function LikedSongs() {
     getLikedSongs();
   }, [token]);
 
-  const { data } = usePalette(LikedSongsImg);
+  const { data } = usePalette(LikedSongsImg.blurDataURL);
   useEffect(() => {
     sleep(0).then(() => paletteGradientLikedSongs(data));
   }, [data]);
