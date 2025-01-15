@@ -1,0 +1,78 @@
+.artist-page--controls {
+  grid-template-columns: 100px repeat(3, auto);
+  padding: 25px;
+  justify-content: start;
+  align-items: center;
+}
+
+.artist-page--controls img,
+.artist-page--controls div {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.artist-page--play-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.artist-page--play-btn:hover {
+  transform: scale(1.03);
+}
+
+/* PAUSE BUTTON */
+.artist-page--pause-btn {
+  width: 70px;
+  height: 70px;
+  transition: 0.1s;
+}
+
+.artist-page--pause-btn:hover {
+  transform: scale(1.03);
+}
+
+/* SHUFFLE BUTTON GRAY */
+.artist-page--shuffle-btn-gray {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.artist-page--shuffle-btn-gray:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* SHUFFLE BUTTON GREEN */
+.artist-page--shuffle-btn-green {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.artist-page--shuffle-btn-green:hover {
+  filter: var(--filter-hover-green);
+  transform: scale(1.05);
+}
+
+.artist-page--following,
+.artist-page--not-following {
+  font-size: 14px;
+  border: solid 1px var(--const-gray);
+  border-radius: 9999px;
+  padding: 5px 15px;
+}
+
+/* MENU DOTS */
+.artist-page--menu-dots {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+}
+
+.artist-page--menu-dots:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}

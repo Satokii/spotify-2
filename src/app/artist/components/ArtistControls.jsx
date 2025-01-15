@@ -8,7 +8,7 @@ import GreenShuffleBtn from "../../../assets/svgs/main-app/shuffle-green.svg";
 import GrayShuffleBtn from "../../../assets/svgs/main-app/shuffle-gray.svg";
 import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
 
-// import "../styles/artist-controls.css";
+import "../styles/artist-controls.css";
 
 function ArtistControls() {
   const [play, setPlay] = useState(false);
