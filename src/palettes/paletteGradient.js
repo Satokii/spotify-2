@@ -1,4 +1,4 @@
-const  palletGradient = (data) => {
+const  paletteGradient = (data) => {
     const lightImgColour = data.lightMuted;
     const darkImgColour = data.vibrant;
     let mixedImgColour = "#";
@@ -56,5 +56,5 @@ const  palletGradient = (data) => {
     albumBackground.style.background = `linear-gradient(${darkFoundColour}, ${darkerFoundColour} 10%, ${evenDarkerFoundColour} 20%, #1a1a1a 42%, #121212 60%)`;
   }
   
-  export default palletGradient;
+  export default paletteGradient;
   

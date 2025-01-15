@@ -1,4 +1,4 @@
-const palletGradientPlaylist = (data) => {
+const paletteGradientPlaylist = (data) => {
     const lightImgColour = data.darkMuted;
     const darkImgColour = data.vibrant;
     let mixedImgColour = "#";
@@ -56,5 +56,5 @@ const palletGradientPlaylist = (data) => {
     artistBackground.style.background = `linear-gradient(${darkFoundColour}, ${darkerFoundColour} 5%, ${evenDarkerFoundColour} 9%, #1a1a1a 11%, #121212 16%)`
   }
   
-  export default palletGradientPlaylist;
+  export default paletteGradientPlaylist;
   

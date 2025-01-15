@@ -7,7 +7,7 @@ import AlbumTopNav from "../../components/AlbumTopNav";
 import getAlbum from "../../functions/getAlbum";
 import getArtist from "@/app/pages/artist/functions/getArtist";
 import sleep from "@/shared-functions/sleep";
-import palletGradient from "@/palettes/paletteGradient";
+import paletteGradient from "@/palettes/paletteGradient";
 
 import AlbumBanner from "../../components/AlbumBanner";
 import AlbumControls from "../../components/AlbumControls";
@@ -39,7 +39,7 @@ function Album({ params }) {
   }, [artistId, token]);
 
   useEffect(() => {
-    sleep(0).then(() => palletGradient(data));
+    sleep(0).then(() => paletteGradient(data));
   }, [data]);
 
   return (

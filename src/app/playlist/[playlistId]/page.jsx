@@ -7,7 +7,7 @@ import { useClient } from "@/components/ClientContext";
 import WelcomePage from "@/app/pages/welcome-page";
 import getPlaylist from "../functions/getPlaylist";
 import sleep from "@/shared-functions/sleep";
-import palletGradientPlaylist from "@/palettes/paletteGradientPlaylist";
+import paletteGradientPlaylist from "@/palettes/paletteGradientPlaylist";
 import PlaylistTopNav from "../components/PlaylistTopNav";
 import PlaylistBanner from "../components/PlaylistBanner";
 import PlaylistControls from "../components/PlaylistControls";
@@ -31,7 +31,7 @@ function Playlist({ params }) {
 
   const { data } = usePalette(playlistInfo.img);
   useEffect(() => {
-    sleep(0).then(() => palletGradientPlaylist(data));
+    sleep(0).then(() => paletteGradientPlaylist(data));
   }, [data]);
 
   if (!token) {
