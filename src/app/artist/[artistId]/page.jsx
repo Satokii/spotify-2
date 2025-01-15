@@ -13,7 +13,7 @@ import ArtistTopNav from "../components/ArtistTopNav";
 import ArtistBanner from "../components/ArtistBanner";
 import ArtistControls from "../components/ArtistControls";
 import ArtistPopularTracks from "../components/ArtistPopularTracks";
-// import ArtistDiscography from "./components/ArtistDiscography";
+import ArtistDiscography from "../components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
 // import ArtistAppearsOn from "./components/ArtistAppearsOn";
 // import palletGradientArtist from "../../ColorThief/paletteGradientArtist";
