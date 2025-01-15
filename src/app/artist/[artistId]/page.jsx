@@ -5,8 +5,7 @@ import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 
 import sleep from "@/shared-functions/sleep";
-
-// import getArtist from "./functions/getArtist";
+import getArtist from "../functions/getArtist";
 // import getArtistTopTracks from "./functions/getArtistTopTracks";
 // import getArtistTop5Tracks from "./functions/getArtistTop5Tracks";
 // import getAlbums from "./functions/getAlbums";
