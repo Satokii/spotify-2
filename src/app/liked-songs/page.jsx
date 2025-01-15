@@ -6,7 +6,7 @@ import { useClient } from "@/components/ClientContext";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 
-// import paletteGradientLikedSongs from "../../ColorThief/paletteGradientLikedSongs";
+import paletteGradientLikedSongs from "@/palettes/paletteGradientLikedSongs";
 import LikedSongsImg from "../../assets/images/liked-songs-img.png";
 // import LikedSongsTopNav from "./components/LikedSongsTopNav"
 // import LikedSongsBanner from "./components/LikedSongsBanner";
