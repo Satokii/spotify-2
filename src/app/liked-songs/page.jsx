@@ -11,7 +11,7 @@ import LikedSongsImg from "../../assets/images/liked-songs-img.png";
 import LikedSongsTopNav from "./components/LikedSongsTopNav";
 import LikedSongsBanner from "./components/LikedSongsBanner";
 import LikedSongsControls from "./components/LikedSongsControls";
-// import LikedSongsTracks from "./components/LikedSongsTracks";
+import LikedSongsTracks from "./components/LikedSongsTracks";
 
 import "./styles/liked-songs.css"
 
