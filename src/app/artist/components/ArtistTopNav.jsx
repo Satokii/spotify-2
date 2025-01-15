@@ -1,6 +1,6 @@
 import MainNav from "@/components/main-nav";
 
-// import "../styles/artist-top-nav.css";
+import "../styles/artist-top-nav.css";
 
 function ArtistTopNav({ setToken }) {
   return (
