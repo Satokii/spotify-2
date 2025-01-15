@@ -1,0 +1,48 @@
+/* ARTIST BANNER */
+.artist-page--banner-container {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.artist-page--banner-filter {
+  grid-template-rows: 30px 130px 40px;
+  line-height: normal;
+  align-content: end;
+  align-items: center;
+  height: 100%;
+  padding: 0 25px 25px;
+  backdrop-filter: brightness(80%);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* BANNER VERIFIED CONTAINER */
+.artist-banner--verified-container {
+  grid-template-columns: 30px 1fr;
+  gap: 2px;
+  align-items: center;
+}
+
+.artist-banner--verified-img {
+  width: 30px;
+  height: 30px;
+}
+
+.artist-banner--verified-text {
+  font-size: 15px;
+}
+
+/* BANNER ARTIST NAME */
+.artist-banner--artist-name {
+  font-size: 100px;
+  font-weight: bold;
+  align-self: start;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  letter-spacing: 1px;
+}
+
+/* BANNER FOLLOWERS */
+.artist-banner--artist-followers {
+  font-size: 16px;
+  padding-left: 5px;
+}
