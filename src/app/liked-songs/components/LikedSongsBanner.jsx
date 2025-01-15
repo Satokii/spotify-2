@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
 
 import "../styles/liked-songs-banner.css";
@@ -6,7 +7,7 @@ function LikedSongsBanner({ likedSongsInfo }) {
   return (
     <div className="liked-songs--banner grid">
       <div className="liked-songs--banner-img-container">
-        <img
+        <Image
           className="liked-songs--img"
           src={LikedSongsImg}
           alt="liked songs img"
