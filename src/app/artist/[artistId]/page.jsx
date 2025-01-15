@@ -18,7 +18,7 @@ import ArtistDiscography from "../components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
 import ArtistAppearsOn from "../components/ArtistAppearsOn";
 // import getPopularReleases from "./functions/getPopularReleases";
-// import getSingles from "./functions/getSingles";
+import getSingles from "../functions/getSingles";
 
 // import "./styles/artist-page.css";
 // import "./styles/artist-card-styling.css";
@@ -79,7 +79,7 @@ function Artist({ params }) {
             top5TracksArr={top5TracksArr}
           />
           <ArtistDiscography
-            popularReleases={popularReleases}
+            popularReleases={topTracksArr}
             album={album}
             single={single}
           />
