@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import fixLengthQueue from "@/shared-functions/fixLengthQueue";
 import getQueue from "./functions/getQueue";
