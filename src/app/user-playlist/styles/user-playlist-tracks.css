@@ -151,6 +151,11 @@
   gap: 4px;
 }
 
+.album-page--artist-name {
+  font-size: 14px;
+  color: var(--const-gray);
+}
+
 /* ALBUM NAME */
 .user-playlist--album-name {
   color: var(--const-gray);
