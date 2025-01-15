@@ -15,7 +15,7 @@ import ArtistControls from "../components/ArtistControls";
 import ArtistPopularTracks from "../components/ArtistPopularTracks";
 import ArtistDiscography from "../components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
-// import ArtistAppearsOn from "./components/ArtistAppearsOn";
+import ArtistAppearsOn from "../components/ArtistAppearsOn";
 // import palletGradientArtist from "../../ColorThief/paletteGradientArtist";
 // import getPopularReleases from "./functions/getPopularReleases";
 // import getSingles from "./functions/getSingles";
