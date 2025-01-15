@@ -1,0 +1,29 @@
+.scrollbar-liked-songs {
+  grid-area: Main;
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+  margin: 5px;
+}
+
+.scrollbar-liked-songs:hover {
+  visibility: visible;
+}
+
+.liked-songs--container {
+  grid-area: Main;
+  grid-template-rows: 350px 1fr;
+  opacity: 0;
+  animation: 0.3s ease 0.8s forwards fade-in;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.liked-songs--sub-container {
+  grid-template-rows: 120px 1fr;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

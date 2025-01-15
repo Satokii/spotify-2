@@ -13,7 +13,7 @@ import LikedSongsImg from "../../assets/images/liked-songs-img.png";
 // import LikedSongsControls from "./components/LikedSongsControls";
 // import LikedSongsTracks from "./components/LikedSongsTracks";
 
-// import "./styles/liked-songs.css"
+import "./styles/liked-songs.css"
 
 function LikedSongs() {
   const { token, setToken } = useClient();
