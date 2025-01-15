@@ -1,6 +1,6 @@
 import MainNav from "@/components/main-nav";
 
-// import "../styles/liked-songs-top-nav.css";
+import "../styles/liked-songs-top-nav.css";
 
 function LikedSongsTopNav({ setToken }) {
   return (
