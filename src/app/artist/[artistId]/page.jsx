@@ -17,7 +17,6 @@ import ArtistPopularTracks from "../components/ArtistPopularTracks";
 import ArtistDiscography from "../components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
 import ArtistAppearsOn from "../components/ArtistAppearsOn";
-// import getPopularReleases from "./functions/getPopularReleases";
 import getSingles from "../functions/getSingles";
 
 import "../styles/artist-page.css";
@@ -31,8 +30,6 @@ function Artist({ params }) {
   const [artistInfo, setArtistInfo] = useState({});
   const [topTracksArr, setTopTracksArr] = useState([]);
   const [top5TracksArr, setTop5TracksArr] = useState([]);
-
-  const [popularReleases, setPopularReleases] = useState([]);
   const [album, setAlbum] = useState([]);
   const [single, setSingle] = useState([]);
 
@@ -46,12 +43,6 @@ function Artist({ params }) {
 
   useEffect(() => {
     sleep(0).then(() => getArtistTop5Tracks(token, artistId, setTop5TracksArr));
-  }, [artistId, token]);
-
-  useEffect(() => {
-    sleep(0).then(() =>
-      getPopularReleases(token, artistId, setPopularReleases)
-    );
   }, [artistId, token]);
 
   useEffect(() => {
