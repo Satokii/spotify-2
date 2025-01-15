@@ -5,7 +5,7 @@ import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 import AlbumTopNav from "../../components/AlbumTopNav";
 import getAlbum from "../../functions/getAlbum";
-import getArtist from "@/app/pages/artist/functions/getArtist";
+import getArtist from "@/app/artist/functions/getArtist";
 import sleep from "@/shared-functions/sleep";
 import paletteGradient from "@/palettes/paletteGradient";
 
