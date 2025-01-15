@@ -83,7 +83,7 @@ function Artist({ params }) {
             album={album}
             single={single}
           />
-          <ArtistSimilarArtists token={token} artistId={artistId} />
+          {/* <ArtistSimilarArtists token={token} artistId={artistId} /> */}
           <ArtistAppearsOn token={token} artistId={artistId} />
         </div>
       </section>
