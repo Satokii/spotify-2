@@ -8,7 +8,7 @@ import sleep from "@/shared-functions/sleep";
 import getArtist from "../functions/getArtist";
 import getArtistTopTracks from "../functions/getArtistTopTracks";
 import getArtistTop5Tracks from "../functions/getArtistTop5Tracks";
-// import getAlbums from "./functions/getAlbums";
+import getAlbums from "../functions/getAlbums";
 // import ArtistTopNav from "./components/ArtistTopNav";
 // import ArtistBanner from "./components/ArtistBanner";
 // import ArtistControls from "./components/ArtistControls";
