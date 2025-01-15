@@ -98,7 +98,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
               <li tabIndex={1}>
                 <Link
                   className="navigation--playlists-item-container grid"
-                  href={"liked-songs"}
+                  href={"/liked-songs"}
                   onClick={scrollToTop}
                 >
                   <Image
