@@ -21,7 +21,7 @@ import ArtistAppearsOn from "../components/ArtistAppearsOn";
 import getSingles from "../functions/getSingles";
 
 import "../styles/artist-page.css";
-// import "./styles/artist-card-styling.css";
+import "../styles/artist-card-styling.css";
 
 function Artist({ params }) {
   const { token, setToken } = useClient();
