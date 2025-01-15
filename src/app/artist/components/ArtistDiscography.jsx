@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import scrollToTop from "@/shared-functions/scrollToTop";
 import GrayCircle from "../../../assets/svgs/main-app/gray-circle.svg";
 import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
 
-// import "../styles/artist-discography.css";
+import "../styles/artist-discography.css";
 
 function ArtistDiscography({ popularReleases, album, single }) {
   const FILTER_INITIAL_STATE = [
