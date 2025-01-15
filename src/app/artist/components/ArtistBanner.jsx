@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-// import VerifiedIcon from "../../../assets/svgs/main-app/verified-icon.svg";
+import VerifiedIcon from "../../../assets/svgs/main-app/verified-icon.svg";
 
 // import "../styles/artist-banner.css";
 
