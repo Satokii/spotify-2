@@ -11,7 +11,7 @@ import getArtistTop5Tracks from "../functions/getArtistTop5Tracks";
 import getAlbums from "../functions/getAlbums";
 import ArtistTopNav from "../components/ArtistTopNav";
 import ArtistBanner from "../components/ArtistBanner";
-// import ArtistControls from "./components/ArtistControls";
+import ArtistControls from "../components/ArtistControls";
 // import ArtistPopularTracks from "./components/ArtistPopularTracks";
 // import ArtistDiscography from "./components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
