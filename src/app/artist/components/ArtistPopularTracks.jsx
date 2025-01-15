@@ -7,7 +7,7 @@ import PlayButton from "../../../assets/svgs/main-app/play-triangle.svg";
 import GrayHeart from "../../../assets/svgs/main-app/heart-gray.svg";
 import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
 
-// import "../styles/artist-popular-tracks.css";
+import "../styles/artist-popular-tracks.css";
 
 function ArtistPopularTracks({ topTracksArr, top5TracksArr }) {
   const [showAllTracks, setShowAllTracks] = useState(false);

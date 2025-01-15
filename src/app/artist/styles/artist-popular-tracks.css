@@ -1,0 +1,133 @@
+.artist-page--popular-tracks {
+  grid-template-rows: 35px 1fr 20px;
+  gap: 20px;
+  padding: 0 25px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+}
+
+/* ARTIST TRACKS HEADER */
+.artist--tracks-header {
+  font-size: 24px;
+}
+
+/* TRACKS */
+.artist--tracks-tracks {
+  grid-auto-flow: row;
+  line-height: 1.3;
+}
+
+.artist-page--single-track {
+  grid-template-columns: 20px 40px 1fr 20px 30px 20px;
+  gap: 20px;
+  height: 56px;
+  border: solid 1px transparent;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+/* TRACK HOVER AND FOCUS EFFECTS */
+.artist-page--single-track:hover {
+  background-color: var(--album-track-hover);
+}
+
+.artist-page--single-track:hover .artist-page--track-number,
+.artist-page--single-track:focus .artist-page--track-number {
+  opacity: 0;
+}
+
+.artist-page--single-track:hover div,
+.artist-page--single-track:focus div {
+  color: var(--const-main-white);
+}
+
+.artist-page--single-track:focus {
+  background-color: var(--album-track-focus);
+  outline: 0;
+}
+
+.artist-page--single-track:hover img,
+.artist-page--single-track:focus img {
+  opacity: 1;
+}
+
+/* TRACK NUMBER */
+.artist-page--track-num-container {
+  position: relative;
+}
+
+.artist-page--track-number {
+  justify-self: center;
+  font-size: 18px;
+  color: var(--const-gray);
+  position: relative;
+}
+
+.artist-page--hover-play-btn {
+  height: 15px;
+  width: 15px;
+  margin-left: 4px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0;
+}
+
+/* TRACK IMAGE */
+.artist-page--track-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* TRACK NAME */
+.artist-page--track-name {
+  font-size: 18px;
+}
+
+/* TRACK LIKE */
+.artist-page--hide-like {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.artist-page--hide-like:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* TRACK TIME */
+.artist-page--track-time {
+  color: var(--const-gray);
+  font-size: 14px;
+}
+
+/* TRACK MENU DOTS */
+.artist-page--track-dots {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.artist-page--track-dots:hover {
+  filter: var(--filter-hover-white);
+  transform: scale(1.05);
+}
+
+/* EXPAND TRACKS */
+.artist-page--expand-tracks {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--const-gray);
+  width: fit-content;
+  padding: 0 16px;
+}
+
+.artist-page--expand-tracks:hover {
+  color: var(--const-white);
+  cursor: default;
+}
