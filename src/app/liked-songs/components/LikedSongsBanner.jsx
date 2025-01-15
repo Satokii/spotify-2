@@ -1,6 +1,6 @@
 import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
 
-// import "../styles/liked-songs-banner.css";
+import "../styles/liked-songs-banner.css";
 
 function LikedSongsBanner({ likedSongsInfo }) {
   return (
