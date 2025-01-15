@@ -6,6 +6,7 @@ import { usePalette } from "react-palette";
 
 import sleep from "@/shared-functions/sleep";
 import getArtist from "../functions/getArtist";
+import palletGradientArtist from "@/palettes/paletteGradientArtist";
 import getArtistTopTracks from "../functions/getArtistTopTracks";
 import getArtistTop5Tracks from "../functions/getArtistTop5Tracks";
 import getAlbums from "../functions/getAlbums";
@@ -16,7 +17,6 @@ import ArtistPopularTracks from "../components/ArtistPopularTracks";
 import ArtistDiscography from "../components/ArtistDiscography";
 // import ArtistSimilarArtists from "./components/ArtistSimilarArtists";
 import ArtistAppearsOn from "../components/ArtistAppearsOn";
-// import palletGradientArtist from "../../ColorThief/paletteGradientArtist";
 // import getPopularReleases from "./functions/getPopularReleases";
 // import getSingles from "./functions/getSingles";
 
