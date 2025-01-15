@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import getYear from "@/shared-functions/getYear";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
@@ -81,7 +82,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
                   src={item.album.images[0].url}
                   alt={item.name}
                 />
-                <img
+                <Image
                   className="artist--section-play"
                   src={PlayGreen}
                   alt="play button"
@@ -94,7 +95,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
           <div className="artist--section-name">{item.name}</div>
           <div className="artist--section-extra-card-details grid">
             <div>{getYear(item.album.release_date)}</div>
-            <img className="gray-circle" src={GrayCircle} alt="gray circle" />
+            <Image className="gray-circle" src={GrayCircle} alt="gray circle" />
             <div className="artist--section-album-type ">
               {item.album.album_type}
             </div>
@@ -117,7 +118,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
                   src={item.images[0].url}
                   alt={item.name}
                 />
-                <img
+                <Image
                   className="artist--section-play"
                   src={PlayGreen}
                   alt="play button"
@@ -130,7 +131,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
           <div className="artist--section-name">{item.name}</div>
           <div className="artist--section-extra-card-details grid">
             <div>{getYear(item.release_date)}</div>
-            <img className="gray-circle" src={GrayCircle} alt="gray circle" />
+            <Image className="gray-circle" src={GrayCircle} alt="gray circle" />
             <div className="artist--section-album-type ">{item.album_type}</div>
           </div>
         </Link>
@@ -151,7 +152,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
                   src={item.images[0].url}
                   alt={item.name}
                 />
-                <img
+                <Image
                   className="artist--section-play"
                   src={PlayGreen}
                   alt="play button"
@@ -164,7 +165,7 @@ function ArtistDiscography({ popularReleases, album, single }) {
           <div className="artist--section-name">{item.name}</div>
           <div className="artist--section-extra-card-details grid">
             <div>{getYear(item.release_date)}</div>
-            <img className="gray-circle" src={GrayCircle} alt="gray circle" />
+            <Image className="gray-circle" src={GrayCircle} alt="gray circle" />
             <div className="artist--section-album-type ">{item.album_type}</div>
           </div>
         </Link>

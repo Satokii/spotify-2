@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import axios from "axios";
 import getYear from "@/shared-functions/getYear";
 import scrollToTop from "@/shared-functions/scrollToTop";
@@ -53,7 +54,7 @@ function ArtistAppearsOn({ token, artistId }) {
                     src={track.images[0].url}
                     alt="artist image"
                   />
-                  <img
+                  <Image
                     className="artist--section-play"
                     src={PlayGreen}
                     alt="play button"
@@ -68,7 +69,7 @@ function ArtistAppearsOn({ token, artistId }) {
               <div className="artist--appears-on-date">
                 {getYear(track.release_date)}
               </div>
-              <img className="gray-circle" src={GrayCircle} alt="gray circle" />
+              <Image className="gray-circle" src={GrayCircle} alt="gray circle" />
               <div className="artist--section-album-type ">
                 {track.album_type}
               </div>
