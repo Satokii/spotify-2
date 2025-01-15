@@ -1,0 +1,52 @@
+.scrollbar-artist {
+  grid-area: Main;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+  margin: 5px;
+}
+
+.scrollbar-artist:hover {
+  visibility: visible;
+}
+
+.artist-page--container {
+  grid-area: Main;
+  grid-template-rows: 400px 1fr;
+  height: 100%;
+  opacity: 0;
+  animation: 0.3s ease 0.8s forwards fade-in;
+  margin-bottom: 20px;
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.artist-page--sub-container {
+  grid-template-rows: 130px 1fr 400px repeat(2, 350px);
+  gap: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.artist-page--show-all {
+  color: var(--const-gray);
+  font-size: 14px;
+  font-weight: bold;
+  align-self: end;
+  justify-self: center;
+}
+
+.artist-page--show-all:hover {
+  cursor: pointer;
+  text-decoration: underline 1px;
+  text-underline-offset: 1.5px;
+}
+
+.gray-circle {
+  width: 4px;
+  height: 4px;
+}
