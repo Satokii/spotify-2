@@ -82,6 +82,7 @@
 
 .dashboard-playlist-list--img img {
   border-radius: 8px;
+  height: 150px;
 }
 
 .dashboard-playlist-list--play {
