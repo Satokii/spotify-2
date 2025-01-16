@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
+import WelcomePage from "@/components/welcome-page";
 import AlbumTopNav from "../../components/AlbumTopNav";
 import getAlbum from "../../functions/getAlbum";
 import getArtist from "@/app/artist/functions/getArtist";
@@ -41,6 +42,10 @@ function Album({ params }) {
   useEffect(() => {
     sleep(0).then(() => paletteGradient(data));
   }, [data]);
+
+  if (!token) {
+    return <WelcomePage />;
+  }
 
   return (
     <div className="scrollbar-album">

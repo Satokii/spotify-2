@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 
+import WelcomePage from "@/components/welcome-page";
 import sleep from "@/shared-functions/sleep";
 import getArtist from "../functions/getArtist";
 import palletGradientArtist from "@/palettes/paletteGradientArtist";
@@ -57,6 +58,10 @@ function Artist({ params }) {
   useEffect(() => {
     sleep(0).then(() => palletGradientArtist(data));
   }, [data]);
+
+  if (!token) {
+    return <WelcomePage />;
+  }
 
   return (
     <div className="scrollbar-artist">
