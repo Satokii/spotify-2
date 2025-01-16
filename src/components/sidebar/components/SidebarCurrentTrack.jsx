@@ -12,6 +12,7 @@ function SidebarCurrentTrack({ currentTrack, currentTrackArtists }) {
     <div className="sidebar--current-track-container grid">
       <Link
         className="sidebar--current-track-img-container"
+        key={`sbarCurrentTrack${currentTrack.albumId}`}
         href={`/album/${currentTrack.albumId}/${currentTrack.artistId}`}
         onClick={scrollToTop}
       >
