@@ -2,7 +2,7 @@
 
 import { useClient } from "@/components/ClientContext";
 import WelcomePage from "./pages/welcome-page";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "@/components/dashboard";
 
 export default function Page() {
   const {

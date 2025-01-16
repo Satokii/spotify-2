@@ -2,7 +2,7 @@ import { Baloo_Chettan_2, Calligraffitti, Figtree } from "next/font/google";
 import ClientWrapper from "./ClientWrapper";
 import "./globals.css";
 import "./root.css";
-import "./keyframes/fade-in.css";
+import "../keyframes/fade-in.css";
 import "../shared-styles/scrollbars.css";
 
 const balooChettan2 = Baloo_Chettan_2({ variable: "--font-baloo-chettan-2", subsets: ["latin"] });
