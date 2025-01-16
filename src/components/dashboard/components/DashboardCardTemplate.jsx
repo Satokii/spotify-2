@@ -3,7 +3,7 @@ import Image from "next/image";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
-// import fixLenthPlistDesc from "../../../shared-functions/fixLengthPlistDesc";
+import fixLenthPlistDesc from "@/shared-functions/fixLengthPlistDesc";
 // import DashboardCardTemplate from "./DashboardCardTemplate";
 
 function DashboardCardTemplate({ title, details }) {
@@ -38,8 +38,7 @@ function DashboardCardTemplate({ title, details }) {
             </div>
             <div className="dashboard-playlist-list--name">{playlist.name}</div>
             <div className="dashboard-playlist-list--description">
-              {playlist.description}
-              {/* {fixLenthPlistDesc(playlist.description)} */}
+              {fixLenthPlistDesc(playlist.description)}
             </div>
           </Link>
         ))}
