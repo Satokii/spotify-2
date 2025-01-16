@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import SearchPageTopNav from "./components/SearchPageTopNav";
 import SearchPageBrowse from "./components/SearchPageBrowse";
-import SearchResults from "@/app/pages/search-results";
+import SearchResults from "@/components/search-results";
 
 import "./styles/search.css";
 import WelcomePage from "../../components/welcome-page";

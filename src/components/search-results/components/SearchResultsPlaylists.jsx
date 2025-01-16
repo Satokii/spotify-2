@@ -1,29 +1,28 @@
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import Image from "next/image";
-import scrollToTop from "@/shared-functions/scrollToTop";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
-import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg"
+import scrollToTop from "@/shared-functions/scrollToTop";
+import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
 
-function SearchResultsArtists({ artistResults }) {
+function SearchResultsPlaylists({ playlistResults }) {
   return (
     <div className="search-results-card--container grid">
-      <h3 className="search-results-card-header">Artists</h3>
+      <h3 className="search-results-card-header">Playlists</h3>
       <ul className="search-results-card--list grid">
-        {artistResults.map((artist, index) => (
+        {playlistResults.map((playlist, index) => (
           <Link
             className="search-results-card--single grid"
-            key={`${artist.id}-${index}`}
-            href={`/artist/${artist.id}`}
+            key={`${playlist.id}-${index}`}
+            href={`/user-playlist/${playlist.id}`}
             onClick={scrollToTop}
           >
             <div className="search-results-card--img-outer-container">
-              {artist.images.length ? (
+              {playlist.images.length ? (
                 <div className="search-results-card--img-container">
                   <img
-                    className="search-results--card-img"
-                    src={artist.images[0].url}
-                    alt="artist image"
+                    className="search-results--card-img-sq"
+                    src={playlist.images[0].url}
+                    alt="playlist image"
                   />
                   <Image
                     className="search-results-card--play"
@@ -32,13 +31,15 @@ function SearchResultsArtists({ artistResults }) {
                   />
                 </div>
               ) : (
-                <div className="search-results--card-img"></div>
+                <div className="search-results--card-img-sq"></div>
               )}
             </div>
             <p className="search-results--card-name">
-              {fixLengthSearch(artist.name)}
+              {fixLengthSearch(playlist.name)}
             </p>
-            <p className="search-results--card-type">Artist</p>
+            <p className="search-results--card-type">
+              {fixLengthSearch(playlist.owner.display_name)}
+            </p>
           </Link>
         ))}
       </ul>
@@ -46,4 +47,4 @@ function SearchResultsArtists({ artistResults }) {
   );
 }
 
-export default SearchResultsArtists;
+export default SearchResultsPlaylists;

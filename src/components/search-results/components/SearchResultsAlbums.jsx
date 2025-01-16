@@ -1,11 +1,10 @@
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import Image from "next/image";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import fixLengthPlaylistAlbum from "@/shared-functions/fixLengthPlaylistAlbum";
-import PlayGreen from "../../../../assets/svgs/main-app/main-play-btn.svg";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import getYear from "@/shared-functions/getYear";
+import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
 
 function SearchResultsAlbums({ albumResults }) {
   return (
