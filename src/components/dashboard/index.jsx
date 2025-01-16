@@ -1,5 +1,7 @@
 import DashboardMenu from "./components/DashboardMenu";
 import DashboardBanner from "./components/DashboardBanner";
+import { playlistCategories } from "./playlistCategories";
+import RenderDashboardPlaylists from "./components/RenderDashboardPlaylists";
 
 import "./styles/dashboard.css";
 
