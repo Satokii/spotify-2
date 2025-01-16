@@ -1,7 +1,36 @@
 export const playlistCategories = [
     {
         category: "pop",
-        title: "Pop"
+        title: "Pop",
+        details: [
+            {
+                name: "test 1",
+                img: "https//",
+                description: "this is the description"
+            },
+            {
+                name: "test 2",
+                img: "https//",
+                description: "this is the description"
+            },{
+                name: "test 3",
+                img: "https//",
+                description: "this is the description"
+            },{
+                name: "test 4",
+                img: "https//",
+                description: "this is the description"
+            },{
+                name: "test 5",
+                img: "https//",
+                description: "this is the description"
+            },{
+                name: "test 6",
+                img: "https//",
+                description: "this is the description"
+            },
+        ]
+        
     },
     {
         category: "rock",
