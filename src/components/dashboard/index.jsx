@@ -33,6 +33,7 @@ function Dashboard({
                 token={token}
                 category={cat.category}
                 title={cat.title}
+                details={cat.details}
               />
             ))}
           </section>
