@@ -4,6 +4,7 @@ import { playlistCategories } from "./playlistCategories";
 import RenderDashboardPlaylists from "./components/RenderDashboardPlaylists";
 
 import "./styles/dashboard.css";
+import "./styles/dashboard-playlists.css"
 
 function Dashboard({
   token,

@@ -1,0 +1,109 @@
+.dashboard--playlist-container {
+  grid-template-rows: 40px 270px;
+  gap: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* HEADER CONTAINER */
+.dashboard--playlist-header-container {
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  padding: 0 5px;
+}
+
+/* HEADER */
+.dashboard--playlist-header {
+  font-size: 24px;
+  font-weight: bold;
+  height: fit-content;
+  width: fit-content;
+}
+
+.dashboard--playlist-header:hover {
+  text-decoration: underline 2px;
+  cursor: pointer;
+  text-underline-offset: 2px;
+}
+
+/* SHOW ALL */
+.dashboard--playlist-show-all {
+  color: var(--const-lighter-gray);
+  font-size: 14px;
+  font-weight: bold;
+  width: fit-content;
+  justify-self: start;
+  padding-right: 15px;
+}
+
+.dashboard--playlist-show-all:hover {
+  text-decoration: underline 2px;
+  cursor: pointer;
+}
+
+/* PLAYLIST LIST */
+.dashboard-playlist-list {
+  grid-template-columns: repeat(auto-fit, 180px);
+  gap: 22px;
+  overflow-y: hidden;
+}
+
+/* SINGLE PLAYLIST CONTAINER */
+.dashboard-playlist-list--item-container {
+  grid-template-rows: 160px 25px 1fr;
+  padding: 16px;
+  background-color: var(--const-card-bg);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.dashboard-playlist-list--item-container:hover {
+  background-color: var(--const-card-hover);
+  cursor: pointer;
+}
+
+.dashboard-playlist-list--item-container:hover .dashboard-playlist-list--play {
+  opacity: 1;
+}
+
+/* PLAYLIST IMAGE */
+.dashboard-playlist-list--img-container {
+  object-fit: cover;
+  width: fit-content;
+  height: 150px;
+  justify-self: center;
+  align-self: start;
+}
+
+.dashboard-playlist-list--img {
+  position: relative;
+  place-self: center;
+}
+
+.dashboard-playlist-list--img img {
+  border-radius: 8px;
+}
+
+.dashboard-playlist-list--play {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 60px;
+  height: 60px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* PLAYLIST NAME */
+.dashboard-playlist-list--name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--const-main-white);
+  overflow: hidden;
+}
+
+/* PLAYLIST DESCRIPTION DATE */
+.dashboard-playlist-list--description {
+  font-size: 14px;
+  color: var(--const-gray);
+}
