@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import scrollToTop from "@/shared-functions/scrollToTop";
 import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
 // import fixLenthPlistDesc from "@/shared-functions/fixLengthPlistDesc";
@@ -14,11 +12,9 @@ function DashboardCardTemplate({ title, details }) {
       </div>
       <div className="dashboard-playlist-list grid">
         {details.map((playlist) => (
-          <Link
+          <div
             className="dashboard-playlist-list--item-container grid"
             key={playlist.id}
-            href={`/playlist/${playlist.id}`}
-            onClick={scrollToTop}
           >
             <div className="dashboard-playlist-list--img-container">
               {playlist.img ? (
@@ -39,7 +35,7 @@ function DashboardCardTemplate({ title, details }) {
               {/* {fixLenthPlistDesc(playlist.description)} */}
               {playlist.description}
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>
