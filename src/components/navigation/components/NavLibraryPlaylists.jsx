@@ -3,7 +3,6 @@
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
