@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import scrollToTop from "../../../shared-functions/scrollToTop";
 
-import TimeIcon from "../../../assets/svgs/main-app/time.svg";
-import GrayHeart from "../../../assets/svgs/main-app/heart-gray.svg";
-import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
+import TimeIcon from "../../../../public/assets/svgs/main-app/time.svg";
+import GrayHeart from "../../../../public/assets/svgs/main-app/heart-gray.svg";
+import MenuDots from "../../../../public/assets/svgs/main-app/menu-dots.svg";
+import PlayButton from "../../../../public/assets/svgs/main-app/play-triangle.svg";
+
 import calcTrackTime from "../../../shared-functions/calcTrackTime";
-import PlayButton from "../../../assets/svgs/main-app/play-triangle.svg";
 import GetSearchTrackArtists from "../../../shared-functions/GetSearchTrackArtists";
 import fixPlaylistAlbumName from "../../../shared-functions/fixPlaylistAlbumName";
 import formatDateShortMths from "../../../shared-functions/formatDateShortMths";

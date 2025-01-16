@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import LibraryIcon from "../../../assets/svgs/main-app/library-icon.svg";
-import PlusGray from "../../../assets/svgs/main-app/plus-gray.svg";
+import LibraryIcon from "../../../../public/assets/svgs/main-app/library-icon.svg";
+import PlusGray from "../../../../public/assets/svgs/main-app/plus-gray.svg";
 
 import "../styles/nav-library-header.css"
 

@@ -3,10 +3,10 @@ import Image from "next/image";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import calcTrackTime from "@/shared-functions/calcTrackTime";
 
-import TimeIcon from "../../../assets/svgs/main-app/time.svg";
-import GreenHeart from "../../../assets/svgs/main-app/heart-green.svg";
-import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
-import PlayButton from "../../../assets/svgs/main-app/play-triangle.svg";
+import TimeIcon from "../../../../public/assets/svgs/main-app/time.svg";
+import GreenHeart from "../../../../public/assets/svgs/main-app/heart-green.svg";
+import MenuDots from "../../../../public/assets/svgs/main-app/menu-dots.svg";
+import PlayButton from "../../../../public/assets/svgs/main-app/play-triangle.svg";
 
 import GetSearchTrackArtists from "@/shared-functions/GetSearchTrackArtists";
 import fixPlaylistAlbumName from "@/shared-functions/fixPlaylistAlbumName";

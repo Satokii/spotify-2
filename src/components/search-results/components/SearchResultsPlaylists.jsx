@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import scrollToTop from "@/shared-functions/scrollToTop";
-import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
+import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
 function SearchResultsPlaylists({ playlistResults }) {
   return (

@@ -6,8 +6,8 @@ import Image from "next/image";
 import getYear from "@/shared-functions/getYear";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
-import GrayCircle from "../../../assets/svgs/main-app/gray-circle.svg";
-import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
+import GrayCircle from "../../../../public/assets/svgs/main-app/gray-circle.svg";
+import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
 import "../styles/artist-discography.css";
 

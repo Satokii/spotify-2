@@ -4,7 +4,7 @@ import fixLengthSearch from "@/shared-functions/fixLengthSearch";
 import fixLengthPlaylistAlbum from "@/shared-functions/fixLengthPlaylistAlbum";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import getYear from "@/shared-functions/getYear";
-import PlayGreen from "../../../assets/svgs/main-app/main-play-btn.svg";
+import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
 function SearchResultsAlbums({ albumResults }) {
   return (

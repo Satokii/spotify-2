@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import changeVolume from "../functions/changeVolume";
 
-import VolumeOnIcon from "../../../assets/svgs/volume/volume-on.svg"
-import VolumeMuteIcon from "../../../assets/svgs/volume/volume-mute.svg"
+import VolumeOnIcon from "../../../../public/assets/svgs/volume/volume-on.svg"
+import VolumeMuteIcon from "../../../../public/assets/svgs/volume/volume-mute.svg"
 
 function VolumeIcon({ token, volume, setVolume }) {
   const [mute, setMute] = useState(false);

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
-import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
+import LikedSongsImg from "../../../../public/assets/images/liked-songs-img.png";
 import "../styles/nav-library-playlists.css"
 
 function NavLibraryPlaylists({ token, showFilter }) {

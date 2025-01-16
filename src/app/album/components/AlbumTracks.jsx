@@ -3,10 +3,10 @@ import calcTrackTime from "@/shared-functions/calcTrackTime";
 import formatDate from "@/shared-functions/formatDate";
 import GetAlbumTrackArtists from "@/shared-functions/GetAlbumTrackArtists";
 
-import TimeIcon from "../../../assets/svgs/main-app/time.svg"
-import GrayHeart from "../../../assets/svgs/main-app/heart-gray.svg";
-import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
-import PlayButton from "../../../assets/svgs/main-app/play-triangle.svg"
+import TimeIcon from "../../../../public/assets/svgs/main-app/time.svg"
+import GrayHeart from "../../../../public/assets/svgs/main-app/heart-gray.svg";
+import MenuDots from "../../../../public/assets/svgs/main-app/menu-dots.svg";
+import PlayButton from "../../../../public/assets/svgs/main-app/play-triangle.svg"
 
 import "../styles/album-tracks.css"
 

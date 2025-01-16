@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import CrossGray from "../../../assets/svgs/main-app/cross-gray.svg";
+import CrossGray from "../../../../public/assets/svgs/main-app/cross-gray.svg";
 
 import "../styles/nav-library-filter.css";
 

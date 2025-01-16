@@ -7,7 +7,7 @@ import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 
 import paletteGradientLikedSongs from "@/palettes/paletteGradientLikedSongs";
-import LikedSongsImg from "../../assets/images/liked-songs-img.png";
+import LikedSongsImg from "../../../public/assets/images/liked-songs-img.png";
 import LikedSongsTopNav from "./components/LikedSongsTopNav";
 import LikedSongsBanner from "./components/LikedSongsBanner";
 import LikedSongsControls from "./components/LikedSongsControls";

@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import HomeActive from "../../../assets/svgs/main-app/home-active.svg";
-import HomeInactive from "../../../assets/svgs/main-app/home-inactive.svg";
-import SearchActive from "../../../assets/svgs/main-app/search-active.svg";
-import SearchInactive from "../../../assets/svgs/main-app/search-inactive.svg";
-import TopPlayedActive from "../../../assets/svgs/main-app/top-played-active.svg";
-import TopPlayedInactive from "../../../assets/svgs/main-app/top-played-inactive.svg";
+import HomeActive from "../../../../public/assets/svgs/main-app/home-active.svg";
+import HomeInactive from "../../../../public/assets/svgs/main-app/home-inactive.svg";
+import SearchActive from "../../../../public/assets/svgs/main-app/search-active.svg";
+import SearchInactive from "../../../../public/assets/svgs/main-app/search-inactive.svg";
+import TopPlayedActive from "../../../../public/assets/svgs/main-app/top-played-active.svg";
+import TopPlayedInactive from "../../../../public/assets/svgs/main-app/top-played-inactive.svg";
 
 import "../styles/nav-main-links.css";
 

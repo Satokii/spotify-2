@@ -7,7 +7,7 @@ import axios from "axios";
 import fixLengthPreviews from "@/shared-functions/fixLengthPreviews";
 import scrollToTop from "@/shared-functions/scrollToTop";
 import SidebarNextInQueueArtists from "../functions/SidebarNextInQueueArtists";
-import NoteIcon from "../../../assets/svgs/main-app/queue-note.svg"
+import NoteIcon from "../../../../public/assets/svgs/main-app/queue-note.svg"
 
 import "../styles/sidebar-next-in-queue.css"
 

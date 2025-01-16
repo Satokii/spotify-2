@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import MainPlayBtn from "../../../assets/svgs/main-app/main-play-btn.svg";
-import MainPauseBtn from "../../../assets/svgs/main-app/main-pause-btn.svg";
-import GreenShuffleBtn from "../../../assets/svgs/main-app/shuffle-green.svg";
-import GrayShuffleBtn from "../../../assets/svgs/main-app/shuffle-gray.svg";
-import GreenHeart from "../../../assets/svgs/main-app/heart-green.svg";
-import GrayHeart from "../../../assets/svgs/main-app/heart-gray.svg";
-import MenuDots from "../../../assets/svgs/main-app/menu-dots.svg";
+import MainPlayBtn from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
+import MainPauseBtn from "../../../../public/assets/svgs/main-app/main-pause-btn.svg";
+import GreenShuffleBtn from "../../../../public/assets/svgs/main-app/shuffle-green.svg";
+import GrayShuffleBtn from "../../../../public/assets/svgs/main-app/shuffle-gray.svg";
+import GreenHeart from "../../../../public/assets/svgs/main-app/heart-green.svg";
+import GrayHeart from "../../../../public/assets/svgs/main-app/heart-gray.svg";
+import MenuDots from "../../../../public/assets/svgs/main-app/menu-dots.svg";
 
 import "../styles/playlist-controls.css";
 

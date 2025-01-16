@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LikedSongsImg from "../../../assets/images/liked-songs-img.png";
+import LikedSongsImg from "../../../../public/assets/images/liked-songs-img.png";
 
 import "../styles/liked-songs-banner.css";
 
