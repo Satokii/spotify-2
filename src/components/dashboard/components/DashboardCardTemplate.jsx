@@ -21,9 +21,9 @@ function DashboardCardTemplate({ title, details }) {
             onClick={scrollToTop}
           >
             <div className="dashboard-playlist-list--img-container">
-              {playlist.images ? (
+              {playlist.img ? (
                 <div className="dashboard-playlist-list--img">
-                  <img src={playlist.images[0].url} alt={playlist.name} />
+                  <img src={playlist.img} alt={playlist.name} />
                   <Image
                     className="dashboard-playlist-list--play"
                     src={PlayGreen}
