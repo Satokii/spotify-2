@@ -1,7 +1,7 @@
 "use client";
 
 import { useClient } from "@/components/ClientContext";
-import WelcomePage from "./pages/welcome-page";
+import WelcomePage from "../components/welcome-page";
 import Dashboard from "@/components/dashboard";
 
 export default function Page() {

@@ -5,7 +5,7 @@ import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
-import WelcomePage from "@/app/pages/welcome-page";
+import WelcomePage from "@/components/welcome-page";
 
 import paletteGradientUserPlaylist from "@/palettes/paletteGradientUserPlaylist";
 import UserPlaylistTopNav from "../components/UserPlaylistTopNav";

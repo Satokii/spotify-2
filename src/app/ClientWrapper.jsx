@@ -5,7 +5,7 @@ import { ClientProvider } from "@/components/ClientContext";
 import Navigation from "@/components/navigation";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
-import WelcomePage from "./pages/welcome-page";
+import WelcomePage from "../components/welcome-page";
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 import axios from "axios";
 

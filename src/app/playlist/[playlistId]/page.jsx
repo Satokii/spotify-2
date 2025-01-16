@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePalette } from "react-palette";
 import { useClient } from "@/components/ClientContext";
 
-import WelcomePage from "@/app/pages/welcome-page";
+import WelcomePage from "@/components/welcome-page";
 import getPlaylist from "../functions/getPlaylist";
 import sleep from "@/shared-functions/sleep";
 import paletteGradientPlaylist from "@/palettes/paletteGradientPlaylist";

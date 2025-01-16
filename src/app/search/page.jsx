@@ -7,7 +7,7 @@ import SearchPageBrowse from "./components/SearchPageBrowse";
 import SearchResults from "@/app/pages/search-results";
 
 import "./styles/search.css";
-import WelcomePage from "../pages/welcome-page";
+import WelcomePage from "../../components/welcome-page";
 
 function Search() {
   const { token, setToken } = useClient();
