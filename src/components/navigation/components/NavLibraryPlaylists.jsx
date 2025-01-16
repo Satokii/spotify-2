@@ -124,7 +124,7 @@ function NavLibraryPlaylists({ token, showFilter }) {
                     href={`/user-playlist/${playlist.id}`}
                     onClick={scrollToTop}
                   >
-                    {playlist.images.length ? (
+                    {playlist.images ? (
                       <img
                         className="navigation--playlists-item-img"
                         src={playlist.images[0].url}
