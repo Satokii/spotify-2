@@ -1,6 +1,7 @@
 import DashboardMenu from "./components/DashboardMenu";
 import DashboardBanner from "./components/DashboardBanner";
 import { playlistCategories } from "./playlistCategories";
+import DashboardTopFeaturedPlaylists from "./components/DashboardTopFeaturedPlaylists";
 import RenderDashboardPlaylists from "./components/RenderDashboardPlaylists";
 
 import "./styles/dashboard.css";
@@ -27,7 +28,7 @@ function Dashboard({
             notPlaying={notPlaying}
           />
           <section className="dashboard--sub-container grid">
-            {/* <DashboardTopFeaturedPlaylists token={token} /> */}
+            <DashboardTopFeaturedPlaylists />
             {playlistCategories.map((cat, index) => (
               <RenderDashboardPlaylists
                 key={`${cat.category}-${index}`}
