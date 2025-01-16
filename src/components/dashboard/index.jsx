@@ -24,7 +24,7 @@ function Dashboard({
             notPlaying={notPlaying}
           />
           <section className="dashboard--sub-container grid">
-            <DashboardTopFeaturedPlaylists token={token} />
+            {/* <DashboardTopFeaturedPlaylists token={token} /> */}
             {playlistCategories.map((cat, index) => (
               <RenderDashboardPlaylists
                 key={`${cat.category}-${index}`}
