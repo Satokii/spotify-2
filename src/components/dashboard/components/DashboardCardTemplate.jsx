@@ -4,11 +4,9 @@ import scrollToTop from "@/shared-functions/scrollToTop";
 import PlayGreen from "../../../../public/assets/svgs/main-app/main-play-btn.svg";
 
 import fixLenthPlistDesc from "@/shared-functions/fixLengthPlistDesc";
-// import DashboardCardTemplate from "./DashboardCardTemplate";
 
 function DashboardCardTemplate({ title, details }) {
   return (
-    // <DashboardCardTemplate title={title} itemArr={playlist} />
     <div className="dashboard--playlist-container grid">
       <div className="dashboard--playlist-header-container grid">
         <div className="dashboard--playlist-header">{title}</div>
