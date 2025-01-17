@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { ClientProvider } from "@/components/ClientContext";
 import Navigation from "@/components/navigation";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
-import LoginPage from "./login-page/page";
+import WelcomePage from "../components/welcome-page/page";
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
-import axios from "axios";
 
 export default function ClientWrapper({ children }) {
   const [token, setToken] = useState("");
@@ -82,7 +82,7 @@ export default function ClientWrapper({ children }) {
 
   if (!token) {
     return (
-      <LoginPage />
+      <WelcomePage />
     )
   }
 

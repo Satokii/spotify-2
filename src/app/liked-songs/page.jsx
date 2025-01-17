@@ -6,7 +6,7 @@ import { useClient } from "@/components/ClientContext";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 
-import LoginPage from "../login-page/page";
+import WelcomePage from "../../components/welcome-page/page";
 import paletteGradientLikedSongs from "@/palettes/paletteGradientLikedSongs";
 import LikedSongsImg from "../../../public/assets/images/liked-songs-img.png";
 import LikedSongsTopNav from "./components/LikedSongsTopNav";
@@ -40,7 +40,7 @@ function LikedSongs() {
   }, [data]);
 
   if (!token) {
-    return <LoginPage />;
+    return <WelcomePage />;
   }
 
   return (

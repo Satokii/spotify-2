@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
-import LoginPage from "@/app/login-page/page";
+import WelcomePage from "@/components/welcome-page/page";
 import AlbumTopNav from "../../components/AlbumTopNav";
 import getAlbum from "../../functions/getAlbum";
 import getArtist from "@/app/artist/functions/getArtist";
@@ -44,7 +44,7 @@ function Album({ params }) {
   }, [data]);
 
   if (!token) {
-    return <LoginPage />;
+    return <WelcomePage />;
   }
 
   return (

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import LoginPage from "../login-page/page";
+import WelcomePage from "../../components/welcome-page/page";
 import SearchPageTopNav from "./components/SearchPageTopNav";
 import SearchPageBrowse from "./components/SearchPageBrowse";
 import SearchResults from "@/components/search-results";
@@ -18,7 +18,7 @@ function Search() {
   //   const [playlistResults, setPlaylistResults] = useState([]);
 
   if (!token) {
-    return <LoginPage />;
+    return <WelcomePage />;
   }
 
   return (

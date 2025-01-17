@@ -14,6 +14,7 @@ function LoginPage() {
     e.preventDefault();
 
     if (user.username === "test" && user.password === "testpassword") {
+      localStorage.setItem("login-token", "session-login-token");
       router.push("/welcome-page");
       setUser({ username: "", password: "" });
     } else {
