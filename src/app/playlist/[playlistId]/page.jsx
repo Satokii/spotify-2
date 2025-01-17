@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePalette } from "react-palette";
 import { useClient } from "@/components/ClientContext";
 
-import WelcomePage from "@/components/welcome-page";
+import LoginPage from "@/app/login-page/page";
 import getPlaylist from "../functions/getPlaylist";
 import sleep from "@/shared-functions/sleep";
 import paletteGradientPlaylist from "@/palettes/paletteGradientPlaylist";
@@ -36,7 +36,7 @@ function Playlist({ params }) {
 
   if (!token) {
     return (
-      <WelcomePage />
+      <LoginPage />
     )
   }
 

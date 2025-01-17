@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 
-import WelcomePage from "@/components/welcome-page";
+import LoginPage from "@/app/login-page/page";
 import sleep from "@/shared-functions/sleep";
 import getArtist from "../functions/getArtist";
 import palletGradientArtist from "@/palettes/paletteGradientArtist";
@@ -60,7 +60,7 @@ function Artist({ params }) {
   }, [data]);
 
   if (!token) {
-    return <WelcomePage />;
+    return <LoginPage />;
   }
 
   return (

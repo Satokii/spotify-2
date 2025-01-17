@@ -5,7 +5,7 @@ import { ClientProvider } from "@/components/ClientContext";
 import Navigation from "@/components/navigation";
 import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
-import WelcomePage from "../components/welcome-page";
+import LoginPage from "./login-page/page";
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
 import axios from "axios";
 
@@ -82,7 +82,7 @@ export default function ClientWrapper({ children }) {
 
   if (!token) {
     return (
-      <WelcomePage />
+      <LoginPage />
     )
   }
 

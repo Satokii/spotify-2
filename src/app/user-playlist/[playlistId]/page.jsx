@@ -5,7 +5,7 @@ import { useClient } from "@/components/ClientContext";
 import { usePalette } from "react-palette";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
-import WelcomePage from "@/components/welcome-page";
+import LoginPage from "@/app/login-page/page";
 
 import paletteGradientUserPlaylist from "@/palettes/paletteGradientUserPlaylist";
 import UserPlaylistTopNav from "../components/UserPlaylistTopNav";
@@ -81,7 +81,7 @@ function UserPlaylist({ params }) {
   }, [data]);
 
   if (!token) {
-    return <WelcomePage />;
+    return <LoginPage />;
   }
 
   return (

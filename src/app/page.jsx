@@ -1,7 +1,7 @@
 "use client";
 
 import { useClient } from "@/components/ClientContext";
-import WelcomePage from "../components/welcome-page";
+import LoginPage from "./login-page/page";
 import Dashboard from "@/components/dashboard";
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
 
   if (!token) {
     return (
-      <WelcomePage />
+      <LoginPage />
     )
   }
 
