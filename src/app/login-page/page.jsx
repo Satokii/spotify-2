@@ -17,7 +17,7 @@ function LoginPage() {
       router.push("/welcome-page");
       setUser({ username: "", password: "" });
     } else {
-      setLoginMessage("Username or password is incorrect. Please try again.");
+      setLoginMessage("Invalid username or password.");
     }
   };
 
