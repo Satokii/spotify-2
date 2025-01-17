@@ -1,0 +1,144 @@
+.login-page--container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: 0.3s ease 1s forwards fade-in;
+}
+
+.login-page--subcontainer {
+  position: absolute;
+  width: 400px;
+  height: 530px;
+  background-color: var(--const-card-bg);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+}
+
+.login-page--content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.login-page--header {
+  font-size: 2em;
+  color: var(--const-green);
+  text-transform: uppercase;
+}
+
+.login-page--login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login-page--login-form-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.login-page--login-form-input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: var(--const-main-white);
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.login-page--login-form-input-container i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.login-page--login-form-input:focus ~ i,
+.login-page--login-form-input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: var(--const-main-white);
+}
+
+.login-page--links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-page--forgot-password {
+  color: var(--const-main-white);
+  text-decoration: none;
+}
+
+.login-page--forgot-password:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.login-page--signup {
+  color: var(--const-green);
+  font-weight: 600;
+}
+
+.login-page--signup:hover {
+  color: var(--const-green-hover);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.login-page--login-form-input-container input[type="submit"] {
+  padding: 10px;
+  background: var(--const-green);
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.login-page--login-form-input-container input[type="submit"]:hover {
+  background-color: var(--const-green-hover);
+  transform: scale(1.02);
+}
+
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+
+.login-page--error-message {
+  font-size: 18px;
+}
+
+.login-page--copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+}
