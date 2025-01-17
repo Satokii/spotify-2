@@ -34,7 +34,7 @@ function LoginPage() {
     <section className="login-page--container">
       <div className="login-page--subcontainer">
         <div className="login-page--content">
-          <h2>Welcome to Codeify</h2>
+          <h2>Welcome to Spotify2</h2>
           <h2 className="login-page--header">Sign In</h2>
           <form className="login-page--login-form" onSubmit={handleLogin}>
             <div className="login-page--login-form-input-container">
@@ -83,7 +83,7 @@ function LoginPage() {
             <p className="login-page--error-message">{loginMessage}</p>
           )}
         </div>
-        <p className="login-page--copyright">&#169; 2024 Codeify</p>
+        <p className="login-page--copyright">&#169; 2025 Spotify2</p>
       </div>
     </section>
   );
