@@ -1,5 +1,5 @@
 import convertMsToTime from "../../../shared-functions/convertMsToTime";
-import playlistTimeinMs from "../../playlist/functions/playlistTimeinMs";
+import playlistTimeinMs from "@/app/playlist/functions/playlistTimeInMs";
 
 import "../styles/user-playlist-banner.css"
 
