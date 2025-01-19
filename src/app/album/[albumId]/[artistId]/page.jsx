@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import { usePalette } from "react-palette";
+// import { usePalette } from "react-palette";
 import WelcomePage from "@/components/welcome-page/page";
 import AlbumTopNav from "../../components/AlbumTopNav";
 import getAlbum from "../../functions/getAlbum";
 import getArtist from "@/app/artist/functions/getArtist";
 import sleep from "@/shared-functions/sleep";
 import paletteGradient from "@/palettes/paletteGradient";
+import { Vibrant } from "node-vibrant/browser";
 
 import AlbumBanner from "../../components/AlbumBanner";
 import AlbumControls from "../../components/AlbumControls";
@@ -27,7 +28,28 @@ function Album({ params }) {
   const [albumTracksArr, setAlbumTracksArr] = useState([]);
   const [copyrights, setCopyrights] = useState([]);
   const [artistAlbums, setArtistAlbums] = useState([]);
-  const { data } = usePalette(albumInfo.img);
+  const [colourHex, setColourHex] = useState("#ffffff");
+
+  // const { data } = usePalette(albumInfo.img);
+
+  useEffect(() => {
+    let v = new Vibrant(albumInfo.img);
+
+    v.getPalette()
+      .then((palette) => {
+        if (palette.Vibrant) {
+          // const colour = palette.DarkMuted.hex;
+          const colour = palette;
+          console.log("Colour hex:", colour);
+          setColourHex(colour);
+        } else {
+          console.error("No Vibrant colour found in the palette.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error extracting the palette:", err);
+      });
+  }, []);
 
   useEffect(() => {
     sleep(0).then(() =>
@@ -40,8 +62,8 @@ function Album({ params }) {
   }, [artistId, token]);
 
   useEffect(() => {
-    sleep(0).then(() => paletteGradient(data));
-  }, [data]);
+    sleep(0).then(() => paletteGradient(colourHex));
+  }, [colourHex]);
 
   if (!token) {
     return <WelcomePage />;
