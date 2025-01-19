@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import { usePalette } from "react-palette";
+import { Vibrant } from "node-vibrant/browser";
 
 import WelcomePage from "@/components/welcome-page/page";
 import sleep from "@/shared-functions/sleep";
@@ -34,6 +34,35 @@ function Artist({ params }) {
   const [album, setAlbum] = useState([]);
   const [single, setSingle] = useState([]);
 
+  const [colourHex, setColourHex] = useState("#ffffff");
+
+  useEffect(() => {
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = artistInfo.img;
+
+    img.onload = () => {
+      const vibrant = new Vibrant(img);
+      vibrant
+        .getPalette()
+        .then((palette) => {
+          if (palette.Vibrant) {
+            const colour = palette;
+            setColourHex(colour);
+          } else {
+            console.error("No Vibrant color found in the palette.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error extracting the palette:", err);
+        });
+    };
+
+    img.onerror = () => {
+      console.error("Error loading image");
+    };
+  }, [artistInfo.img]);
+
   useEffect(() => {
     sleep(0).then(() => getArtist(token, artistId, setArtistInfo));
   }, [artistId, token]);
@@ -54,10 +83,9 @@ function Artist({ params }) {
     sleep(0).then(() => getSingles(token, artistId, setSingle));
   }, [artistId, token]);
 
-  const { data } = usePalette(artistInfo.img);
   useEffect(() => {
-    sleep(0).then(() => palletGradientArtist(data));
-  }, [data]);
+    sleep(0).then(() => palletGradientArtist(colourHex));
+  }, [colourHex]);
 
   if (!token) {
     return <WelcomePage />;
