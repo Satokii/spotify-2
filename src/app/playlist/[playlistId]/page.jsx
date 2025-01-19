@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { usePalette } from "react-palette";
+import { Vibrant } from "node-vibrant/browser";
 import { useClient } from "@/components/ClientContext";
 
 import WelcomePage from "@/components/welcome-page/page";
@@ -22,6 +22,34 @@ function Playlist({ params }) {
 
   const [playlistInfo, setPlaylistInfo] = useState({});
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  const [colourHex, setColourHex] = useState("#ffffff");
+  
+    useEffect(() => {
+      const img = new Image();
+      img.crossOrigin = "Anonymous";
+      img.src = playlistInfo.img;
+  
+      img.onload = () => {
+        const vibrant = new Vibrant(img);
+        vibrant
+          .getPalette()
+          .then((palette) => {
+            if (palette.Vibrant) {
+              const colour = palette;
+              setColourHex(colour);
+            } else {
+              console.error("No Vibrant color found in the palette.");
+            }
+          })
+          .catch((err) => {
+            console.error("Error extracting the palette:", err);
+          });
+      };
+  
+      img.onerror = () => {
+        console.error("Error loading image");
+      };
+    }, [playlistInfo.img]);
 
   useEffect(() => {
     sleep(0).then(() =>
@@ -29,10 +57,9 @@ function Playlist({ params }) {
     );
   }, [playlistId, token]);
 
-  const { data } = usePalette(playlistInfo.img);
   useEffect(() => {
-    sleep(0).then(() => paletteGradientPlaylist(data));
-  }, [data]);
+    sleep(0).then(() => paletteGradientPlaylist(colourHex));
+  }, [colourHex]);
 
   if (!token) {
     return (
