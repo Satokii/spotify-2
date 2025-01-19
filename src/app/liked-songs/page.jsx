@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePalette } from "react-palette";
 import { useClient } from "@/components/ClientContext";
+import { Vibrant } from "node-vibrant/browser";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 
@@ -20,6 +20,7 @@ function LikedSongs() {
   const { token, setToken } = useClient();
   const [likedSongsInfo, setLikedSongsInfo] = useState([]);
   const [likedSongs, setLikedSongs] = useState([]);
+  const [colourHex, setColourHex] = useState("#ffffff");
 
   useEffect(() => {
     const getLikedSongs = async () => {
@@ -34,10 +35,36 @@ function LikedSongs() {
     getLikedSongs();
   }, [token]);
 
-  const { data } = usePalette(LikedSongsImg.blurDataURL);
   useEffect(() => {
-    sleep(0).then(() => paletteGradientLikedSongs(data));
-  }, [data]);
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = LikedSongsImg.blurDataURL;
+
+    img.onload = () => {
+      const vibrant = new Vibrant(img);
+      vibrant
+        .getPalette()
+        .then((palette) => {
+          if (palette.Vibrant) {
+            const colour = palette;
+            setColourHex(colour);
+          } else {
+            console.error("No Vibrant color found in the palette.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error extracting the palette:", err);
+        });
+    };
+
+    img.onerror = () => {
+      console.error("Error loading image");
+    };
+  }, [LikedSongsImg.blurDataURL]);
+
+  useEffect(() => {
+    sleep(0).then(() => paletteGradientLikedSongs(colourHex));
+  }, [colourHex]);
 
   if (!token) {
     return <WelcomePage />;

@@ -1,6 +1,6 @@
 const paletteGradientLikedSongs = (data) => {
-    const lightImgColour = data.muted;
-    const darkImgColour = data.lightVibrant;
+    const lightImgColour = data.Muted.hex;
+    const darkImgColour = data.LightVibrant.hex;
     let mixedImgColour = "#";
   
     for (let i = 0; i < 3; i++) {
