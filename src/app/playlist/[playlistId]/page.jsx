@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { Vibrant } from "node-vibrant/browser";
@@ -23,33 +23,33 @@ function Playlist({ params }) {
   const [playlistInfo, setPlaylistInfo] = useState({});
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [colourHex, setColourHex] = useState("#ffffff");
-  
-    useEffect(() => {
-      const img = new Image();
-      img.crossOrigin = "Anonymous";
-      img.src = playlistInfo.img;
-  
-      img.onload = () => {
-        const vibrant = new Vibrant(img);
-        vibrant
-          .getPalette()
-          .then((palette) => {
-            if (palette.Vibrant) {
-              const colour = palette;
-              setColourHex(colour);
-            } else {
-              console.error("No Vibrant color found in the palette.");
-            }
-          })
-          .catch((err) => {
-            console.error("Error extracting the palette:", err);
-          });
-      };
-  
-      img.onerror = () => {
-        console.error("Error loading image");
-      };
-    }, [playlistInfo.img]);
+
+  useEffect(() => {
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = playlistInfo.img;
+
+    img.onload = () => {
+      const vibrant = new Vibrant(img);
+      vibrant
+        .getPalette()
+        .then((palette) => {
+          if (palette.Vibrant) {
+            const colour = palette;
+            setColourHex(colour);
+          } else {
+            console.error("No Vibrant color found in the palette.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error extracting the palette:", err);
+        });
+    };
+
+    img.onerror = () => {
+      console.error("Error loading image");
+    };
+  }, [playlistInfo.img]);
 
   useEffect(() => {
     sleep(0).then(() =>
@@ -62,9 +62,7 @@ function Playlist({ params }) {
   }, [colourHex]);
 
   if (!token) {
-    return (
-      <WelcomePage />
-    )
+    return <WelcomePage />;
   }
 
   return (
