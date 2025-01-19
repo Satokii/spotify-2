@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import { usePalette } from "react-palette";
+import { Vibrant } from "node-vibrant/browser";
 import axios from "axios";
 import sleep from "@/shared-functions/sleep";
 import WelcomePage from "@/components/welcome-page/page";
@@ -22,6 +22,7 @@ function UserPlaylist({ params }) {
 
   const [userPlaylistInfo, setUserPlaylistInfo] = useState({});
   const [userPlaylistTracks, setUserPlaylistTracks] = useState([]);
+  const [colourHex, setColourHex] = useState("#ffffff");
 
   useEffect(() => {
     const getUserPlaylistInfo = async () => {
@@ -75,10 +76,36 @@ function UserPlaylist({ params }) {
     getUserPlaylistTracks();
   }, [playlistId, token]);
 
-  const { data } = usePalette(userPlaylistInfo.img);
   useEffect(() => {
-    sleep(0).then(() => paletteGradientUserPlaylist(data));
-  }, [data]);
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.src = userPlaylistInfo.img;
+
+    img.onload = () => {
+      const vibrant = new Vibrant(img);
+      vibrant
+        .getPalette()
+        .then((palette) => {
+          if (palette.Vibrant) {
+            const colour = palette;
+            setColourHex(colour);
+          } else {
+            console.error("No Vibrant color found in the palette.");
+          }
+        })
+        .catch((err) => {
+          console.error("Error extracting the palette:", err);
+        });
+    };
+
+    img.onerror = () => {
+      console.error("Error loading image");
+    };
+  }, [userPlaylistInfo.img]);
+
+  useEffect(() => {
+    sleep(0).then(() => paletteGradientUserPlaylist(colourHex));
+  }, [colourHex]);
 
   if (!token) {
     return <WelcomePage />;

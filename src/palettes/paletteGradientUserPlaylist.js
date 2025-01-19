@@ -1,6 +1,6 @@
 const paletteGradientUserPlaylist = (data) => {
-    const lightImgColour = data.vibrant;
-    const darkImgColour = data.lightMuted
+    const lightImgColour = data.Vibrant.hex;
+    const darkImgColour = data.LightMuted.hex;
     let mixedImgColour = "#";
   
     for (let i = 0; i < 3; i++) {
