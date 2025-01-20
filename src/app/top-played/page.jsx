@@ -7,7 +7,7 @@ import TRACKS_INITIAL_STATE from "@/initial-states/TRACKS-INITIAL-STATE";
 import ARTISTS_INITIAL_STATE from "@initial-states/ARTISTS-INITIAL-STATE";
 import TopTracksPreview from "./components/TopTracksPreview";
 import TopArtistsPreview from "./components/TopArtistsPreview";
-// import RecentlyPlayed from "./components/RecentlyPlayed";
+import RecentlyPlayed from "./components/RecentlyPlayed";
 // import toggleTopTracksDate from "../../shared-functions/toggleTopTracksDate";
 // import toggleTopArtistsDate from "../../shared-functions/toggleTopArtistsDate";
 
