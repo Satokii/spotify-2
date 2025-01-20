@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import axios from "axios";
 import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
+import TopTracksTopNav from "./components/TopTracksTopNav";
 
 import "../top-played/styles/top-results-pages.css";
 import "../top-played/styles/main-date-filter.css";
@@ -64,6 +65,7 @@ function TopTracks() {
     <div className="top-results-page-outer-container grid">
       <div className="scrollbar-top-results-page">
         <section className="top-results-page--container grid">
+          <TopTracksTopNav setToken={setToken} />
           <h2 className="top-results-page--header">Top Tracks</h2>
           <ul className="top-results-page--filter date-filter-list grid">
             {topTracksDate.map((dateFilter, index) => (
