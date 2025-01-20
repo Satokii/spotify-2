@@ -1,9 +1,25 @@
-.scrollbar-top-played {
+.top-played-outer-container {
   grid-area: Main;
+  overflow: hidden;
+  background: linear-gradient(
+    var(--const-base-red-db),
+    var(--const-base-bg) 50%
+  );
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 5px;
+  padding-right: 3px;
+  padding-top: 65px;
+  opacity: 0;
+  animation: 0.3s ease 0.5s forwards fade-in;
+}
+
+.scrollbar-top-played {
   overflow-y: scroll;
   visibility: hidden;
   transition: 1s all 0.1s ease-out;
-  margin: 5px;
 }
 
 .scrollbar-top-played:hover {
@@ -11,13 +27,9 @@
 }
 
 .top-played {
-  grid-area: Main;
   grid-template-rows: 70px repeat(2, 420px) 400px;
-  background-color: var(--const-base-bg);
-  padding: 20px 50px 50px;
+  padding: 8px 30px 40px 30px;
   gap: 30px;
-  opacity: 0;
-  animation: 0.3s ease 0.5s forwards fade-in;
   visibility: visible;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
