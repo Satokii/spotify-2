@@ -1,8 +1,11 @@
+"use client"
+
 import Link from "next/link";
+import { useState } from "react";
 import { useClient } from "@/components/ClientContext";
 import TRACKS_INITIAL_STATE from "@/initial-states/TRACKS-INITIAL-STATE";
 import ARTISTS_INITIAL_STATE from "@initial-states/ARTISTS-INITIAL-STATE";
-// import TopTracksPreview from "./components/TopTracksPreview";
+import TopTracksPreview from "./components/TopTracksPreview";
 // import TopArtistsPreview from "./components/TopArtistsPreview";
 // import RecentlyPlayed from "./components/RecentlyPlayed";
 // import toggleTopTracksDate from "../../shared-functions/toggleTopTracksDate";
@@ -22,7 +25,7 @@ function TopPlayed() {
         const [showTopTracks, setShowTopTracks] = useState("long_term");
       
         // TOP ARTISTS STATES
-        // const [topArtistsDate, setTopArtistsDate] = useState(ARTISTS_INITIAL_STATE);
+        const [topArtistsDate, setTopArtistsDate] = useState(ARTISTS_INITIAL_STATE);
         const [showTopArtists, setShowTopArtists] = useState("long_term");
 
   return (
