@@ -89,9 +89,13 @@ export default function ClientWrapper({ children }) {
     notPlaying,
     setNotPlaying,
     topTracksDate,
+    setTopTracksDate,
     showTopTracks,
+    setShowTopTracks,
     topArtistsDate,
-    showTopArtists
+    setTopArtistsDate,
+    showTopArtists,
+    setShowTopArtists
   };
 
   if (!token) {

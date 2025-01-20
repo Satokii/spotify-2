@@ -12,7 +12,17 @@ import "./styles/main-preview-styles.css";
 import "./styles/main-recently-played.css";
 
 function TopPlayed() {
-  const { token } = useClient();
+  const {
+    token,
+    topTracksDate,
+    setTopTracksDate,
+    showTopTracks,
+    setShowTopTracks,
+    topArtistsDate,
+    setTopArtistsDate,
+    showTopArtists,
+    setShowTopArtists,
+  } = useClient();
 
   return (
     <div className="scrollbar-top-played">
