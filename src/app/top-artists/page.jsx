@@ -1,19 +1,22 @@
-"use effect"
+"use effect";
 
 import { useEffect, useState } from "react";
+import { useClient } from "@/components/ClientContext";
 import Link from "next/link";
 import axios from "axios";
 import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
 
 // import "../styles/top-results-pages.css";
 
-function TopArtists({
-  token,
-  topArtistsDate,
-  setTopArtistsDate,
-  showTopArtists,
-  setShowTopArtists,
-}) {
+function TopArtists() {
+  const {
+    token,
+    topArtistsDate,
+    setTopArtistsDate,
+    showTopArtists,
+    setShowTopArtists,
+  } = useClient();
+
   const [allTopArtists, setAllTopArtists] = useState([]);
 
   useEffect(() => {
