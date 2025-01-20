@@ -11,7 +11,7 @@ import RecentlyPlayed from "./components/RecentlyPlayed";
 import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
 import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
 
-// import "./styles/main.css";
+import "./styles/top-played.css"
 // import "./styles/main-date-filter.css";
 // import "./styles/main-preview-styles.css";
 // import "./styles/main-recently-played.css";
@@ -29,9 +29,9 @@ function TopPlayed() {
         const [showTopArtists, setShowTopArtists] = useState("long_term");
 
   return (
-    <div className="scrollbar-main">
-    <main className="main grid">
-      <h2 className="main--header">My Dashboard</h2>
+    <div className="scrollbar-top-played">
+    <main className="top-played grid">
+      <h2 className="top-played--header">My Dashboard</h2>
       <section className="top-tracks--container grid">
         <div className="top-tracks--header-container grid">
           <h3 className="top-tracks--header">Top Tracks Preview</h3>
