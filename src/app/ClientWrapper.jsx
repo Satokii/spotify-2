@@ -8,6 +8,8 @@ import Sidebar from "@/components/sidebar";
 import Footer from "@/components/footer";
 import WelcomePage from "../components/welcome-page/page";
 import CURRENT_TRACK_INITIAL_STATE from "@/initial-states/CURRENT-TRACK-INITIAL-STATE";
+import TRACKS_INITIAL_STATE from "@/initial-states/TRACKS-INITIAL-STATE";
+import ARTISTS_INITIAL_STATE from "@/initial-states/ARTISTS-INITIAL-STATE";
 
 export default function ClientWrapper({ children }) {
   const [token, setToken] = useState("");
@@ -15,6 +17,14 @@ export default function ClientWrapper({ children }) {
   const [currentTrack, setCurrentTrack] = useState(CURRENT_TRACK_INITIAL_STATE);
   const [currentTrackArtists, setCurrentTrackArtists] = useState([]);
   const [notPlaying, setNotPlaying] = useState(null);
+
+  // TOP TRACKS STATES
+  const [topTracksDate, setTopTracksDate] = useState(TRACKS_INITIAL_STATE);
+  const [showTopTracks, setShowTopTracks] = useState("long_term");
+
+  // TOP ARTISTS STATES
+  const [topArtistsDate, setTopArtistsDate] = useState(ARTISTS_INITIAL_STATE);
+  const [showTopArtists, setShowTopArtists] = useState("long_term");
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -78,19 +88,21 @@ export default function ClientWrapper({ children }) {
     setCurrentTrackArtists,
     notPlaying,
     setNotPlaying,
+    topTracksDate,
+    showTopTracks,
+    topArtistsDate,
+    showTopArtists
   };
 
   if (!token) {
-    return (
-      <WelcomePage />
-    )
+    return <WelcomePage />;
   }
 
   return (
     <ClientProvider value={contextValue}>
-    <div className="container grid">
-      <Navigation token={token} />
-      {children}
+      <div className="container grid">
+        <Navigation token={token} />
+        {children}
         <>
           <Sidebar
             token={token}
@@ -105,7 +117,7 @@ export default function ClientWrapper({ children }) {
             setQueue={setQueue}
           />
         </>
-    </div>
+      </div>
     </ClientProvider>
   );
 }
