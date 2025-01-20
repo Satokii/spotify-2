@@ -1,20 +1,40 @@
-.top-results-page--container {
+.top-results-page-outer-container {
   grid-area: Main;
+  overflow: hidden;
+  background: linear-gradient(
+    var(--const-base-red-db),
+    var(--const-base-bg) 50%
+  );
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 5px;
+  padding-right: 3px;
+  padding-top: 65px;
+  opacity: 0;
+  animation: 0.3s ease 0.5s forwards fade-in;
+}
+
+.scrollbar-top-results-page {
+  overflow-y: scroll;
+  visibility: hidden;
+  transition: 1s all 0.1s ease-out;
+}
+
+.scrollbar-top-results-page:hover {
+  visibility: visible;
+}
+
+.top-results-page--container {
   grid-template-rows: 60px 40px 1fr;
-  background-color: var(--const-base-bg);
   padding: 20px 10px 200px;
   z-index: 1;
-  overflow-y: scroll;
-}
-
-.top-results-page--header-container {
-  grid-template-columns: 150px 1fr;
-  padding-right: 150px;
-}
-
-.top-results-page--back-btn:hover {
-  background-color: var(--const-green-hover);
-  border-color: var(--const-green-hover);
+  visibility: visible;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .top-results-page--header {

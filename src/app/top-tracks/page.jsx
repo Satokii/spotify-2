@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import Link from "next/link";
 import axios from "axios";
 import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
 
-import "../top-played/styles/top-results-pages.css"
-import "../top-played/styles/main-date-filter.css"
+import "../top-played/styles/top-results-pages.css";
+import "../top-played/styles/main-date-filter.css";
 
 function TopTracks() {
   const {
@@ -62,50 +61,49 @@ function TopTracks() {
   }, [showTopTracks, token]);
 
   return (
-    <section className="top-results-page--container grid">
-      <div className="top-results-page--header-container grid">
-        <Link className="page--back-btn btn" href="/">
-          Go back
-        </Link>
-        <h2 className="top-results-page--header">Top Tracks</h2>
+    <div className="top-results-page-outer-container grid">
+      <div className="scrollbar-top-results-page">
+        <section className="top-results-page--container grid">
+          <h2 className="top-results-page--header">Top Tracks</h2>
+          <ul className="top-results-page--filter date-filter-list grid">
+            {topTracksDate.map((dateFilter, index) => (
+              <li
+                key={`${dateFilter.title}-${index}`}
+                className={dateFilter.className}
+                onClick={(e) => {
+                  toggleTopTracksDate(e, topTracksDate, setTopTracksDate);
+                  setShowTopTracks(dateFilter.click);
+                }}
+              >
+                {dateFilter.name}
+              </li>
+            ))}
+          </ul>
+          <ul className="top-results-page--list grid">
+            {allTopTracks.map((track, index) => (
+              <li
+                className="top-results-page--item grid"
+                key={`${track.id}-${index}`}
+              >
+                <p className="top-results-page--item-rank">{`${index + 1}`}</p>
+                {track.album.images.length ? (
+                  <img
+                    src={track.album.images[0].url}
+                    alt={`${track.name} image`}
+                  />
+                ) : (
+                  <div>No Image</div>
+                )}
+                <p className="top-results-page--item-name">{track.name}</p>
+                <p className="top-results-page--item-artist">
+                  {track.artists[0].name}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
-      <ul className="top-results-page--filter date-filter-list grid">
-        {topTracksDate.map((dateFilter, index) => (
-          <li
-            key={`${dateFilter.title}-${index}`}
-            className={dateFilter.className}
-            onClick={(e) => {
-              toggleTopTracksDate(e, topTracksDate, setTopTracksDate);
-              setShowTopTracks(dateFilter.click);
-            }}
-          >
-            {dateFilter.name}
-          </li>
-        ))}
-      </ul>
-      <ul className="top-results-page--list grid">
-        {allTopTracks.map((track, index) => (
-          <li
-            className="top-results-page--item grid"
-            key={`${track.id}-${index}`}
-          >
-            <p className="top-results-page--item-rank">{`${index + 1}`}</p>
-            {track.album.images.length ? (
-              <img
-                src={track.album.images[0].url}
-                alt={`${track.name} image`}
-              />
-            ) : (
-              <div>No Image</div>
-            )}
-            <p className="top-results-page--item-name">{track.name}</p>
-            <p className="top-results-page--item-artist">
-              {track.artists[0].name}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </section>
+    </div>
   );
 }
 
