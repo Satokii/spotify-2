@@ -12,9 +12,9 @@ import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
 import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
 
 import "./styles/top-played.css"
-// import "./styles/main-date-filter.css";
-// import "./styles/main-preview-styles.css";
-// import "./styles/main-recently-played.css";
+import "./styles/main-date-filter.css";
+import "./styles/main-preview-styles.css";
+import "./styles/main-recently-played.css";
 
 function TopPlayed() {
     

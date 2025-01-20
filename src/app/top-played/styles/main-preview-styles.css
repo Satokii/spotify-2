@@ -1,0 +1,74 @@
+/* PREVIEW GENERIC STYLING */
+.preview--list {
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-auto-flow: column;
+  align-items: start;
+  gap: 20px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.preview--list:hover {
+  overflow-x: scroll;
+}
+
+.preview--item {
+  min-width: 200px;
+  min-height: 270px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--const-card-bg);
+  transition: 0.3s;
+}
+
+.preview--item:hover {
+  background-color: var(--const-card-hover);
+  cursor: pointer;
+}
+
+.preview--item-rank {
+  font-weight: bold;
+  text-align: center;
+}
+
+.preview--item > img {
+  object-fit: cover;
+  width: 160px;
+  height: 160px;
+  place-self: center;
+}
+
+.preview--item img {
+  border-radius: 8px;
+  margin: 5px 0;
+}
+
+.preview--item-text {
+  justify-content: start;
+  align-self: start;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.preview--item-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--const-main-white);
+  overflow: hidden;
+}
+
+.preview--item-artist {
+  font-size: 14px;
+  color: var(--const-lighter-gray);
+  width: fit-content;
+}
+
+.preview--item-artist:hover {
+  color: var(--const-main-white);
+  text-decoration: underline 1px;
+}
+
+/* TOP ARTISTS PREVIEW SPECIFIC */
+.preview-top-artists {
+  padding-top: 10px;
+}

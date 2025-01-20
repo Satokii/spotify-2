@@ -1,0 +1,40 @@
+/* FILTER DATE RANGE */
+.date-filter-list {
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  align-content: center;
+  gap: 20px;
+  padding-left: 5px;
+}
+
+.date-filter-list > li {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+}
+
+.inactive-date-filter {
+  padding-block: 0.1em;
+  background: linear-gradient(var(--const-green) 50%, #000 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--const-green) 0 0) 0% var(--_p, 0%) / var(--_p, 0%)
+      0.1em no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.2s var(--_s, 0s) linear,
+    background-size 0.2s calc(0.2s - var(--_s, 0s));
+}
+
+.inactive-date-filter:hover {
+  --_p: 100%;
+  --_s: 0.2s;
+  cursor: pointer;
+}
+
+.active-date-filter {
+  text-decoration: underline 0.1em var(--const-green);
+  text-underline-offset: 0.4em;
+  transition: 0.2s;
+  transform: scale(1.05);
+  color: var(--const-green);
+}
