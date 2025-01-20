@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useClient } from "@/components/ClientContext";
 import TRACKS_INITIAL_STATE from "@/initial-states/TRACKS-INITIAL-STATE";
+
 // import TopTracksPreview from "./components/TopTracksPreview";
 // import TopArtistsPreview from "./components/TopArtistsPreview";
 // import RecentlyPlayed from "./components/RecentlyPlayed";
@@ -21,7 +22,7 @@ function TopPlayed() {
         const [showTopTracks, setShowTopTracks] = useState("long_term");
       
         // TOP ARTISTS STATES
-        const [topArtistsDate, setTopArtistsDate] = useState(ARTISTS_INITIAL_STATE);
+        // const [topArtistsDate, setTopArtistsDate] = useState(ARTISTS_INITIAL_STATE);
         const [showTopArtists, setShowTopArtists] = useState("long_term");
 
   return (
