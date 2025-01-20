@@ -1,5 +1,7 @@
 import MainNav from "@/components/main-nav";
 
+import "../styles/top-tracks-top-nav.css";
+
 function TopTracksTopNav({ setToken }) {
   return (
     <div className="top-tracks-page--menu-backing">
