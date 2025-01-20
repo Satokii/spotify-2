@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
-import Link from "next/link";
 import axios from "axios";
 import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
+import TopArtistsTopNav from "./components/TopArtistsTopNav";
 
-import "../top-played/styles/top-results-pages.css"
-import "../top-played/styles/main-date-filter.css"
+import "../top-played/styles/top-results-pages.css";
+import "../top-played/styles/main-date-filter.css";
 
 function TopArtists() {
   const {
     token,
+    setToken,
     topArtistsDate,
     setTopArtistsDate,
     showTopArtists,
@@ -62,44 +63,47 @@ function TopArtists() {
   }, [showTopArtists, token]);
 
   return (
-    <section className="top-results-page--container grid">
-      <div className="top-results-page--header-container grid">
-        <Link className="page--back-btn btn" href="/">
-          Go back
-        </Link>
-        <h2 className="top-results-page--header">Top Artists</h2>
+    <div className="top-results-page-outer-container grid">
+      <div className="scrollbar-top-results-page">
+        <section className="top-results-page--container grid">
+          <TopArtistsTopNav setToken={setToken} />
+            <h2 className="top-results-page--header">Top Artists</h2>
+          <ul className="top-results-page--filter date-filter-list grid">
+            {topArtistsDate.map((dateFilter, index) => (
+              <li
+                key={`${dateFilter.title}-${index}`}
+                className={dateFilter.className}
+                onClick={(e) => {
+                  toggleTopArtistsDate(e, topArtistsDate, setTopArtistsDate);
+                  setShowTopArtists(dateFilter.click);
+                }}
+              >
+                {dateFilter.name}
+              </li>
+            ))}
+          </ul>
+          <ul className="top-results-page--list grid">
+            {allTopArtists.map((artist, index) => (
+              <li
+                className="top-results-page--item grid"
+                key={`${artist.id}-${index}`}
+              >
+                <p className="top-results-page--item-rank">{`${index + 1}`}</p>
+                {artist.images.length ? (
+                  <img
+                    src={artist.images[0].url}
+                    alt={`${artist.name} image`}
+                  />
+                ) : (
+                  <div>No Image</div>
+                )}
+                <p className="top-results-page--item-name">{artist.name}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
-      <ul className="top-results-page--filter date-filter-list grid">
-        {topArtistsDate.map((dateFilter, index) => (
-          <li
-            key={`${dateFilter.title}-${index}`}
-            className={dateFilter.className}
-            onClick={(e) => {
-              toggleTopArtistsDate(e, topArtistsDate, setTopArtistsDate);
-              setShowTopArtists(dateFilter.click);
-            }}
-          >
-            {dateFilter.name}
-          </li>
-        ))}
-      </ul>
-      <ul className="top-results-page--list grid">
-        {allTopArtists.map((artist, index) => (
-          <li
-            className="top-results-page--item grid"
-            key={`${artist.id}-${index}`}
-          >
-            <p className="top-results-page--item-rank">{`${index + 1}`}</p>
-            {artist.images.length ? (
-              <img src={artist.images[0].url} alt={`${artist.name} image`} />
-            ) : (
-              <div>No Image</div>
-            )}
-            <p className="top-results-page--item-name">{artist.name}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
+    </div>
   );
 }
 
