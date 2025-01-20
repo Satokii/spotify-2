@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useClient } from "@/components/ClientContext";
+
+import TopPlayedTopNav from "./components/TopPlayedTopNav";
 import TopTracksPreview from "./components/TopTracksPreview";
 import TopArtistsPreview from "./components/TopArtistsPreview";
 import RecentlyPlayed from "./components/RecentlyPlayed";
@@ -16,6 +18,7 @@ import "./styles/main-recently-played.css";
 function TopPlayed() {
   const {
     token,
+    setToken,
     topTracksDate,
     setTopTracksDate,
     showTopTracks,
@@ -29,6 +32,7 @@ function TopPlayed() {
   return (
     <div className="scrollbar-top-played">
       <main className="top-played grid">
+        <TopPlayedTopNav setToken={setToken} />
         <h2 className="top-played--header">My Dashboard</h2>
         <section className="top-tracks--container grid">
           <div className="top-tracks--header-container grid">
