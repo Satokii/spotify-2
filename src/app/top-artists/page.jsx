@@ -1,4 +1,4 @@
-"use effect";
+"use client";
 
 import { useEffect, useState } from "react";
 import { useClient } from "@/components/ClientContext";
@@ -63,7 +63,7 @@ function TopArtists() {
   return (
     <section className="top-results-page--container grid">
       <div className="top-results-page--header-container grid">
-        <Link className="page--back-btn btn" to="/">
+        <Link className="page--back-btn btn" href="/">
           Go back
         </Link>
         <h2 className="top-results-page--header">Top Artists</h2>

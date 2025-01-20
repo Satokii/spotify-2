@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { useClient } from "@/components/ClientContext";
 import TopTracksPreview from "./components/TopTracksPreview";
@@ -10,6 +12,7 @@ import "./styles/top-played.css";
 import "./styles/main-date-filter.css";
 import "./styles/main-preview-styles.css";
 import "./styles/main-recently-played.css";
+import "./styles/top-results-pages.css"
 
 function TopPlayed() {
   const {
