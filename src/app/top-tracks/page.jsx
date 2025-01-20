@@ -6,6 +6,9 @@ import Link from "next/link";
 import axios from "axios";
 import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
 
+import "../top-played/styles/top-results-pages.css"
+import "../top-played/styles/main-date-filter.css"
+
 function TopTracks() {
   const {
     token,
