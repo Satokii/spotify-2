@@ -1,4 +1,4 @@
-.top-tracks-page--menu-backing {
+.top-artists-page--menu-backing {
     position: absolute;
     top: 13px;
     left: 293px;
@@ -7,7 +7,7 @@
     transition: 0.3s 0s ease;
   }
   
-  .top-tracks-page--menu-container {
+  .top-artists-page--menu-container {
     grid-template-columns: repeat(2, auto);
     padding: 0 20px;
     border-top-left-radius: 8px;

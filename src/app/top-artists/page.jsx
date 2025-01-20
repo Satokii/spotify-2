@@ -67,7 +67,7 @@ function TopArtists() {
       <div className="scrollbar-top-results-page">
         <section className="top-results-page--container grid">
           <TopArtistsTopNav setToken={setToken} />
-            <h2 className="top-results-page--header">Top Artists</h2>
+          <h2 className="top-results-page--header">Top Artists</h2>
           <ul className="top-results-page--filter date-filter-list grid">
             {topArtistsDate.map((dateFilter, index) => (
               <li
