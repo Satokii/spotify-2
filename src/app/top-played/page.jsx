@@ -9,7 +9,7 @@ import TopTracksPreview from "./components/TopTracksPreview";
 import TopArtistsPreview from "./components/TopArtistsPreview";
 import RecentlyPlayed from "./components/RecentlyPlayed";
 import toggleTopTracksDate from "@/shared-functions/toggleTopTracksDate";
-// import toggleTopArtistsDate from "../../shared-functions/toggleTopArtistsDate";
+import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
 
 // import "./styles/main.css";
 // import "./styles/main-date-filter.css";
