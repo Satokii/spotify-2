@@ -1,0 +1,18 @@
+.top-played-page--menu-backing {
+  position: absolute;
+  top: 13px;
+  left: 293px;
+  width: calc(100% - 652px);
+  z-index: 1;
+  transition: 0.3s 0s ease;
+}
+
+.top-played-page--menu-container {
+  grid-template-columns: repeat(2, auto);
+  padding: 0 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 1;
+  height: 65px;
+  transition: 0.3s 0s ease-in-out;
+}

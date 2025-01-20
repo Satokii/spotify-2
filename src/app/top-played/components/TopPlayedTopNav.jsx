@@ -1,5 +1,7 @@
 import MainNav from "@/components/main-nav";
 
+import "../styles/top-played-top-nav.css"
+
 function TopPlayedTopNav() {
   return (
     <div className="top-played-page--menu-backing">
