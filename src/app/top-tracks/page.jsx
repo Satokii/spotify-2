@@ -12,6 +12,7 @@ import "../top-played/styles/main-date-filter.css";
 function TopTracks() {
   const {
     token,
+    setToken,
     topTracksDate,
     setTopTracksDate,
     showTopTracks,
