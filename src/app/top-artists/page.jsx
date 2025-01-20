@@ -6,8 +6,6 @@ import Link from "next/link";
 import axios from "axios";
 import toggleTopArtistsDate from "@/shared-functions/toggleTopArtistsDate";
 
-// import "../styles/top-results-pages.css";
-
 function TopArtists() {
   const {
     token,
