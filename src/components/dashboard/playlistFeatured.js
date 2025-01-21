@@ -18,9 +18,9 @@ export const playlistFeatured = [
     description: "For all those times.",
   },
   {
-    name: "The 1975",
+    name: "On Repeat",
     id: 82,
-    img: "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1X6Ic8-default.jpg",
-    description: "This is The 1975.",
+    img: "https://daily-mix.scdn.co/covers/on_repeat/PZN_On_Repeat2_DEFAULT-en-GB.jpg",
+    description: "Songs you love right now.",
   },
 ];
