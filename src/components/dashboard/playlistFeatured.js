@@ -1,27 +1,27 @@
 export const playlistFeatured = [
         {
-          name: "Featured 1",
+          name: "Template Playlists",
           id: 79,
           img: "https://th.bing.com/th/id/OIP.0eYKlVvSfLF3fFWR0749ZQAAAA?rs=1&pid=ImgDetMain",
-          description: "This is the description",
+          description: "When Spotify deprecates the API :)",
         },
         {
-          name: "Featured 2",
+          name: "Quackers",
           id: 80,
           img: "https://i.scdn.co/image/ab67706c0000da844a5fd632536b51dc6773db2b",
-          description: "This is the description",
+          description: "Quack Quack.",
         },
         {
-          name: "Featured 3",
+          name: "Moments",
           id: 81,
           img: "https://i.pinimg.com/736x/cb/e5/e6/cbe5e65cb89fdded9f7d3663dcdeeaed.jpg",
-          description: "This is the description",
+          description: "For all those times.",
         },
         {
-          name: "Featured 4",
+          name: "The 1975",
           id: 82,
           img: "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1X6Ic8-default.jpg",
-          description: "This is the description",
+          description: "This is The 1975.",
         },
         {
           name: "Featured 5",
