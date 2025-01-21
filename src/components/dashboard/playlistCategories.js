@@ -210,48 +210,6 @@ export const playlistCategories = [
     ],
   },
   {
-    category: "throwback",
-    title: "Throwback",
-    details: [
-      {
-        name: "Playlist 1",
-        id: 43,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-      {
-        name: "Playlist 2",
-        id: 44,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-      {
-        name: "Playlist 3",
-        id: 45,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-      {
-        name: "Playlist 4",
-        id: 46,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-      {
-        name: "Playlist 5",
-        id: 47,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-      {
-        name: "Playlist 6",
-        id: 48,
-        img: "https://th.bing.com/th/id/OIP.YfH0AlZUFDgsK3T0BtcBeAHaHa?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
-        description: "this is the description",
-      },
-    ],
-  },
-  {
     category: "R&B",
     title: "R&B",
     details: [
