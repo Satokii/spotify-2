@@ -1,9 +1,9 @@
 export const playlistFeatured = [
   {
-    name: "Template Playlists",
+    name: "New Music Wednesday",
     id: 79,
-    img: "https://th.bing.com/th/id/OIP.0eYKlVvSfLF3fFWR0749ZQAAAA?rs=1&pid=ImgDetMain",
-    description: "When Spotify deprecates the API :)",
+    img: "https://i.scdn.co/image/ab67706f0000000266fc7bc6f444d1e69ccc55da",
+    description: "This week's hottest new songs.",
   },
   {
     name: "Quackers",
