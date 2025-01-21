@@ -1,5 +1,5 @@
 .dashboard--playlist-container {
-  grid-template-rows: 40px 250px;
+  grid-template-rows: 40px 270px;
   gap: 10px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -44,6 +44,7 @@
 /* PLAYLIST LIST */
 .dashboard-playlist-list {
   grid-template-columns: repeat(auto-fit, 180px);
+  height: 260px;
   gap: 22px;
   overflow-y: hidden;
 }
