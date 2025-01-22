@@ -12,7 +12,7 @@ function NewPlaylist() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [visibility, setVisibility] = useState(true);
-console.log(userId)
+
   const createPlaylist = async () => {
     const { data } = await axios.post(
       `https://api.spotify.com/v1/users/${userId}/playlists`,
@@ -39,8 +39,7 @@ console.log(userId)
       return;
     }
 
-    await getUserId()
-    console.log(title, description, visibility)
+    console.log("token", token)
     await createPlaylist()
 
     alert("Playlist successfully created!");
