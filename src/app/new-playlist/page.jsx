@@ -8,27 +8,25 @@ import "./styles/new-playlist.css";
 import "./styles/new-playlist-form.css";
 
 function NewPlaylist() {
-  const { token, userId } = useClient()
+  const { token, userId } = useClient();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [visibility, setVisibility] = useState(true);
 
   const createPlaylist = async () => {
-    const { data } = await axios.post(
+    await axios.post(
       `https://api.spotify.com/v1/users/${userId}/playlists`,
+      {
+        name: title,
+        description,
+        public: visibility,
+      },
       {
         headers: {
           Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json"
-        },
-        data: {
-          name: title,
-          description,
-          public: visibility,
         },
       }
     );
-    console.log(data)
   };
 
   const handleSubmit = async (e) => {
@@ -39,9 +37,8 @@ function NewPlaylist() {
       return;
     }
 
-    await createPlaylist()
+    await createPlaylist();
 
-    alert("Playlist successfully created!");
     setTitle("");
     setDescription("");
     setVisibility(true);
