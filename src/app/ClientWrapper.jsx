@@ -74,7 +74,9 @@ export default function ClientWrapper({ children }) {
         console.error("Error fetching current track:", error);
       }
     };
-    getCurrentTrack();
+    setInterval(() => {
+      getCurrentTrack();
+    }, 1000);
   }, [token]);
 
   const contextValue = {
