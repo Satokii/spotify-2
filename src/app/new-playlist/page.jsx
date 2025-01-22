@@ -1,14 +1,33 @@
 "use client";
 
 import { useState } from "react";
+import { useClient } from "@/components/ClientContext";
 
 import "./styles/new-playlist.css";
 import "./styles/new-playlist-form.css";
 
 function NewPlaylist() {
+  const { token } = useClient()
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [visibility, setVisibility] = useState("public");
+  const [visibility, setVisibility] = useState(true);
+
+  const createPlaylist = async () => {
+    const { data } = await axios.post(
+      `https://api.spotify.com/v1/users/${user_id}/playlists`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data: {
+          name: title,
+          description,
+          public: visibility,
+        },
+      }
+    );
+    console.log(data)
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,17 +37,19 @@ function NewPlaylist() {
       return;
     }
 
-    const playlistData = {
-      title: title.trim(),
-      description: description.trim() || null,
-      visibility,
-    };
+    createPlaylist()
 
-    console.log("Playlist Created:", playlistData);
+    // const playlistData = {
+    //   title: title.trim(),
+    //   description: description.trim() || null,
+    //   visibility,
+    // };
+
+    // console.log("Playlist Created:", playlistData);
     alert("Playlist successfully created!");
     setTitle("");
     setDescription("");
-    setVisibility("public");
+    setVisibility(true);
   };
 
   return (
@@ -65,9 +86,9 @@ function NewPlaylist() {
                   <input
                     type="radio"
                     name="visibility"
-                    value="public"
-                    checked={visibility === "public"}
-                    onChange={(e) => setVisibility(e.target.value)}
+                    value={true}
+                    checked={visibility === true}
+                    onChange={(e) => setVisibility(e.target.value === "true")}
                     className="new-playlist-radio-input"
                   />
                   <span>Public</span>
@@ -76,9 +97,9 @@ function NewPlaylist() {
                   <input
                     type="radio"
                     name="visibility"
-                    value="private"
-                    checked={visibility === "private"}
-                    onChange={(e) => setVisibility(e.target.value)}
+                    value={false}
+                    checked={visibility === false}
+                    onChange={(e) => setVisibility(e.target.value === "true")}
                     className="new-playlist-radio-input"
                   />
                   <span>Private</span>
