@@ -1,47 +1,92 @@
-.form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: auto;
-  }
-  
-  .title {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  .label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .input,
-  .textarea,
-  .select {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+.new-playlist-form {
+  background: var(--const-card-hover);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  margin: auto;
+}
+
+.new-playlist-title {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--const-main-white);
+}
+
+.new-playlist-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--const-dull-white);
+}
+
+.new-playlist-input,
+.new-playlist-select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+  background: var(--playlist-form-input-bg);
+  transition: all 0.3s ease;
+}
+
+.new-playlist-textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+  background: var(--playlist-form-input-bg);
+  max-height: 200px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.new-playlist-input:focus,
+.new-playlist-textarea:focus,
+.new-playlist-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--const-dull-white);
+  border: 2px solid var(--const-dull-white);
+}
+
+.new-playlist-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--const-dull-white);
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-playlist-button:hover {
+  background-color: var(--const-green);
+  transform: translateY(-2px);
+}
+
+.new-playlist-button:active {
+  background-color: var(--const-dark-green);
+  transform: translateY(0);
+}
+
+.new-playlist-input::placeholder,
+.new-playlist-textarea::placeholder {
+  color: #b3b3b3;
+}
+
+.new-playlist-input,
+.new-playlist-textarea {
+  font-family: inherit;
+}

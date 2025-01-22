@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import "./styles/new-playlist.css"
-import "./styles/new-playlist-form.css"
+import "./styles/new-playlist.css";
+import "./styles/new-playlist-form.css";
 
 function NewPlaylist() {
   const [title, setTitle] = useState("");
@@ -35,9 +35,9 @@ function NewPlaylist() {
     <div className="new-playlist-outer-container grid">
       <div className="scrollbar-new-playlist">
         <main className="new-playlist grid">
-          <form onSubmit={handleSubmit} className="form">
-            <h2 className="title">Create New Playlist</h2>
-            <label htmlFor="title" className="label">
+          <form onSubmit={handleSubmit} className="new-playlist-form">
+            <h2 className="new-playlist-title">Create New Playlist</h2>
+            <label htmlFor="title" className="new-playlist-label">
               Playlist Title
             </label>
             <input
@@ -46,24 +46,25 @@ function NewPlaylist() {
               name="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="input"
-              placeholder="Enter playlist title"
+              className="new-playlist-input"
+              placeholder="Add a name"
               required
             />
 
-            <label htmlFor="description" className="label">
+            <label htmlFor="description" className="new-playlist-label">
               Description (Optional)
             </label>
             <textarea
               id="description"
               name="description"
+              rows={4}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="textarea"
-              placeholder="Enter playlist description"
+              className="new-playlist-textarea"
+              placeholder="Add an optional description"
             ></textarea>
 
-            <label htmlFor="visibility" className="label">
+            <label htmlFor="visibility" new-playlist-="new-playlist-label">
               Visibility
             </label>
             <select
@@ -71,17 +72,16 @@ function NewPlaylist() {
               name="visibility"
               value={visibility}
               onChange={(e) => setVisibility(e.target.value)}
-              className="select"
+              className="new-playlist-select"
             >
               <option value="public">Public</option>
               <option value="private">Private</option>
             </select>
 
-            <button type="submit" className="button">
+            <button type="submit" className="new-playlist-button">
               Create Playlist
             </button>
           </form>
-          {/* <section className="new-playlist--sub-container grid"></section> */}
         </main>
       </div>
     </div>
