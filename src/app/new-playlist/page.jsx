@@ -39,7 +39,6 @@ function NewPlaylist() {
       return;
     }
 
-    console.log("token", token)
     await createPlaylist()
 
     alert("Playlist successfully created!");
