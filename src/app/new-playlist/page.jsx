@@ -37,9 +37,9 @@ function NewPlaylist() {
         <main className="new-playlist grid">
           <form onSubmit={handleSubmit} className="new-playlist-form">
             <h2 className="new-playlist-title">Create New Playlist</h2>
-            <label htmlFor="title" className="new-playlist-label">
+            {/* <label htmlFor="title" className="new-playlist-label">
               Playlist Title
-            </label>
+            </label> */}
             <input
               type="text"
               id="title"
@@ -51,9 +51,9 @@ function NewPlaylist() {
               required
             />
 
-            <label htmlFor="description" className="new-playlist-label">
+            {/* <label htmlFor="description" className="new-playlist-label">
               Description (Optional)
-            </label>
+            </label> */}
             <textarea
               id="description"
               name="description"
@@ -64,9 +64,9 @@ function NewPlaylist() {
               placeholder="Add an optional description"
             ></textarea>
 
-            <label htmlFor="visibility" new-playlist-="new-playlist-label">
+            {/* <label htmlFor="visibility" new-playlist-="new-playlist-label">
               Visibility
-            </label>
+            </label> */}
             <select
               id="visibility"
               name="visibility"

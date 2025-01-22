@@ -15,26 +15,8 @@
   color: var(--const-main-white);
 }
 
-.new-playlist-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: var(--const-dull-white);
-}
-
 .new-playlist-input,
-.new-playlist-select {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  color: black;
-  background: var(--playlist-form-input-bg);
-  transition: all 0.3s ease;
-}
-
+.new-playlist-select,
 .new-playlist-textarea {
   width: 100%;
   margin-bottom: 20px;
@@ -42,11 +24,14 @@
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  color: black;
+  color: var(--const-green);
   background: var(--playlist-form-input-bg);
+  transition: all 0.3s ease;
+}
+
+.new-playlist-textarea {
   max-height: 200px;
   resize: vertical;
-  transition: all 0.3s ease;
 }
 
 .new-playlist-input:focus,
