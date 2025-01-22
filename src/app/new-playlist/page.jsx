@@ -2,19 +2,33 @@
 
 import { useState } from "react";
 import { useClient } from "@/components/ClientContext";
+import axios from "axios";
 
 import "./styles/new-playlist.css";
 import "./styles/new-playlist-form.css";
 
 function NewPlaylist() {
   const { token } = useClient()
+  const [userId, setUserId] = useState("")
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [visibility, setVisibility] = useState(true);
 
+  const getUserId = async () => {
+    const { data } = await axios.get(
+      `https://api.spotify.com/v1/me`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    setUserId(data.id)
+  }
+
   const createPlaylist = async () => {
     const { data } = await axios.post(
-      `https://api.spotify.com/v1/users/${user_id}/playlists`,
+      `https://api.spotify.com/v1/users/${userId}/playlists`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -29,7 +43,7 @@ function NewPlaylist() {
     console.log(data)
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!title.trim()) {
@@ -37,7 +51,9 @@ function NewPlaylist() {
       return;
     }
 
-    createPlaylist()
+    await getUserId()
+
+    await createPlaylist()
 
     // const playlistData = {
     //   title: title.trim(),
