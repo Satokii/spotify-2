@@ -8,30 +8,18 @@ import "./styles/new-playlist.css";
 import "./styles/new-playlist-form.css";
 
 function NewPlaylist() {
-  const { token } = useClient()
-  const [userId, setUserId] = useState("")
+  const { token, userId } = useClient()
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [visibility, setVisibility] = useState(true);
-
-  const getUserId = async () => {
-    const { data } = await axios.get(
-      `https://api.spotify.com/v1/me`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    )
-    setUserId(data.id)
-  }
-
+console.log(userId)
   const createPlaylist = async () => {
     const { data } = await axios.post(
       `https://api.spotify.com/v1/users/${userId}/playlists`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json"
         },
         data: {
           name: title,
@@ -52,16 +40,9 @@ function NewPlaylist() {
     }
 
     await getUserId()
-
+    console.log(title, description, visibility)
     await createPlaylist()
 
-    // const playlistData = {
-    //   title: title.trim(),
-    //   description: description.trim() || null,
-    //   visibility,
-    // };
-
-    // console.log("Playlist Created:", playlistData);
     alert("Playlist successfully created!");
     setTitle("");
     setDescription("");

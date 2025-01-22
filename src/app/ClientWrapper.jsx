@@ -13,6 +13,7 @@ import ARTISTS_INITIAL_STATE from "@/initial-states/ARTISTS-INITIAL-STATE";
 
 export default function ClientWrapper({ children }) {
   const [token, setToken] = useState("");
+  const [userId, setUserId] = useState("");
   const [queue, setQueue] = useState([]);
   const [currentTrack, setCurrentTrack] = useState(CURRENT_TRACK_INITIAL_STATE);
   const [currentTrackArtists, setCurrentTrackArtists] = useState([]);
@@ -40,6 +41,19 @@ export default function ClientWrapper({ children }) {
     }
     setToken(token);
   }, []);
+
+  useEffect(() => {
+    const getUserId = async () => {
+      if (!token) return;
+      const { data } = await axios.get(`https://api.spotify.com/v1/me`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setUserId(data.id);
+    };
+    getUserId();
+  }, [token]);
 
   useEffect(() => {
     const getCurrentTrack = async () => {
@@ -75,13 +89,14 @@ export default function ClientWrapper({ children }) {
       }
     };
     // setInterval(() => {
-      getCurrentTrack();
+    getCurrentTrack();
     // }, 1000);
   }, [token]);
 
   const contextValue = {
     token,
     setToken,
+    userId,
     queue,
     setQueue,
     currentTrack,
@@ -97,7 +112,7 @@ export default function ClientWrapper({ children }) {
     topArtistsDate,
     setTopArtistsDate,
     showTopArtists,
-    setShowTopArtists
+    setShowTopArtists,
   };
 
   if (!token) {
