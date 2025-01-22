@@ -12,9 +12,11 @@ function NewPlaylist() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [visibility, setVisibility] = useState(true);
+  const [newPlaylistId, setNewPlaylistId] = useState("");
+  const [navToNewPlaylist, setNavToNewPlaylist] = useState(false);
 
   const createPlaylist = async () => {
-    await axios.post(
+    const { data } = await axios.post(
       `https://api.spotify.com/v1/users/${userId}/playlists`,
       {
         name: title,
@@ -27,6 +29,7 @@ function NewPlaylist() {
         },
       }
     );
+    setNewPlaylistId(data.id);
   };
 
   const handleSubmit = async (e) => {
@@ -42,7 +45,13 @@ function NewPlaylist() {
     setTitle("");
     setDescription("");
     setVisibility(true);
+    setNavToNewPlaylist(true);
   };
+
+  if (navToNewPlaylist === true) {
+    setNavToNewPlaylist(false);
+    window.location.href = `/user-playlist/${newPlaylistId}`;
+  }
 
   return (
     <div className="new-playlist-outer-container grid">
