@@ -37,9 +37,7 @@ function NewPlaylist() {
         <main className="new-playlist grid">
           <form onSubmit={handleSubmit} className="new-playlist-form">
             <h2 className="new-playlist-title">Create New Playlist</h2>
-            {/* <label htmlFor="title" className="new-playlist-label">
-              Playlist Title
-            </label> */}
+
             <input
               type="text"
               id="title"
@@ -51,9 +49,6 @@ function NewPlaylist() {
               required
             />
 
-            {/* <label htmlFor="description" className="new-playlist-label">
-              Description (Optional)
-            </label> */}
             <textarea
               id="description"
               name="description"
@@ -64,19 +59,32 @@ function NewPlaylist() {
               placeholder="Add an optional description"
             ></textarea>
 
-            {/* <label htmlFor="visibility" new-playlist-="new-playlist-label">
-              Visibility
-            </label> */}
-            <select
-              id="visibility"
-              name="visibility"
-              value={visibility}
-              onChange={(e) => setVisibility(e.target.value)}
-              className="new-playlist-select"
-            >
-              <option value="public">Public</option>
-              <option value="private">Private</option>
-            </select>
+            <div className="new-playlist-visibility-section">
+              <div className="new-playlist-radio-group">
+                <label className="new-playlist-radio-button">
+                  <input
+                    type="radio"
+                    name="visibility"
+                    value="public"
+                    checked={visibility === "public"}
+                    onChange={(e) => setVisibility(e.target.value)}
+                    className="new-playlist-radio-input"
+                  />
+                  <span>Public</span>
+                </label>
+                <label className="new-playlist-radio-button">
+                  <input
+                    type="radio"
+                    name="visibility"
+                    value="private"
+                    checked={visibility === "private"}
+                    onChange={(e) => setVisibility(e.target.value)}
+                    className="new-playlist-radio-input"
+                  />
+                  <span>Private</span>
+                </label>
+              </div>
+            </div>
 
             <button type="submit" className="new-playlist-button">
               Create Playlist
