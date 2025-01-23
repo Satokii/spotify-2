@@ -5,22 +5,22 @@
 }
 
 .dashboard--toggle-queue {
-  grid-row: auto;
+  grid-template-rows: 35px 1fr;
 }
 
 .dashboard--toggle-queue-button {
   place-self: center;
-  width: 300px;
+  font-variant-caps: all-small-caps;
+  width: 200px;
   padding: 2px 4px;
-  background-color: var(--const-dull-white);
-  color: black;
-  border: none;
+  background-color: rgb(5, 6, 45);
   border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: solid 2px var(--const-light-purple);
+  color: var(--const-white);
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dashboard--toggle-queue-button:hover {
-  background-color: var(--const-green);
-  transform: translateY(1px);
+  background-image: linear-gradient(144deg,var(--const-light-purple), var(--const-purple) 50%,var(--const-cyan));
 }

@@ -24,9 +24,9 @@
 }
 
 .dashboard {
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 220px 1fr;
     padding: 8px 0 40px 20px;
-    gap: 30px;
+    gap: 20px;
     visibility: visible;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
