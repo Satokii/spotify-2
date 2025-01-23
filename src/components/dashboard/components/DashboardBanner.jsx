@@ -23,7 +23,7 @@ function DashboardBanner({ token, queue, setQueue, currentTrack, notPlaying }) {
           className="dashboard--toggle-queue-button"
           onClick={toggleTracks}
         >
-          Toggle Queue/Recent Tracks
+          {isRecent ? "Show Queue" : "Show Recently Played"}
         </button>
         {isRecent ? (
           <RecentTracks token={token} />
