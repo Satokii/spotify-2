@@ -1,5 +1,26 @@
-.dashboard--banner  {
-    grid-template-columns: 355px 1fr;
-    gap: 20px;
-    padding: 0 5px;
+.dashboard--banner {
+  grid-template-columns: 355px 1fr;
+  gap: 20px;
+  padding: 0 5px;
+}
+
+.dashboard--toggle-queue {
+  grid-row: auto;
+}
+
+.dashboard--toggle-queue-button {
+  place-self: center;
+  width: 300px;
+  padding: 2px 4px;
+  background-color: var(--const-dull-white);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboard--toggle-queue-button:hover {
+  background-color: var(--const-green);
+  transform: translateY(1px);
 }

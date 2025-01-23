@@ -1,15 +1,36 @@
+"use client";
+
+import { useState } from "react";
+
 import CurrentlyPlaying from "./dashboard-playback/CurrentlyPlaying";
 import Queue from "@/components/queue";
 import RecentTracks from "@/components/recent-tracks";
 
-import "../styles/dashboard-banner.css"
+import "../styles/dashboard-banner.css";
 
-function DashboardBanner({ token, queue, setQueue, currentTrack, notPlaying  }) {
+function DashboardBanner({ token, queue, setQueue, currentTrack, notPlaying }) {
+  const [isRecent, setIsRecent] = useState(true);
+
+  const toggleTracks = () => {
+    setIsRecent((prev) => !prev);
+  };
+
   return (
     <section className="dashboard--banner grid">
       <CurrentlyPlaying currentTrack={currentTrack} notPlaying={notPlaying} />
-      {/* <Queue token={token} queue={queue} setQueue={setQueue} /> */}
-      <RecentTracks token={token} />
+      <section className="dashboard--toggle-queue grid">
+        <button
+          className="dashboard--toggle-queue-button"
+          onClick={toggleTracks}
+        >
+          Toggle Queue/Recent Tracks
+        </button>
+        {isRecent ? (
+          <RecentTracks token={token} />
+        ) : (
+          <Queue token={token} queue={queue} setQueue={setQueue} />
+        )}
+      </section>
     </section>
   );
 }
