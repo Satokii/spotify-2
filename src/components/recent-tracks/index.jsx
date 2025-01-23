@@ -6,6 +6,8 @@ import Link from "next/link";
 import fixLengthQueue from "@/shared-functions/fixLengthQueue";
 import scrollToTop from "../../shared-functions/scrollToTop";
 
+import "./styles/recent-tracks.css"
+
 function RecentTracks({ token }) {
   const [recentlyPlayed, setRecentlyPlayed] = useState([]);
 
@@ -29,13 +31,13 @@ function RecentTracks({ token }) {
   }, []);
 
   return (
-    <div className="main-playback--queue-container grid">
-      <h3 className="main-playback--queue-header">Recently Played...</h3>
-      <div className="scrollbar--dashboard-queue grid">
-        <div className="main-playback--queue-list grid">
+    <div className="main-playback--recent-tracks-container grid">
+      <h3 className="main-playback--recent-tracks-header">Recently Played...</h3>
+      <div className="scrollbar--dashboard-recent-tracks grid">
+        <div className="main-playback--recent-tracks-list grid">
           {recentlyPlayed.map((track, index) => (
             <Link
-              className="main-playback--queue-item grid"
+              className="main-playback--recent-tracks-item grid"
               key={`${track.track.id}-${index}`}
               href={`/album/${track.track.album.id}/${track.track.artists[0].id}`}
               onClick={scrollToTop}
@@ -48,11 +50,11 @@ function RecentTracks({ token }) {
               ) : (
                 <div>No Image</div>
               )}
-              <p className="main-playback--queue-track">
+              <p className="main-playback--recent-tracks-track">
                 {fixLengthQueue(track.track.name)}
               </p>
               <Link
-                className="main-playback--queue-artist"
+                className="main-playback--recent-tracks-artist"
                 href={`/artist/${track.track.artists[0].id}`}
                 onClick={scrollToTop}
               >
