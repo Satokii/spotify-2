@@ -22,6 +22,7 @@ function UserPlaylist({ params }) {
 
   const [userPlaylistInfo, setUserPlaylistInfo] = useState({});
   const [userPlaylistTracks, setUserPlaylistTracks] = useState([]);
+  const [playlistHasTracks, setPlaylistHasTracks] = useState(0)
   const [colourHex, setColourHex] = useState("#ffffff");
 
   useEffect(() => {
@@ -34,7 +35,6 @@ function UserPlaylist({ params }) {
           },
         }
       );
-      console.log(data);
       setUserPlaylistInfo({
         owner: data.owner.display_name,
         name: data.name,
@@ -43,6 +43,7 @@ function UserPlaylist({ params }) {
         numSongs: data.tracks.total,
         isPublic: data.public,
       });
+      setPlaylistHasTracks(data.tracks.total)
     };
     getUserPlaylistInfo();
   }, [playlistId, token]);
@@ -107,6 +108,12 @@ function UserPlaylist({ params }) {
 
   if (!token) {
     return <WelcomePage />;
+  }
+
+  if (playlistHasTracks === 0 ) {
+    return (
+      <div>No Tracks</div>
+    )
   }
 
   return (
