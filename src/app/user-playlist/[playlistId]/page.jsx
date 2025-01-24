@@ -123,14 +123,7 @@ function UserPlaylist({ params }) {
       <div className="scrollbar-user-playlist">
         <section className="user-playlist--container grid">
           <UserPlaylistTopNav setToken={setToken} />
-          {/* <UserPlaylistBanner
-          userPlaylistInfo={userPlaylistInfo}
-          userPlaylistTracks={userPlaylistTracks}
-        /> */}
-          <UserPlaylistBannerEmpty
-            userPlaylistInfo={newUserPlaylistInfo}
-            userPlaylistTracks={userPlaylistTracks}
-          />
+          <UserPlaylistBannerEmpty userPlaylistInfo={newUserPlaylistInfo} />
           <div>Add some songs to get started.</div>
           <div className="user-playlist--sub-container grid">
             <UserPlaylistControls />
