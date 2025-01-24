@@ -10,6 +10,7 @@ import WelcomePage from "@/components/welcome-page/page";
 import paletteGradientUserPlaylist from "@/palettes/paletteGradientUserPlaylist";
 import UserPlaylistTopNav from "../components/UserPlaylistTopNav";
 import UserPlaylistBanner from "../components/UserPlaylistBanner";
+import UserPlaylistBannerEmpty from "../components/UserPlaylistBannerEmpty";
 import UserPlaylistControls from "../components/UserPlaylistControls";
 import UserPlaylistTracks from "../components/UserPlaylistTracks";
 
@@ -22,7 +23,8 @@ function UserPlaylist({ params }) {
 
   const [userPlaylistInfo, setUserPlaylistInfo] = useState({});
   const [userPlaylistTracks, setUserPlaylistTracks] = useState([]);
-  const [playlistHasTracks, setPlaylistHasTracks] = useState(0)
+  const [playlistHasTracks, setPlaylistHasTracks] = useState(0);
+  const [newUserPlaylistInfo, setNewUserPlaylistInfo] = useState({});
   const [colourHex, setColourHex] = useState("#ffffff");
 
   useEffect(() => {
@@ -35,6 +37,11 @@ function UserPlaylist({ params }) {
           },
         }
       );
+      setNewUserPlaylistInfo({
+        owner: data.owner.display_name,
+        name: data.name,
+        description: data.description,
+      });
       setUserPlaylistInfo({
         owner: data.owner.display_name,
         name: data.name,
@@ -43,7 +50,7 @@ function UserPlaylist({ params }) {
         numSongs: data.tracks.total,
         isPublic: data.public,
       });
-      setPlaylistHasTracks(data.tracks.total)
+      setPlaylistHasTracks(data.tracks.total);
     };
     getUserPlaylistInfo();
   }, [playlistId, token]);
@@ -110,25 +117,29 @@ function UserPlaylist({ params }) {
     return <WelcomePage />;
   }
 
-  if (playlistHasTracks === 0 ) {
+  if (playlistHasTracks === 0) {
     return (
       // <div>No Tracks</div>
       <div className="scrollbar-user-playlist">
-      <section className="user-playlist--container grid">
-        <UserPlaylistTopNav setToken={setToken} />
-        {/* <UserPlaylistBanner
+        <section className="user-playlist--container grid">
+          <UserPlaylistTopNav setToken={setToken} />
+          {/* <UserPlaylistBanner
           userPlaylistInfo={userPlaylistInfo}
           userPlaylistTracks={userPlaylistTracks}
         /> */}
-        <div>Add some songs to get started.</div>
-        <div className="user-playlist--sub-container grid">
-          <UserPlaylistControls />
-          <div></div>
-          {/* <UserPlaylistTracks userPlaylistTracks={userPlaylistTracks} /> */}
-        </div>
-      </section>
-    </div>
-    )
+          <UserPlaylistBannerEmpty
+            userPlaylistInfo={newUserPlaylistInfo}
+            userPlaylistTracks={userPlaylistTracks}
+          />
+          <div>Add some songs to get started.</div>
+          <div className="user-playlist--sub-container grid">
+            <UserPlaylistControls />
+            <div></div>
+            {/* <UserPlaylistTracks userPlaylistTracks={userPlaylistTracks} /> */}
+          </div>
+        </section>
+      </div>
+    );
   }
 
   return (
