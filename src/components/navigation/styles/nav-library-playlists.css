@@ -46,6 +46,20 @@
   border-radius: 6px;
 }
 
+.navigation--playlists-item-no-img-container {
+  place-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: var(--const-card-hover);
+}
+
+.navigation--playlists-item-no-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+}
+
 /* TEXT CONTAINER */
 .navigation--playlists-item-text-container {
   grid-template-rows: repeat(2, 22px);

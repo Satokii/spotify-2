@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import axios from "axios";
 import Image from "next/image";
@@ -7,7 +7,8 @@ import Link from "next/link";
 import scrollToTop from "@/shared-functions/scrollToTop";
 
 import LikedSongsImg from "../../../../public/assets/images/liked-songs-img.png";
-import "../styles/nav-library-playlists.css"
+import "../styles/nav-library-playlists.css";
+import MusicNote from "../../../../public/assets/svgs/main-app/music-note.svg";
 
 function NavLibraryPlaylists({ token, showFilter }) {
   const [likeSongsLibrary, setLikedSongsLibrary] = useState({});
@@ -41,16 +42,16 @@ function NavLibraryPlaylists({ token, showFilter }) {
           limit: 50,
         },
       });
-    //   allPlaylists.push(data.items);
-    //   if (data.next !== null) {
-    //     playlistURL = data.next;
-    //     getPlaylistItems();
-    //   } else {
-    //     allPlaylists.forEach((array) => {
-    //       combinedPlaylists = combinedPlaylists.concat(array);
-    //     });
-    //   }
-    //   setPlaylistItemsLibrary(combinedPlaylists);
+      //   allPlaylists.push(data.items);
+      //   if (data.next !== null) {
+      //     playlistURL = data.next;
+      //     getPlaylistItems();
+      //   } else {
+      //     allPlaylists.forEach((array) => {
+      //       combinedPlaylists = combinedPlaylists.concat(array);
+      //     });
+      //   }
+      //   setPlaylistItemsLibrary(combinedPlaylists);
       setPlaylistItemsLibrary(data.items);
     };
     getPlaylistItems();
@@ -69,17 +70,17 @@ function NavLibraryPlaylists({ token, showFilter }) {
           limit: 50,
         },
       });
-    //   allAlbums.push(data.items);
-    //   if (data.next !== null) {
-    //     albumURL = data.next;
-    //     getAlbums();
-    //   } else {
-    //     allAlbums.forEach((array) => {
-    //       combinedAlbums = combinedAlbums.concat(array);
-    //     });
-    //   }
-    //   setAlbumItemsLibrary(combinedAlbums);
-    setAlbumItemsLibrary(data.items)
+      //   allAlbums.push(data.items);
+      //   if (data.next !== null) {
+      //     albumURL = data.next;
+      //     getAlbums();
+      //   } else {
+      //     allAlbums.forEach((array) => {
+      //       combinedAlbums = combinedAlbums.concat(array);
+      //     });
+      //   }
+      //   setAlbumItemsLibrary(combinedAlbums);
+      setAlbumItemsLibrary(data.items);
     };
     getAlbums();
   }, [token]);
@@ -131,7 +132,12 @@ function NavLibraryPlaylists({ token, showFilter }) {
                         alt="playlist songs img"
                       />
                     ) : (
-                      <div></div>
+                      <div className="navigation--playlists-item-no-img-container grid">
+                        <Image
+                          className="navigation--playlists-item-no-img"
+                          src={MusicNote}
+                        ></Image>
+                      </div>
                     )}
                     <div className="navigation--playlists-item-text-container grid">
                       <div className="navigation--playlists-item-header">
