@@ -1,5 +1,8 @@
+import Image from "next/image";
+
 import convertMsToTime from "../../../shared-functions/convertMsToTime";
 import playlistTimeinMs from "@/app/playlist/functions/playlistTimeInMs";
+import MusicNote from "../../../../public/assets/svgs/main-app/music-note.svg"
 
 import "../styles/user-playlist-banner.css";
 
@@ -8,7 +11,7 @@ function UserPlaylistBannerEmpty({ userPlaylistInfo, userPlaylistTracks }) {
   return (
     <div className="user-playlist--banner grid">
       <div className="user-playlist--banner-img-container">
-          <div className="user-playlist--img-none"></div>
+        <Image className="user-playlist--img" src={MusicNote}></Image>
       </div>
       <div className="user-playlist--banner-info-container grid">
         {/* {userPlaylistInfo.isPublic ? (
@@ -26,11 +29,11 @@ function UserPlaylistBannerEmpty({ userPlaylistInfo, userPlaylistTracks }) {
             {userPlaylistInfo.owner}
           </p>
           <span className="middot">&middot;</span>
-          <p className="user-playlist-overview-total-tracks">{`${
+          {/* <p className="user-playlist-overview-total-tracks">{`${
             userPlaylistInfo.numSongs
           } songs, ${convertMsToTime(
             playlistTimeinMs(userPlaylistTracks)
-          )}`}</p>
+          )}`}</p> */}
         </div>
       </div>
     </div>
