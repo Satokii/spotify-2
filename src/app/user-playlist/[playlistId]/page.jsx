@@ -119,14 +119,15 @@ function UserPlaylist({ params }) {
 
   if (playlistHasTracks === 0) {
     return (
-      // <div>No Tracks</div>
       <div className="scrollbar-user-playlist">
         <section className="user-playlist--container grid">
           <UserPlaylistTopNav setToken={setToken} />
           <UserPlaylistBannerEmpty userPlaylistInfo={newUserPlaylistInfo} />
           <div className="user-playlist-empty--sub-container grid">
             <UserPlaylistControls />
-            <div className="user-playlist-empty--prompt">Add some songs to get started.</div>
+            <div className="user-playlist-empty--prompt">
+              Add some songs to get started.
+            </div>
           </div>
         </section>
       </div>

@@ -11,12 +11,12 @@ function UserPlaylistBannerEmpty({ userPlaylistInfo }) {
       </div>
       <div className="user-playlist--banner-empty-info-container grid">
         <div></div>
-        <p className="user-playlist--playlist-name">{userPlaylistInfo.name}</p>
-        <p className="user-playlist--playlist-description">
+        <p className="user-playlist-empty--playlist-name">{userPlaylistInfo.name}</p>
+        <p className="user-playlist-empty--playlist-description">
           {userPlaylistInfo.description}
         </p>
-        <div className="user-playlist--playlist-overview-container grid">
-          <p className="user-playlist-overview-owner-name">
+        <div className="user-playlist-empty--playlist-overview-container grid">
+          <p className="user-playlist-empty-overview-owner-name">
             {userPlaylistInfo.owner}
           </p>
           <span className="middot">&middot;</span>
