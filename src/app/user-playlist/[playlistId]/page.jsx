@@ -112,7 +112,22 @@ function UserPlaylist({ params }) {
 
   if (playlistHasTracks === 0 ) {
     return (
-      <div>No Tracks</div>
+      // <div>No Tracks</div>
+      <div className="scrollbar-user-playlist">
+      <section className="user-playlist--container grid">
+        <UserPlaylistTopNav setToken={setToken} />
+        {/* <UserPlaylistBanner
+          userPlaylistInfo={userPlaylistInfo}
+          userPlaylistTracks={userPlaylistTracks}
+        /> */}
+        <div>Add some songs to get started.</div>
+        <div className="user-playlist--sub-container grid">
+          <UserPlaylistControls />
+          <div></div>
+          {/* <UserPlaylistTracks userPlaylistTracks={userPlaylistTracks} /> */}
+        </div>
+      </section>
+    </div>
     )
   }
 
