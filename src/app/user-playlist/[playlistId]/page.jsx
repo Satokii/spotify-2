@@ -32,11 +32,9 @@ function UserPlaylist({ params }) {
           headers: {
             Authorization: `Bearer ${token}`,
           },
-          params: {
-            limit: 20,
-          },
         }
       );
+      console.log(data);
       setUserPlaylistInfo({
         owner: data.owner.display_name,
         name: data.name,
