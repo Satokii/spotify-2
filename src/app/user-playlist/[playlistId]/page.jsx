@@ -124,11 +124,9 @@ function UserPlaylist({ params }) {
         <section className="user-playlist--container grid">
           <UserPlaylistTopNav setToken={setToken} />
           <UserPlaylistBannerEmpty userPlaylistInfo={newUserPlaylistInfo} />
-          <div>Add some songs to get started.</div>
-          <div className="user-playlist--sub-container grid">
+          <div className="user-playlist-empty--sub-container grid">
             <UserPlaylistControls />
-            <div></div>
-            {/* <UserPlaylistTracks userPlaylistTracks={userPlaylistTracks} /> */}
+            <div className="user-playlist-empty--prompt">Add some songs to get started.</div>
           </div>
         </section>
       </div>

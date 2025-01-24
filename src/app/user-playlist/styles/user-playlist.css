@@ -28,3 +28,22 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+.user-playlist-empty--sub-container {
+  grid-template-rows: 120px 1fr;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 100vh;
+  background: linear-gradient(
+    var(--album-track-hover),
+    var(--album-track-hover) 20%,
+    var(--const-base-bg),
+    var(--const-base-bg) 50%
+  );
+}
+
+.user-playlist-empty--prompt {
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 20px;
+}
