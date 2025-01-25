@@ -49,6 +49,11 @@
 .search-results-tracks--track-artist {
   font-size: 14px;
   color: var(--const-lighter-gray);
+  width: fit-content;
+}
+
+.search-results-tracks--track-artist:hover {
+  text-decoration: underline;
 }
 
 .search-results-tracks--track-time {
