@@ -156,6 +156,11 @@
   color: var(--const-gray);
 }
 
+.album-page--artist-name:hover {
+  color: var(--const-main-white);
+  text-decoration: underline;
+}
+
 /* ALBUM NAME */
 .user-playlist--album-name {
   color: var(--const-gray);
