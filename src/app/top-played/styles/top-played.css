@@ -68,14 +68,16 @@
 .top-artists--see-all-link {
   font-size: 13px;
   margin-top: 3px;
-  color: var(--const-card-yellow);
-  border: solid 1px var(--const-card-yellow);
+  color: var(--const-main-white);
+  border: solid 1px var(--const-main-white);
   border-radius: 9999px;
   padding: 3px 10px;
 }
 
 .top-tracks--see-all-link:hover,
 .top-artists--see-all-link:hover {
-  color: var(--const-card-yellow-hover);
-  border-color: var(--const-card-yellow-hover);
+  font-weight: bold;
+  border: none;
+  /* color: var(--const-card-yellow-hover); */
+  /* border-color: var(--const-card-yellow-hover); */
 }
