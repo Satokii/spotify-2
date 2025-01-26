@@ -78,6 +78,4 @@
 .top-artists--see-all-link:hover {
   font-weight: bold;
   border: none;
-  /* color: var(--const-card-yellow-hover); */
-  /* border-color: var(--const-card-yellow-hover); */
 }
