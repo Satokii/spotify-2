@@ -18,17 +18,17 @@
 
 .recently-played--refresh-btn {
   font-size: 13px;
-  color: var(--const-card-yellow);
-  border: solid 1px var(--const-card-yellow);
+  color: var(--const-main-white);
+  border: solid 1px var(--const-main-white);
   border-radius: 9999px;
   padding: 2px 10px;
   margin-top: 3px;
-  background-color: var(--almost-black);
+  background-color: transparent;
 }
 
 .recently-played--refresh-btn:hover {
-  color: var(--const-card-yellow-hover);
-  border-color: var(--const-card-yellow-hover);
+  font-weight: bold;
+  border: none;
   cursor: pointer;
 }
 
